@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+  <defs>
+    <style>
+      text { font-family: "PingFang SC","Microsoft YaHei",sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="300" fill="#1e1e1e"/>
+
+  <!-- Title -->
+  <text x="250" y="30" text-anchor="middle" fill="#e0e0e0" font-size="20" font-weight="bold">三白兵</text>
+  <text x="250" y="50" text-anchor="middle" fill="#888" font-size="12">Three White Soldiers</text>
+
+  <!-- Ground line / battlefield -->
+  <line x1="60" y1="230" x2="440" y2="230" stroke="#555" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="130" cy="230" rx="8" ry="3" fill="#555" opacity="0.5"/>
+  <ellipse cx="250" cy="230" rx="8" ry="3" fill="#555" opacity="0.5"/>
+  <ellipse cx="370" cy="230" rx="8" ry="3" fill="#555" opacity="0.5"/>
+
+  <!-- Soldier helmet shapes -->
+  <path d="M122,168 Q130,162 138,168" fill="#22c55e" opacity="0.3" stroke="none"/>
+  <path d="M242,132 Q250,126 258,132" fill="#22c55e" opacity="0.3" stroke="none"/>
+  <path d="M362,100 Q370,94 378,100" fill="#22c55e" opacity="0.3" stroke="none"/>
+
+  <!-- C1: First soldier (left) -->
+  <g>
+    <line x1="130" y1="170" x2="130" y2="185" stroke="#22c55e" stroke-width="2"/>
+    <line x1="130" y1="222" x2="130" y2="235" stroke="#22c55e" stroke-width="2"/>
+    <rect x="122" y="185" width="16" height="37" fill="#22c55e" rx="1"/>
+  </g>
+
+  <!-- C2: Second soldier (middle, higher) -->
+  <g>
+    <line x1="250" y1="134" x2="250" y2="148" stroke="#22c55e" stroke-width="2"/>
+    <line x1="250" y1="186" x2="250" y2="200" stroke="#22c55e" stroke-width="2"/>
+    <rect x="242" y="148" width="16" height="38" fill="#22c55e" rx="1"/>
+  </g>
+
+  <!-- C3: Third soldier (right, highest) -->
+  <g>
+    <line x1="370" y1="102" x2="370" y2="116" stroke="#22c55e" stroke-width="2"/>
+    <line x1="370" y1="160" x2="370" y2="175" stroke="#22c55e" stroke-width="2"/>
+    <rect x="362" y="116" width="16" height="44" fill="#22c55e" rx="1"/>
+  </g>
+
+  <!-- Marching arrows -->
+  <path d="M155,205 L175,190" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" opacity="0.6" marker-end="url(#arrow-small)"/>
+  <path d="M275,165 L295,150" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" opacity="0.6" marker-end="url(#arrow-small)"/>
+
+  <defs>
+    <marker id="arrow-small" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6" fill="#22c55e" opacity="0.6"/>
+    </marker>
+  </defs>
+
+  <!-- Upward arrow -->
+  <path d="M250,248 L250,265" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="245,265 250,273 255,265" fill="#22c55e"/>
+
+  <!-- Label -->
+  <text x="250" y="288" text-anchor="middle" fill="#22c55e" font-size="16" font-weight="bold">底部看涨反转</text>
+</svg>

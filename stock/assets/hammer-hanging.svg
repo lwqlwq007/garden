@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .bull { fill: #22c55e; }
+      .bear { fill: #ef4444; }
+      .w { fill: #ffffff; }
+      .label { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 11px; }
+      .title { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 14px; font-weight: bold; }
+      .anno { stroke: #888888; stroke-width: 1; }
+      .ano { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #888888; font-size: 9px; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="400" height="300"/>
+
+  <text x="200" y="25" text-anchor="middle" class="title">锤子线 &amp; 上吊线</text>
+
+  <!-- ========== LEFT: Hammer (bullish, bottom of trend) ========== -->
+  <!-- upper shadow (short) -->
+  <rect x="88" y="80" width="6" height="20" class="bull"/>
+  <!-- body (small) -->
+  <rect x="78" y="100" width="26" height="30" class="bull"/>
+  <!-- lower shadow (long — 3x body) -->
+  <rect x="88" y="130" width="6" height="105" class="bull"/>
+
+  <!-- label -->
+  <text x="91" y="275" text-anchor="middle" class="label">锤子线（低位→看涨）</text>
+  <!-- up arrow below -->
+  <polygon points="91,245 82,258 100,258" class="bull"/>
+
+  <!-- ========== RIGHT: Hanging Man (bearish, top of trend) ========== -->
+  <rect x="288" y="80" width="6" height="20" class="bear"/>
+  <rect x="278" y="100" width="26" height="30" class="bear"/>
+  <rect x="288" y="130" width="6" height="105" class="bear"/>
+
+  <text x="291" y="275" text-anchor="middle" class="label">上吊线（高位→看跌）</text>
+  <polygon points="291,245 282,258 300,258" class="bear"/>
+
+  <!-- ========== Annotations: lower shadow length ========== -->
+  <!-- left bracket -->
+  <line x1="115" y1="100" x2="128" y2="100" class="anno"/>
+  <line x1="122" y1="100" x2="122" y2="235" class="anno" stroke-dasharray="3,3"/>
+  <line x1="115" y1="235" x2="128" y2="235" class="anno"/>
+  <polygon points="122,96 118,105 126,105" class="ano"/>
+  <polygon points="122,239 118,230 126,230" class="ano"/>
+
+  <!-- right bracket -->
+  <line x1="315" y1="100" x2="328" y2="100" class="anno"/>
+  <line x1="322" y1="100" x2="322" y2="235" class="anno" stroke-dasharray="3,3"/>
+  <line x1="315" y1="235" x2="328" y2="235" class="anno"/>
+  <polygon points="322,96 318,105 330,105" class="ano"/>
+  <polygon points="322,239 318,230 330,230" class="ano"/>
+
+  <text x="200" y="170" text-anchor="middle" class="ano">下影线 ≥ 实体 × 2</text>
+</svg>

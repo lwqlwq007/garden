@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-size: 16px; text-anchor: middle; }
+    .label { font-size: 13px; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+    .dashed { stroke: #888; stroke-width: 1.5; stroke-dasharray: 5 3; fill: none; }
+    .trend { stroke: #888; stroke-width: 2; fill: none; }
+  </style>
+
+  <text x="400" y="32" class="title">头肩顶形态</text>
+
+  <!-- Price curve path -->
+  <path d="M 60,260 
+           C 90,260 120,145 180,145 
+           C 240,145 270,265 300,265
+           C 330,265 360,70 400,70
+           C 440,70 470,265 500,265
+           C 530,265 560,145 620,145
+           C 660,145 690,260 720,260"
+        class="line" stroke="#fff" stroke-width="2.5"/>
+
+  <!-- Left shoulder peak dashed line -->
+  <line x1="180" y1="145" x2="180" y2="265" class="dashed"/>
+  <circle cx="180" cy="145" r="4" fill="#fff"/>
+  <text x="180" y="135" class="subtitle" text-anchor="middle" fill="#fff">左肩</text>
+
+  <!-- Head peak dashed line -->
+  <line x1="400" y1="70" x2="400" y2="265" class="dashed"/>
+  <circle cx="400" cy="70" r="4" fill="#fff"/>
+  <text x="400" y="60" class="subtitle" text-anchor="middle" fill="#fff">头</text>
+
+  <!-- Right shoulder peak dashed line -->
+  <line x1="620" y1="145" x2="620" y2="265" class="dashed"/>
+  <circle cx="620" cy="145" r="4" fill="#fff"/>
+  <text x="620" y="135" class="subtitle" text-anchor="middle" fill="#fff">右肩</text>
+
+  <!-- Neckline -->
+  <line x1="60" y1="265" x2="740" y2="265" class="dashed" stroke="#ffaa00" stroke-width="2"/>
+  <text x="745" y="269" class="label" fill="#ffaa00">颈线</text>
+
+  <!-- Measurement arrows (head to neckline) -->
+  <line x1="410" y1="70" x2="410" y2="265" class="line" stroke="#ffaa00"/>
+  <!-- Left arrowhead -->
+  <polygon points="410,80 404,90 416,90" fill="#ffaa00"/>
+  <!-- Right arrowhead -->
+  <polygon points="410,255 404,245 416,245" fill="#ffaa00"/>
+  <text x="420" y="175" class="label" fill="#ffaa00">H</text>
+
+  <!-- Target arrow from neckline breakdown -->
+  <line x1="400" y1="265" x2="400" y2="465" class="line" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="400,455 392,445 408,445" fill="#ef4444"/>
+  <line x1="350" y1="465" x2="450" y2="465" class="dashed" stroke="#ef4444"/>
+
+  <text x="400" y="440" class="subtitle" text-anchor="middle" fill="#ef4444">目标价位</text>
+  <text x="400" y="485" class="label" text-anchor="middle" fill="#aaa">目标 = 颈线位置 - H</text>
+
+  <!-- Uptrend arrow before pattern -->
+  <text x="100" y="160" class="label" fill="#22c55e">上升趋势</text>
+  <polygon points="80,175 90,155 100,175" fill="#22c55e"/>
+
+  <!-- Downtrend arrow after pattern -->
+  <text x="680" y="160" class="label" fill="#ef4444">下降趋势</text>
+  <polygon points="680,175 690,155 700,175" fill="#ef4444"/>
+</svg>

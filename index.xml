@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>🌱 Garden</title>
+      <link>https://garden.daniel-liu.top</link>
+      <description>最近的10条笔记 on 🌱 Garden</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>🌱 Daniel的秘密花园</title>
+    <link>https://garden.daniel-liu.top/</link>
+    <guid>https://garden.daniel-liu.top/</guid>
+    <description><![CDATA[ 欢迎来到我的秘密花园 🌱 这里是我学习美股知识的个人笔记仓库，记录从零开始的学习旅程。 📚 学习目录 stock — 美股学习系统笔记 . ]]></description>
+    <pubDate>Tue, 19 May 2026 08:24:42 GMT</pubDate>
+  </item><item>
+    <title>README</title>
+    <link>https://garden.daniel-liu.top/README</link>
+    <guid>https://garden.daniel-liu.top/README</guid>
+    <description><![CDATA[ 🌱 Garden — 我的秘密花园 这是通过坚果云同步的 Obsidian 笔记仓库，vault 根目录为 garden/。 目录结构 目录/文件用途. ]]></description>
+    <pubDate>Tue, 19 May 2026 04:02:51 GMT</pubDate>
+  </item><item>
+    <title>01-什么是美股</title>
+    <link>https://garden.daniel-liu.top/stock/01-%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80/01-%E4%BB%80%E4%B9%88%E6%98%AF%E7%BE%8E%E8%82%A1</link>
+    <guid>https://garden.daniel-liu.top/stock/01-%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80/01-%E4%BB%80%E4%B9%88%E6%98%AF%E7%BE%8E%E8%82%A1</guid>
+    <description><![CDATA[ 什么是美股 美股市场是什么 美股是指在美国公开上市交易的股票。全球投资者都可以通过券商买卖美股。 两大主要交易所： 交易所全称特点NYSE纽约证券交易所主板，上市公司最老牌（可口可乐、沃尔玛）Nasdaq纳斯达克科技股为主（苹果、微软、谷歌、亚马逊） 📌 简单记：老公司去 NYSE，科技公司去 Nasdaq。 三大指数 指数就是一篮子股票的平均表现，用来衡量整个市场「涨了还是跌了」。 指数成分股一句话道琼斯工业平均指数（道指/DJIA）30 只蓝筹股美股「元老」，代表 30 家最知名的美国大公司标普 500 指数（S&amp;P 500）500 只大盘股最常被引用的「大盘」，覆盖美国股市约 ... ]]></description>
+    <pubDate>Mon, 18 May 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>02-美股交易规则</title>
+    <link>https://garden.daniel-liu.top/stock/01-%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80/02-%E7%BE%8E%E8%82%A1%E4%BA%A4%E6%98%93%E8%A7%84%E5%88%99</link>
+    <guid>https://garden.daniel-liu.top/stock/01-%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80/02-%E7%BE%8E%E8%82%A1%E4%BA%A4%E6%98%93%E8%A7%84%E5%88%99</guid>
+    <description><![CDATA[ 美股交易规则 T+0 交易（当日回转交易） 美股支持当日无限次买卖，也就是你今天买入的股票，今天就能卖出。这在 A 股叫「T+0」，但美股其实没有「T+N」的限制。 例子： 上午买入 Apple，中午涨了 2%，直接卖出获利 同一个股票同一天可以来回买卖几十次 ⚠️ 虽然支持 T+0，但频繁短线交易会增加手续费和税务成本，新手不建议过度交易。 T+2 结算 美股是 T+2 结算，即交易完成后第 2 个工作日资金才真正到账。 什么意思？ 周一卖出股票 → 周三钱才能取出到银行卡 但卖出后可以立即用这笔钱买其他股票（只是不能提现） 📌 T+0 是「交易不受限」，T+2 是「资金到账时间」，两者不... ]]></description>
+    <pubDate>Mon, 18 May 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>03-常用术语</title>
+    <link>https://garden.daniel-liu.top/stock/01-%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80/03-%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD</link>
+    <guid>https://garden.daniel-liu.top/stock/01-%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80/03-%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD</guid>
+    <description><![CDATA[ 常用术语 本文按首字母拼音排序，随查随用。新手不用一次背完，遇到了回来查就行。 A Alpha（α，阿尔法） 衡量一只股票超没超过大盘的表现。 Alpha &gt; 0：比大盘涨得多/跌得少 Alpha = 0：和大盘一样 Alpha &lt; 0：比大盘差 例子：大盘涨 10%，你的股票涨 15%，那 Alpha 就是 +5%。 B Beta（β，贝塔） 衡量一只股票比大盘”爱动”多少倍。 Beta &gt; 1：比大盘波动大（涨跌更猛） Beta = 1：和大盘一样波动 Beta &lt; 1：比大盘波动小（更稳） 例子： 科技股 Beta ~1.5 → 大盘涨 10%，它可能涨 15% ... ]]></description>
+    <pubDate>Mon, 18 May 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>01-K线图入门</title>
+    <link>https://garden.daniel-liu.top/stock/02-K%E7%BA%BF%E5%9F%BA%E7%A1%80/01-K%E7%BA%BF%E5%9B%BE%E5%85%A5%E9%97%A8</link>
+    <guid>https://garden.daniel-liu.top/stock/02-K%E7%BA%BF%E5%9F%BA%E7%A1%80/01-K%E7%BA%BF%E5%9B%BE%E5%85%A5%E9%97%A8</guid>
+    <description><![CDATA[ K 线图入门 什么是 K 线？ K 线（Candlestick，又称蜡烛图）是股票、期货、外汇等金融市场最常用的价格图表。一根 K 线记录的是一个时间单位内的价格变化——比如一天、一小时、或一周。 K 线四要素 每一根 K 线包含四个关键价格信息： 要素含义开盘价该时间周期开始时的第一笔成交价收盘价该时间周期结束时的最后一笔成交价最高价该时间周期内成交的最高价格最低价该时间周期内成交的最低价格 阳线 vs 阴线 阳线（红色 / 空心） 收盘价 &gt; 开盘价 → 价格上涨 实体越大，上涨力度越强 阴线（绿色 / 实心） 收盘价 &lt; 开盘价 → 价格下跌 实体越大，下跌力度越强 ⚠️ 中... ]]></description>
+    <pubDate>Mon, 18 May 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>02-单根K线形态</title>
+    <link>https://garden.daniel-liu.top/stock/02-K%E7%BA%BF%E5%9F%BA%E7%A1%80/02-%E5%8D%95%E6%A0%B9K%E7%BA%BF%E5%BD%A2%E6%80%81</link>
+    <guid>https://garden.daniel-liu.top/stock/02-K%E7%BA%BF%E5%9F%BA%E7%A1%80/02-%E5%8D%95%E6%A0%B9K%E7%BA%BF%E5%BD%A2%E6%80%81</guid>
+    <description><![CDATA[ 单根 K 线形态 单根 K 线的形态可以透露多空双方在一段时间内的博弈结果。虽然有经验的交易者更看重组合形态，但某些单根 K 线本身就是重要的反转信号。 1. ]]></description>
+    <pubDate>Mon, 18 May 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>03-多根K线组合</title>
+    <link>https://garden.daniel-liu.top/stock/02-K%E7%BA%BF%E5%9F%BA%E7%A1%80/03-%E5%A4%9A%E6%A0%B9K%E7%BA%BF%E7%BB%84%E5%90%88</link>
+    <guid>https://garden.daniel-liu.top/stock/02-K%E7%BA%BF%E5%9F%BA%E7%A1%80/03-%E5%A4%9A%E6%A0%B9K%E7%BA%BF%E7%BB%84%E5%90%88</guid>
+    <description><![CDATA[ 多根 K 线组合 单根 K 线是”单词”，多根 K 线组合才是”句子”。组合形态比单根形态可靠性更高，是技术分析的核心工具之一。 1. ]]></description>
+    <pubDate>Mon, 18 May 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>01-移动平均线(MA)</title>
+    <link>https://garden.daniel-liu.top/stock/03-%E6%8A%80%E6%9C%AF%E6%8C%87%E6%A0%87/01-%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%9D%87%E7%BA%BF(MA)</link>
+    <guid>https://garden.daniel-liu.top/stock/03-%E6%8A%80%E6%9C%AF%E6%8C%87%E6%A0%87/01-%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%9D%87%E7%BA%BF(MA)</guid>
+    <description><![CDATA[ 移动平均线 (MA) 什么是移动平均线？ 移动平均线（Moving Average，简称 MA 或均线） 是技术分析中最基础、最常用的工具之一。它的本质就是对过去一段时间的收盘价取平均值，然后把每天的平均值连成一条线。这条线平滑了价格的日常波动，帮助你看清趋势方向。 打个比方：价格像一个人走路时身体的晃动，而均线像他走路的大方向——到底是向前走（上涨），还是向后走（下跌）。 两种最常见的均线 1. ]]></description>
+    <pubDate>Mon, 18 May 2026 16:00:00 GMT</pubDate>
+  </item><item>
+    <title>02-MACD</title>
+    <link>https://garden.daniel-liu.top/stock/03-%E6%8A%80%E6%9C%AF%E6%8C%87%E6%A0%87/02-MACD</link>
+    <guid>https://garden.daniel-liu.top/stock/03-%E6%8A%80%E6%9C%AF%E6%8C%87%E6%A0%87/02-MACD</guid>
+    <description><![CDATA[ MACD（异同移动平均线） 什么是 MACD？ MACD 是 Moving Average Convergence Divergence 的缩写，中文叫”指数平滑异同移动平均线”。名字很长，但理解起来不难——它就是利用两条均线的差值来分析趋势强弱和转折的指标。 MACD 是目前全球使用最广泛的趋势指标之一，几乎所有股票软件都默认显示它。 MACD 的三大组成 MACD 由三个部分组成，看图时从上到下依次是： 1. ]]></description>
+    <pubDate>Mon, 18 May 2026 16:00:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

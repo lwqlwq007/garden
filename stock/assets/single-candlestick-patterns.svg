@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .label { font-size: 14px; text-anchor: middle; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+  </style>
+
+  <text x="400" y="32" class="title">单根K线形态</text>
+
+  <!-- ===== 1. Hammer (锤子线) ===== -->
+  <g>
+    <!-- Upper wick -->
+    <line x1="140" y1="205" x2="140" y2="230" class="line" stroke="#22c55e"/>
+    <!-- Body (green, small, near top) -->
+    <rect x="125" y="230" width="30" height="20" fill="#22c55e"/>
+    <!-- Lower wick (long) -->
+    <line x1="140" y1="250" x2="140" y2="420" class="line" stroke="#22c55e"/>
+    <text x="140" y="455" class="label">锤子线</text>
+  </g>
+
+  <!-- ===== 2. Hanging Man (上吊线) ===== -->
+  <g>
+    <!-- Upper wick -->
+    <line x1="300" y1="210" x2="300" y2="235" class="line" stroke="#ef4444"/>
+    <!-- Body (red, small, near top) -->
+    <rect x="285" y="235" width="30" height="20" fill="#ef4444"/>
+    <!-- Lower wick (long) -->
+    <line x1="300" y1="255" x2="300" y2="420" class="line" stroke="#ef4444"/>
+    <text x="300" y="455" class="label">上吊线</text>
+  </g>
+
+  <!-- ===== 3. Doji (十字星) ===== -->
+  <g>
+    <!-- Upper wick -->
+    <line x1="460" y1="150" x2="460" y2="290" class="line" stroke="#888"/>
+    <!-- Body (very thin) -->
+    <rect x="445" y="290" width="30" height="4" fill="#888"/>
+    <!-- Lower wick -->
+    <line x1="460" y1="294" x2="460" y2="420" class="line" stroke="#888"/>
+    <text x="460" y="455" class="label">十字星</text>
+  </g>
+
+  <!-- ===== 4. Shooting Star (射击之星) ===== -->
+  <g>
+    <!-- Upper wick (long) -->
+    <line x1="620" y1="130" x2="620" y2="360" class="line" stroke="#ef4444"/>
+    <!-- Body (red, small, near bottom) -->
+    <rect x="605" y="360" width="30" height="20" fill="#ef4444"/>
+    <!-- Lower wick -->
+    <line x1="620" y1="380" x2="620" y2="410" class="line" stroke="#ef4444"/>
+    <text x="620" y="455" class="label">射击之星</text>
+  </g>
+
+  <!-- Separator lines between candles -->
+  <line x1="220" y1="60" x2="220" y2="470" class="line" stroke-dasharray="2 4" stroke="#444"/>
+  <line x1="380" y1="60" x2="380" y2="470" class="line" stroke-dasharray="2 4" stroke="#444"/>
+  <line x1="540" y1="60" x2="540" y2="470" class="line" stroke-dasharray="2 4" stroke="#444"/>
+</svg>

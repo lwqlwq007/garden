@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .bull { fill: #22c55e; }
+      .bear { fill: #ef4444; }
+      .label { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 11px; }
+      .title { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 14px; font-weight: bold; }
+      .anno { stroke: #888888; stroke-width: 1; }
+      .ano { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #888888; font-size: 9px; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="400" height="300"/>
+
+  <text x="200" y="25" text-anchor="middle" class="title">倒锤子 &amp; 射击之星</text>
+
+  <!-- ========== LEFT: Inverted Hammer (bullish, bottom of trend — needs confirmation) ========== -->
+  <!-- lower shadow (short) -->
+  <rect x="88" y="140" width="6" height="20" class="bull"/>
+  <!-- body (small) -->
+  <rect x="78" y="120" width="26" height="20" class="bull"/>
+  <!-- upper shadow (long — 3x body) -->
+  <rect x="88" y="40" width="6" height="80" class="bull"/>
+
+  <text x="91" y="275" text-anchor="middle" class="label">倒锤子（低位→需确认）</text>
+  <!-- question mark -->
+  <text x="91" y="248" text-anchor="middle" class="label" font-size="16">?</text>
+  <!-- small up arrow hint -->
+  <polygon points="91,258 85,268 97,268" class="bull"/>
+
+  <!-- ========== RIGHT: Shooting Star (bearish, top of trend) ========== -->
+  <rect x="288" y="140" width="6" height="20" class="bear"/>
+  <rect x="278" y="120" width="26" height="20" class="bear"/>
+  <rect x="288" y="40" width="6" height="80" class="bear"/>
+
+  <text x="291" y="275" text-anchor="middle" class="label">射击之星（高位→看跌）</text>
+  <polygon points="291,245 282,258 300,258" class="bear"/>
+
+  <!-- ========== Annotations: upper shadow length ========== -->
+  <!-- left bracket -->
+  <line x1="115" y1="40" x2="128" y2="40" class="anno"/>
+  <line x1="122" y1="40" x2="122" y2="140" class="anno" stroke-dasharray="3,3"/>
+  <line x1="115" y1="140" x2="128" y2="140" class="anno"/>
+  <polygon points="122,36 118,45 126,45" class="ano"/>
+  <polygon points="122,144 118,135 126,135" class="ano"/>
+
+  <!-- right bracket -->
+  <line x1="315" y1="40" x2="328" y2="40" class="anno"/>
+  <line x1="322" y1="40" x2="322" y2="140" class="anno" stroke-dasharray="3,3"/>
+  <line x1="315" y1="140" x2="328" y2="140" class="anno"/>
+  <polygon points="322,36 318,45 330,45" class="ano"/>
+  <polygon points="322,144 318,135 330,135" class="ano"/>
+
+  <text x="200" y="97" text-anchor="middle" class="ano">上影线 ≥ 实体 × 2</text>
+</svg>

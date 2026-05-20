@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+  <defs>
+    <style>
+      text { font-family: "PingFang SC","Microsoft YaHei",sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="300" fill="#1e1e1e"/>
+
+  <!-- Title -->
+  <text x="250" y="30" text-anchor="middle" fill="#e0e0e0" font-size="20" font-weight="bold">三只乌鸦</text>
+  <text x="250" y="50" text-anchor="middle" fill="#888" font-size="12">Three Black Crows</text>
+
+  <!-- Branch line (乌鸦站在枝头) -->
+  <path d="M60,225 Q155,215 250,220 Q345,225 440,215" stroke="#555" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M120,225 L115,235 M180,218 L178,228 M320,223 L322,233 M380,218 L383,228" stroke="#555" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- C1 (top/left crow) -->
+  <g>
+    <line x1="130" y1="62" x2="130" y2="80" stroke="#ef4444" stroke-width="2"/>
+    <line x1="130" y1="118" x2="130" y2="128" stroke="#ef4444" stroke-width="2"/>
+    <rect x="122" y="80" width="16" height="38" fill="#ef4444" rx="1"/>
+  </g>
+  <!-- Crow silhouette -->
+  <path d="M130,56 Q110,52 105,58 Q100,64 120,62" fill="#333" stroke="none"/>
+  <path d="M130,56 Q150,52 155,58 Q160,64 140,62" fill="#333" stroke="none"/>
+  <circle cx="130" cy="52" r="6" fill="#333"/>
+  <circle cx="128" cy="50" r="1.5" fill="#ef4444"/>
+
+  <!-- C2 (middle crow) -->
+  <g>
+    <line x1="250" y1="85" x2="250" y2="105" stroke="#ef4444" stroke-width="2"/>
+    <line x1="250" y1="155" x2="250" y2="165" stroke="#ef4444" stroke-width="2"/>
+    <rect x="242" y="105" width="16" height="50" fill="#ef4444" rx="1"/>
+  </g>
+  <!-- Crow silhouette -->
+  <path d="M250,79 Q230,75 225,81 Q220,87 240,85" fill="#333" stroke="none"/>
+  <path d="M250,79 Q270,75 275,81 Q280,87 260,85" fill="#333" stroke="none"/>
+  <circle cx="250" cy="75" r="6" fill="#333"/>
+  <circle cx="248" cy="73" r="1.5" fill="#ef4444"/>
+
+  <!-- C3 (bottom/right crow) -->
+  <g>
+    <line x1="370" y1="108" x2="370" y2="128" stroke="#ef4444" stroke-width="2"/>
+    <line x1="370" y1="192" x2="370" y2="205" stroke="#ef4444" stroke-width="2"/>
+    <rect x="362" y="128" width="16" height="64" fill="#ef4444" rx="1"/>
+  </g>
+  <!-- Crow silhouette -->
+  <path d="M370,102 Q350,98 345,104 Q340,110 360,108" fill="#333" stroke="none"/>
+  <path d="M370,102 Q390,98 395,104 Q400,110 380,108" fill="#333" stroke="none"/>
+  <circle cx="370" cy="98" r="6" fill="#333"/>
+  <circle cx="368" cy="96" r="1.5" fill="#ef4444"/>
+
+  <!-- Downward arrow annotation -->
+  <path d="M250,235 L250,255" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="245,255 250,263 255,255" fill="#ef4444"/>
+
+  <!-- Label -->
+  <text x="250" y="278" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">顶部看跌反转</text>
+</svg>

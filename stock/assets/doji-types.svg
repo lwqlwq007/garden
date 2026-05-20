@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .w { fill: #ffffff; }
+      .label { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 11px; }
+      .title { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 14px; font-weight: bold; }
+      .sub { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #aaaaaa; font-size: 9px; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="400" height="300"/>
+
+  <text x="200" y="25" text-anchor="middle" class="title">十字星 — 三种变体</text>
+
+  <!-- ====== 1. Long-legged Doji (both shadows long) ====== -->
+  <g transform="translate(75, 0)">
+    <!-- upper shadow -->
+    <rect x="15" y="55" width="6" height="90" class="w"/>
+    <!-- horizontal line (body = open = close) -->
+    <rect x="6" y="143" width="24" height="4" class="w"/>
+    <!-- lower shadow -->
+    <rect x="15" y="147" width="6" height="80" class="w"/>
+  </g>
+  <text x="88" y="272" text-anchor="middle" class="label">长脚十字</text>
+  <text x="88" y="285" text-anchor="middle" class="sub">上下影线均较长</text>
+
+  <!-- ====== 2. Gravestone Doji (only upper shadow) ====== -->
+  <g transform="translate(188, 0)">
+    <!-- upper shadow -->
+    <rect x="15" y="55" width="6" height="165" class="w"/>
+    <!-- horizontal line at bottom -->
+    <rect x="6" y="218" width="24" height="4" class="w"/>
+  </g>
+  <text x="200" y="272" text-anchor="middle" class="label">墓碑十字</text>
+  <text x="200" y="285" text-anchor="middle" class="sub">仅上影线（开=收=最低）</text>
+
+  <!-- ====== 3. Dragonfly Doji (only lower shadow) ====== -->
+  <g transform="translate(300, 0)">
+    <!-- horizontal line at top -->
+    <rect x="6" y="55" width="24" height="4" class="w"/>
+    <!-- lower shadow -->
+    <rect x="15" y="59" width="6" height="162" class="w"/>
+  </g>
+  <text x="312" y="272" text-anchor="middle" class="label">蜻蜓十字</text>
+  <text x="312" y="285" text-anchor="middle" class="sub">仅下影线（开=收=最高）</text>
+</svg>

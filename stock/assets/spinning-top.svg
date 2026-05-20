@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .bull { fill: #22c55e; }
+      .label { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 11px; }
+      .title { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 14px; font-weight: bold; }
+      .anno { stroke: #888888; stroke-width: 1; }
+      .ano { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #888888; font-size: 9px; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="400" height="300"/>
+
+  <text x="200" y="25" text-anchor="middle" class="title">纺锤线</text>
+
+  <!-- ====== Center candlestick ====== -->
+  <!-- upper shadow (long) -->
+  <rect x="195" y="55" width="10" height="80" class="bull"/>
+  <!-- body (small) -->
+  <rect x="185" y="135" width="30" height="30" class="bull"/>
+  <!-- lower shadow (long) -->
+  <rect x="195" y="165" width="10" height="80" class="bull"/>
+
+  <!-- annotation: upper shadow bracket -->
+  <line x1="230" y1="55" x2="250" y2="55" class="anno"/>
+  <line x1="240" y1="55" x2="240" y2="135" class="anno" stroke-dasharray="3,3"/>
+  <line x1="230" y1="135" x2="250" y2="135" class="anno"/>
+  <polygon points="240,51 236,60 244,60" class="ano"/>
+  <polygon points="240,139 236,130 244,130" class="ano"/>
+  <text x="270" y="100" class="ano" text-anchor="start">上影线长</text>
+
+  <!-- annotation: lower shadow bracket -->
+  <line x1="230" y1="165" x2="250" y2="165" class="anno"/>
+  <line x1="240" y1="165" x2="240" y2="245" class="anno" stroke-dasharray="3,3"/>
+  <line x1="230" y1="245" x2="250" y2="245" class="anno"/>
+  <polygon points="240,161 236,170 244,170" class="ano"/>
+  <polygon points="240,249 236,240 244,240" class="ano"/>
+  <text x="270" y="210" class="ano" text-anchor="start">下影线长</text>
+
+  <!-- annotation: small body bracket (left side) -->
+  <line x1="170" y1="135" x2="155" y2="135" class="anno"/>
+  <line x1="165" y1="135" x2="165" y2="165" class="anno" stroke-dasharray="3,3"/>
+  <line x1="170" y1="165" x2="155" y2="165" class="anno"/>
+  <polygon points="165,131 161,140 169,140" class="ano"/>
+  <polygon points="165,169 161,160 169,160" class="ano"/>
+  <text x="140" y="155" class="ano" text-anchor="end">实体小</text>
+
+  <!-- description -->
+  <text x="200" y="278" text-anchor="middle" class="label">实体小、上下影线长 → 多空分歧，趋势可能转向</text>
+</svg>

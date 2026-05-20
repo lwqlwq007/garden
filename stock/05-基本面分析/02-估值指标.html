@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>02-估值指标 | Garden</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto Sans SC:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="🌱 Garden"/><meta property="og:title" content="02-估值指标 | Garden"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="02-估值指标 | Garden"/><meta name="twitter:description" content="估值指标 估值指标是用来判断一只股票”贵不贵”（或者”便不便宜”）的量化工具。但不同行业、不同生命周期的公司，适用的估值指标也不同。 本章逐一介绍最常用的估值指标：PE、PB、PS、PEG、ROE、股息率、EV/EBITDA，以及常用的美股估值网站。 一、市盈率 (PE / Price-to-Earnings) 含义 PE = 股价 ÷ 每股收益 (EPS) 市盈率表示：你愿意为每一块钱的利润支付多少价格。 PE = 10：意味着你花 10 元买入，对应 1 元的年利润 PE = 50：意味着你花 50 元买入，对应 1 元的年利润 两种 PE 类型含义特点静态 PE (Trailing PE..."/><meta property="og:description" content="估值指标 估值指标是用来判断一只股票”贵不贵”（或者”便不便宜”）的量化工具。但不同行业、不同生命周期的公司，适用的估值指标也不同。 本章逐一介绍最常用的估值指标：PE、PB、PS、PEG、ROE、股息率、EV/EBITDA，以及常用的美股估值网站。 一、市盈率 (PE / Price-to-Earnings) 含义 PE = 股价 ÷ 每股收益 (EPS) 市盈率表示：你愿意为每一块钱的利润支付多少价格。 PE = 10：意味着你花 10 元买入，对应 1 元的年利润 PE = 50：意味着你花 50 元买入，对应 1 元的年利润 两种 PE 类型含义特点静态 PE (Trailing PE..."/><meta property="og:image:alt" content="估值指标 估值指标是用来判断一只股票”贵不贵”（或者”便不便宜”）的量化工具。但不同行业、不同生命周期的公司，适用的估值指标也不同。 本章逐一介绍最常用的估值指标：PE、PB、PS、PEG、ROE、股息率、EV/EBITDA，以及常用的美股估值网站。 一、市盈率 (PE / Price-to-Earnings) 含义 PE = 股价 ÷ 每股收益 (EPS) 市盈率表示：你愿意为每一块钱的利润支付多少价格。 PE = 10：意味着你花 10 元买入，对应 1 元的年利润 PE = 50：意味着你花 50 元买入，对应 1 元的年利润 两种 PE 类型含义特点静态 PE (Trailing PE..."/><meta property="og:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:url" content="https://garden.daniel-liu.top/static/og-image.png"/><meta name="twitter:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="garden.daniel-liu.top"/><meta property="og:url" content="https://garden.daniel-liu.top/stock/05-基本面分析/02-估值指标"/><meta property="twitter:url" content="https://garden.daniel-liu.top/stock/05-基本面分析/02-估值指标"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="估值指标 估值指标是用来判断一只股票”贵不贵”（或者”便不便宜”）的量化工具。但不同行业、不同生命周期的公司，适用的估值指标也不同。 本章逐一介绍最常用的估值指标：PE、PB、PS、PEG、ROE、股息率、EV/EBITDA，以及常用的美股估值网站。 一、市盈率 (PE / Price-to-Earnings) 含义 PE = 股价 ÷ 每股收益 (EPS) 市盈率表示：你愿意为每一块钱的利润支付多少价格。 PE = 10：意味着你花 10 元买入，对应 1 元的年利润 PE = 50：意味着你花 50 元买入，对应 1 元的年利润 两种 PE 类型含义特点静态 PE (Trailing PE..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2RhbmllbC9Eb2N1bWVudHMvZ2FyZGVuLXNpdGUvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://garden.daniel-liu.top/index.xml"/></head><body data-slug="stock/05-基本面分析/02-估值指标"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">🌱 Garden</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;README\&quot;&amp;&amp;node.slugSegment!==\&quot;index\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-43"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-43" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/">stock</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/05-基本面分析/">05 基本面分析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>02 估值指标</a></div></nav><h1 class="article-title">02-估值指标</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-18T16:00:00.000Z">2026年5月19日</time><span>12分钟阅读</span></p><ul class="tags"><li><a href="../../tags/基本面分析" class="internal tag-link">基本面分析</a></li><li><a href="../../tags/估值指标" class="internal tag-link">估值指标</a></li><li><a href="../../tags/美股投资" class="internal tag-link">美股投资</a></li></ul></div></div><article class="popover-hint"><h1 id="估值指标">估值指标<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#估值指标" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>估值指标是用来判断一只股票”贵不贵”（或者”便不便宜”）的量化工具。但不同行业、不同生命周期的公司，适用的估值指标也不同。</p>
+<p>本章逐一介绍最常用的估值指标：<strong>PE、PB、PS、PEG、ROE、股息率、EV/EBITDA</strong>，以及常用的美股估值网站。</p>
+<hr/>
+<h2 id="一市盈率-pe--price-to-earnings">一、市盈率 (PE / Price-to-Earnings)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一市盈率-pe--price-to-earnings" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="含义">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>PE = 股价 ÷ 每股收益 (EPS)</strong></p>
+</blockquote>
+<p>市盈率表示：你愿意为每一块钱的利润支付多少价格。</p>
+<ul>
+<li><strong>PE = 10</strong>：意味着你花 10 元买入，对应 1 元的年利润</li>
+<li><strong>PE = 50</strong>：意味着你花 50 元买入，对应 1 元的年利润</li>
+</ul>
+<h3 id="两种-pe">两种 PE<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#两种-pe" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>类型</th><th>含义</th><th>特点</th></tr></thead><tbody><tr><td><strong>静态 PE (Trailing PE)</strong></td><td>用过去 12 个月的实际 EPS 计算</td><td>滞后但可靠</td></tr><tr><td><strong>动态 PE (Forward PE)</strong></td><td>用分析师预测的未来 12 个月 EPS 计算</td><td>前瞻但不一定准确</td></tr></tbody></table></div>
+<h3 id="适用行业">适用行业<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#适用行业" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>适用：<strong>盈利稳定的成熟行业</strong>——消费、银行、工业、保险</li>
+<li>不适用：亏损的公司（PE 为负数）、高增长的科技初创公司（PE 极高但仍在高速增长）</li>
+</ul>
+<h3 id="pe-基准参考">PE 基准参考<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pe-基准参考" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>标普 500 平均 PE：长期在 <strong>15-25 倍</strong>之间</li>
+<li>行业平均 PE：不同行业差异巨大（银行平均 10-15 倍，科技 25-40 倍）</li>
+<li>个股与同行业 PE 对比才有意义</li>
+</ul>
+<h3 id="局限性">局限性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#局限性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>净利润容易被会计手段操纵（一次性收益/亏损）</li>
+<li>周期性行业（钢铁、能源）在周期顶部的 PE 最低（利润最高），但此时反而是股价顶部</li>
+<li>不分行业对比 PE 没有意义</li>
+</ol>
+<hr/>
+<h2 id="二市净率-pb--price-to-book">二、市净率 (PB / Price-to-Book)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二市净率-pb--price-to-book" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="含义-1">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>PB = 股价 ÷ 每股净资产 (Book Value Per Share)</strong></p>
+</blockquote>
+<p>市净率衡量：股价相对于公司清算价值（净资产）的倍数。</p>
+<ul>
+<li><strong>PB &lt; 1</strong>：股价低于净资产（可能被低估，也可能是公司有问题）</li>
+<li><strong>PB = 1</strong>：股价等于净资产</li>
+<li><strong>PB > 1</strong>：股价高于净资产</li>
+</ul>
+<h3 id="适用行业-1">适用行业<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#适用行业-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>适用：<strong>重资产行业</strong>——银行（最常用）、保险、房地产、制造业</li>
+<li>不适用：<strong>轻资产行业</strong>——科技公司（谷歌、微软的主要资产是无形资产而非固定资产）</li>
+</ul>
+<h3 id="局限性-1">局限性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#局限性-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>账面价值以历史成本计算，不代表当前市场价值</li>
+<li>无形资产（品牌、专利、软件）难以衡量</li>
+<li>不适合轻资产公司和互联网公司</li>
+</ol>
+<hr/>
+<h2 id="三市销率-ps--price-to-sales">三、市销率 (PS / Price-to-Sales)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三市销率-ps--price-to-sales" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="含义-2">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>PS = 总市值 ÷ 总营收 (Revenue)</strong></p>
+</blockquote>
+<h3 id="适用行业-2">适用行业<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#适用行业-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>适用：<strong>尚未盈利的成长型公司</strong>——早期生物科技、SaaS 公司、电商</li>
+<li>当公司没有利润（EPS 为负数）时，PS 可以替代 PE 进行评估</li>
+</ul>
+<h3 id="局限性-2">局限性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#局限性-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>不考虑成本和利润——营收高不等于能赚钱</li>
+<li>不同行业毛利率差异大，PS 无法跨行业比较</li>
+<li>可以通过降低价格、促销等手段快速提升营收，但这不可持续</li>
+</ol>
+<hr/>
+<h2 id="四peg-市盈率相对盈利增长率">四、PEG (市盈率相对盈利增长率)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四peg-市盈率相对盈利增长率" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="含义-3">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>PEG = PE ÷ 盈利增长率 (EPS Growth Rate %)</strong></p>
+</blockquote>
+<p>PEG 将市盈率和盈利增长结合起来，衡量”增长是否值这个价格”。</p>
+<h3 id="判断标准">判断标准<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#判断标准" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>PEG &lt; 1</strong>：可能被低估（价格没有反映增长潜力）</li>
+<li><strong>PEG = 1</strong>：估值合理（价格与增长匹配）</li>
+<li><strong>PEG > 1</strong>：可能被高估（增长不足以支撑当前价格）</li>
+</ul>
+<h3 id="适用行业-3">适用行业<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#适用行业-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>适用：<strong>成长型公司</strong>——科技、医疗、消费品牌</li>
+<li>不适用：盈利下降的公司、周期性公司</li>
+</ul>
+<h3 id="局限性-3">局限性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#局限性-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>增长率是预测值，分析师常常高估增长率</li>
+<li>短期增长率不能代表长期趋势</li>
+<li>无法区分”有机增长”和”并购带来的增长”</li>
+</ol>
+<hr/>
+<h2 id="五净资产收益率-roe--return-on-equity">五、净资产收益率 (ROE / Return on Equity)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五净资产收益率-roe--return-on-equity" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="含义-4">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>ROE = 净利润 ÷ 股东权益 (%)</strong></p>
+</blockquote>
+<p>ROE 衡量：股东每投入一元钱，公司能赚回多少利润。</p>
+<ul>
+<li><strong>ROE > 15%</strong>：一般认为是一家好公司</li>
+<li><strong>ROE > 20%</strong>：非常优秀的公司</li>
+<li><strong>ROE > 30%</strong>：极其优秀（但要注意是否由高杠杆驱动）</li>
+</ul>
+<h3 id="roe-分解杜邦分析">ROE 分解（杜邦分析）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#roe-分解杜邦分析" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>ROE = 净利润率 × 资产周转率 × 权益乘数</strong></p>
+</blockquote>
+<ul>
+<li><strong>净利润率</strong>：赚不赚钱</li>
+<li><strong>资产周转率</strong>：效率高不高</li>
+<li><strong>权益乘数</strong>（= 总资产/股东权益）：用了多少杠杆</li>
+</ul>
+<h3 id="适用行业-4">适用行业<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#适用行业-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>适用于所有行业——但必须与同行业对比</li>
+<li>高 ROE 的原因很重要：是靠高利润率（好）还是靠高杠杆（风险大）？</li>
+</ul>
+<h3 id="局限性-4">局限性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#局限性-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>可以通过提高负债来提升 ROE（借更多钱）——但这增加了风险</li>
+<li>一次性的非经常性损益会扭曲 ROE</li>
+<li>银行等金融行业本身杠杆高，ROE 天然较高</li>
+</ol>
+<hr/>
+<h2 id="六股息率-dividend-yield">六、股息率 (Dividend Yield)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#六股息率-dividend-yield" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="含义-5">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义-5" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>股息率 = 每股年股息 ÷ 股价 × 100%</strong></p>
+</blockquote>
+<p>股息率衡量：投资股票后每年能拿回多少现金分红。</p>
+<h3 id="参考标准">参考标准<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#参考标准" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>1-2%</strong>：普通水平（标普 500 平均）</li>
+<li><strong>2-4%</strong>：较好水平</li>
+<li><strong>4-6%</strong>：高股息（注意是否可持续）</li>
+<li><strong>> 6%</strong>：异常高——可能股票在下跌，或公司面临风险</li>
+</ul>
+<h3 id="适用行业-5">适用行业<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#适用行业-5" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>适用：<strong>成熟稳定且有现金流的行业</strong>——公用事业、消费必需品、电信、REITs</li>
+<li>不适用：高增长行业（科技公司通常不派息或股息率极低，因将利润再投资于增长）</li>
+</ul>
+<h3 id="局限性-5">局限性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#局限性-5" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>高股息不等于好投资——有时是股价暴跌导致的股息率被动升高</li>
+<li>股息可能会被削减或取消</li>
+<li>过度关注股息可能错过更好的成长股</li>
+</ol>
+<hr/>
+<h2 id="七evebitda-企业价值息税折旧摊销前利润">七、EV/EBITDA (企业价值/息税折旧摊销前利润)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#七evebitda-企业价值息税折旧摊销前利润" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="含义-6">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义-6" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>EV/EBITDA = 企业价值 ÷ EBITDA</strong></p>
+</blockquote>
+<p><strong>EV</strong> = 总市值 + 总负债 - 现金及现金等价物</p>
+<p><strong>EBITDA</strong> = 净利润 + 利息 + 税费 + 折旧 + 摊销</p>
+<h3 id="为什么用-ev-而不是市值">为什么用 EV 而不是市值？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#为什么用-ev-而不是市值" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>EV 代表”买下整个公司”需要的实际成本（包括承担债务）。如果一个公司市值 100 亿但有 30 亿债务，买下它实际需要 130 亿。</p>
+<h3 id="适用行业-6">适用行业<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#适用行业-6" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>适用：<strong>资本密集型行业</strong>——制造业、能源、电信、重工业</li>
+<li>也适用于：跨国并购估值比较</li>
+<li>不适用：金融行业（利息本身就是业务核心部分）</li>
+</ul>
+<h3 id="evebitda-的优势">EV/EBITDA 的优势<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#evebitda-的优势" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>消除资本结构（负债率）不同的影响</li>
+<li>消除折旧政策不同的影响</li>
+<li>消除税率不同的影响</li>
+<li>比 PE 更适合做<strong>跨公司比较</strong></li>
+</ol>
+<h3 id="局限性-6">局限性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#局限性-6" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>EBITDA 忽略了资本支出（CapEx）——很多公司表面上 EBITDA 很高，但维护设备需要大量投入</li>
+<li>不适合高增长科技公司（折旧少，EBITDA 参考价值有限）</li>
+<li>计算比 PE 复杂</li>
+</ol>
+<hr/>
+<h2 id="估值指标速查表">估值指标速查表<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#估值指标速查表" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>指标</th><th>全称</th><th>公式</th><th>适用场景</th><th>不适合场景</th></tr></thead><tbody><tr><td><strong>PE</strong></td><td>市盈率</td><td>股价 ÷ EPS</td><td>盈利稳定的成熟公司</td><td>亏损公司</td></tr><tr><td><strong>PB</strong></td><td>市净率</td><td>股价 ÷ 每股净资产</td><td>银行、保险、制造业</td><td>科技/互联网</td></tr><tr><td><strong>PS</strong></td><td>市销率</td><td>市值 ÷ 收入</td><td>尚未盈利的成长公司</td><td>盈利稳定的公司</td></tr><tr><td><strong>PEG</strong></td><td>市盈率/增长率</td><td>PE ÷ 增长率%</td><td>成长型公司</td><td>周期性/衰退公司</td></tr><tr><td><strong>ROE</strong></td><td>净资产收益率</td><td>净利润 ÷ 股东权益</td><td>通用（需同行业比）</td><td>高杠杆公司需谨慎</td></tr><tr><td><strong>股息率</strong></td><td>Dividend Yield</td><td>年股息 ÷ 股价</td><td>收入型投资</td><td>成长型投资</td></tr><tr><td><strong>EV/EBITDA</strong></td><td>企业价值倍数</td><td>EV ÷ EBITDA</td><td>资本密集型、跨公司比较</td><td>金融行业</td></tr></tbody></table></div>
+<hr/>
+<h2 id="美股估值网站推荐">美股估值网站推荐<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#美股估值网站推荐" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>以下网站可以快速查看上述所有估值指标：</p>
+<h3 id="1-finviz强烈推荐">1. Finviz（强烈推荐）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-finviz强烈推荐" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>网址</strong>：<a href="https://finviz.com" class="external">https://finviz.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Finviz 是最适合快速扫描估值的网站。功能包括：</p>
+<ul>
+<li><strong>Screener</strong>（筛选器）：按 PE、PB、PS、PEG、ROE 等指标筛选股票</li>
+<li><strong>表格视图</strong>：以表格形式展示大量股票的估值数据，一目了然</li>
+<li><strong>行业分类</strong>：按行业筛选并查看行业平均估值</li>
+<li><strong>地图 (MAP)</strong>：以热力图展示各板块估值水平</li>
+<li><strong>完全免费</strong>（付费版 $39.6/月，但免费版已经够用）</li>
+</ul>
+<h3 id="2-yahoo-finance">2. Yahoo Finance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-yahoo-finance" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>网址</strong>：<a href="https://finance.yahoo.com" class="external">https://finance.yahoo.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>搜索股票代码后，在 <strong>Statistics</strong> 选项卡查看所有估值指标</li>
+<li>提供行业平均对比</li>
+<li>免费</li>
+</ul>
+<h3 id="3-seeking-alpha">3. Seeking Alpha<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-seeking-alpha" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>网址</strong>：<a href="https://seekingalpha.com" class="external">https://seekingalpha.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>在 <strong>Valuation</strong> 选项卡中展示 PE、PB、PS、EV/EBITDA 与同行业和自身历史对比的图表</li>
+<li>提供 <strong>量化评级</strong>，给出估值、增长、盈利能力的综合评分</li>
+<li>部分功能免费</li>
+</ul>
+<h3 id="4-morningstar">4. Morningstar<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-morningstar" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>网址</strong>：<a href="https://www.morningstar.com" class="external">https://www.morningstar.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>提供 <strong>公允估值 (Fair Value Estimate)</strong> 评级</li>
+<li>展示 5 星评级体系和公允价值区间</li>
+<li>免费版可以看到部分数据</li>
+</ul>
+<h3 id="5-simply-wall-st">5. Simply Wall St<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-simply-wall-st" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>网址</strong>：<a href="https://simplywall.st" class="external">https://simplywall.st<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>数据可视化做得好，适合新手</li>
+<li>以图表形式展示估值指标和历史趋势</li>
+<li>部分免费</li>
+</ul>
+<hr/>
+<h2 id="估值分析流程新手推荐">估值分析流程（新手推荐）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#估值分析流程新手推荐" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>对于初学者，建议按以下步骤评估一只股票是否值得买入：</p>
+<ol>
+<li><strong>行业定位</strong>：这家公司属于什么行业？这个行业用什么估值指标？</li>
+<li><strong>市盈率先行</strong>：查看 PE，与行业平均 PE 对比</li>
+<li><strong>增长匹配检查</strong>：使用 PEG，看 PE 是否合理覆盖增长率</li>
+<li><strong>盈利能力评估</strong>：查看 ROE，判断公司盈利能力</li>
+<li><strong>财务安全</strong>：结合 PB 和负债率，看风险水平</li>
+<li><strong>同行对照</strong>：放在行业板块中比较，最好处于行业中等偏上</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>重要提醒</strong>：估值指标只是工具，低估值不代表马上会上涨，高估值也不代表马上会下跌。估值 + 增长 + 市场情绪，三者结合才有完整的判断。</p>
+</blockquote></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-15" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#估值指标" data-for="估值指标">估值指标</a></li><li class="depth-1"><a href="#一市盈率-pe--price-to-earnings" data-for="一市盈率-pe--price-to-earnings">一、市盈率 (PE / Price-to-Earnings)</a></li><li class="depth-2"><a href="#含义" data-for="含义">含义</a></li><li class="depth-2"><a href="#两种-pe" data-for="两种-pe">两种 PE</a></li><li class="depth-2"><a href="#适用行业" data-for="适用行业">适用行业</a></li><li class="depth-2"><a href="#pe-基准参考" data-for="pe-基准参考">PE 基准参考</a></li><li class="depth-2"><a href="#局限性" data-for="局限性">局限性</a></li><li class="depth-1"><a href="#二市净率-pb--price-to-book" data-for="二市净率-pb--price-to-book">二、市净率 (PB / Price-to-Book)</a></li><li class="depth-2"><a href="#含义-1" data-for="含义-1">含义</a></li><li class="depth-2"><a href="#适用行业-1" data-for="适用行业-1">适用行业</a></li><li class="depth-2"><a href="#局限性-1" data-for="局限性-1">局限性</a></li><li class="depth-1"><a href="#三市销率-ps--price-to-sales" data-for="三市销率-ps--price-to-sales">三、市销率 (PS / Price-to-Sales)</a></li><li class="depth-2"><a href="#含义-2" data-for="含义-2">含义</a></li><li class="depth-2"><a href="#适用行业-2" data-for="适用行业-2">适用行业</a></li><li class="depth-2"><a href="#局限性-2" data-for="局限性-2">局限性</a></li><li class="depth-1"><a href="#四peg-市盈率相对盈利增长率" data-for="四peg-市盈率相对盈利增长率">四、PEG (市盈率相对盈利增长率)</a></li><li class="depth-2"><a href="#含义-3" data-for="含义-3">含义</a></li><li class="depth-2"><a href="#判断标准" data-for="判断标准">判断标准</a></li><li class="depth-2"><a href="#适用行业-3" data-for="适用行业-3">适用行业</a></li><li class="depth-2"><a href="#局限性-3" data-for="局限性-3">局限性</a></li><li class="depth-1"><a href="#五净资产收益率-roe--return-on-equity" data-for="五净资产收益率-roe--return-on-equity">五、净资产收益率 (ROE / Return on Equity)</a></li><li class="depth-2"><a href="#含义-4" data-for="含义-4">含义</a></li><li class="depth-2"><a href="#roe-分解杜邦分析" data-for="roe-分解杜邦分析">ROE 分解（杜邦分析）</a></li><li class="depth-2"><a href="#适用行业-4" data-for="适用行业-4">适用行业</a></li><li class="depth-2"><a href="#局限性-4" data-for="局限性-4">局限性</a></li><li class="depth-1"><a href="#六股息率-dividend-yield" data-for="六股息率-dividend-yield">六、股息率 (Dividend Yield)</a></li><li class="depth-2"><a href="#含义-5" data-for="含义-5">含义</a></li><li class="depth-2"><a href="#参考标准" data-for="参考标准">参考标准</a></li><li class="depth-2"><a href="#适用行业-5" data-for="适用行业-5">适用行业</a></li><li class="depth-2"><a href="#局限性-5" data-for="局限性-5">局限性</a></li><li class="depth-1"><a href="#七evebitda-企业价值息税折旧摊销前利润" data-for="七evebitda-企业价值息税折旧摊销前利润">七、EV/EBITDA (企业价值/息税折旧摊销前利润)</a></li><li class="depth-2"><a href="#含义-6" data-for="含义-6">含义</a></li><li class="depth-2"><a href="#为什么用-ev-而不是市值" data-for="为什么用-ev-而不是市值">为什么用 EV 而不是市值？</a></li><li class="depth-2"><a href="#适用行业-6" data-for="适用行业-6">适用行业</a></li><li class="depth-2"><a href="#evebitda-的优势" data-for="evebitda-的优势">EV/EBITDA 的优势</a></li><li class="depth-2"><a href="#局限性-6" data-for="局限性-6">局限性</a></li><li class="depth-1"><a href="#估值指标速查表" data-for="估值指标速查表">估值指标速查表</a></li><li class="depth-1"><a href="#美股估值网站推荐" data-for="美股估值网站推荐">美股估值网站推荐</a></li><li class="depth-2"><a href="#1-finviz强烈推荐" data-for="1-finviz强烈推荐">1. Finviz（强烈推荐）</a></li><li class="depth-2"><a href="#2-yahoo-finance" data-for="2-yahoo-finance">2. Yahoo Finance</a></li><li class="depth-2"><a href="#3-seeking-alpha" data-for="3-seeking-alpha">3. Seeking Alpha</a></li><li class="depth-2"><a href="#4-morningstar" data-for="4-morningstar">4. Morningstar</a></li><li class="depth-2"><a href="#5-simply-wall-st" data-for="5-simply-wall-st">5. Simply Wall St</a></li><li class="depth-1"><a href="#估值分析流程新手推荐" data-for="估值分析流程新手推荐">估值分析流程（新手推荐）</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://garden.daniel-liu.top">🌱 秘密花园</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>02-持续形态 | Garden</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto Sans SC:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="🌱 Garden"/><meta property="og:title" content="02-持续形态 | Garden"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="02-持续形态 | Garden"/><meta name="twitter:description" content="持续形态 持续形态（Continuation Patterns）表示当前趋势在短暂休整后将延续原有方向。与反转形态不同，持续形态是”中继站”而不是”终点站”。 本章介绍最常见的持续形态：旗形、三角形态、楔形、矩形/箱体、杯柄形态。 一、旗形 (Flag) 旗形是最可靠的持续形态之一，形态像一面飘扬的旗帜。旗形分为上升旗形和下降旗形。 上升旗形 (Bull Flag) 形态特征 旗杆 (Flagpole)：价格以近乎垂直的角度快速上涨（直线拉升） 旗帜 (Flag)：价格进入回调整理期，在两条向下倾斜的平行线之间波动 回调幅度通常不超过旗杆高度的 1/3 形态持续时间：1-4 周 成交量配合 旗..."/><meta property="og:description" content="持续形态 持续形态（Continuation Patterns）表示当前趋势在短暂休整后将延续原有方向。与反转形态不同，持续形态是”中继站”而不是”终点站”。 本章介绍最常见的持续形态：旗形、三角形态、楔形、矩形/箱体、杯柄形态。 一、旗形 (Flag) 旗形是最可靠的持续形态之一，形态像一面飘扬的旗帜。旗形分为上升旗形和下降旗形。 上升旗形 (Bull Flag) 形态特征 旗杆 (Flagpole)：价格以近乎垂直的角度快速上涨（直线拉升） 旗帜 (Flag)：价格进入回调整理期，在两条向下倾斜的平行线之间波动 回调幅度通常不超过旗杆高度的 1/3 形态持续时间：1-4 周 成交量配合 旗..."/><meta property="og:image:alt" content="持续形态 持续形态（Continuation Patterns）表示当前趋势在短暂休整后将延续原有方向。与反转形态不同，持续形态是”中继站”而不是”终点站”。 本章介绍最常见的持续形态：旗形、三角形态、楔形、矩形/箱体、杯柄形态。 一、旗形 (Flag) 旗形是最可靠的持续形态之一，形态像一面飘扬的旗帜。旗形分为上升旗形和下降旗形。 上升旗形 (Bull Flag) 形态特征 旗杆 (Flagpole)：价格以近乎垂直的角度快速上涨（直线拉升） 旗帜 (Flag)：价格进入回调整理期，在两条向下倾斜的平行线之间波动 回调幅度通常不超过旗杆高度的 1/3 形态持续时间：1-4 周 成交量配合 旗..."/><meta property="og:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:url" content="https://garden.daniel-liu.top/static/og-image.png"/><meta name="twitter:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="garden.daniel-liu.top"/><meta property="og:url" content="https://garden.daniel-liu.top/stock/04-图表形态/02-持续形态"/><meta property="twitter:url" content="https://garden.daniel-liu.top/stock/04-图表形态/02-持续形态"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="持续形态 持续形态（Continuation Patterns）表示当前趋势在短暂休整后将延续原有方向。与反转形态不同，持续形态是”中继站”而不是”终点站”。 本章介绍最常见的持续形态：旗形、三角形态、楔形、矩形/箱体、杯柄形态。 一、旗形 (Flag) 旗形是最可靠的持续形态之一，形态像一面飘扬的旗帜。旗形分为上升旗形和下降旗形。 上升旗形 (Bull Flag) 形态特征 旗杆 (Flagpole)：价格以近乎垂直的角度快速上涨（直线拉升） 旗帜 (Flag)：价格进入回调整理期，在两条向下倾斜的平行线之间波动 回调幅度通常不超过旗杆高度的 1/3 形态持续时间：1-4 周 成交量配合 旗..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2RhbmllbC9Eb2N1bWVudHMvZ2FyZGVuLXNpdGUvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://garden.daniel-liu.top/index.xml"/></head><body data-slug="stock/04-图表形态/02-持续形态"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">🌱 Garden</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;README\&quot;&amp;&amp;node.slugSegment!==\&quot;index\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-39"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-39" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/">stock</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/04-图表形态/">04 图表形态</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>02 持续形态</a></div></nav><h1 class="article-title">02-持续形态</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-18T16:00:00.000Z">2026年5月19日</time><span>11分钟阅读</span></p><ul class="tags"><li><a href="../../tags/图表形态" class="internal tag-link">图表形态</a></li><li><a href="../../tags/持续形态" class="internal tag-link">持续形态</a></li><li><a href="../../tags/技术分析" class="internal tag-link">技术分析</a></li></ul></div></div><article class="popover-hint"><h1 id="持续形态">持续形态<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#持续形态" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>持续形态（Continuation Patterns）表示当前趋势在短暂休整后将延续原有方向。与反转形态不同，持续形态是”中继站”而不是”终点站”。</p>
+<p>本章介绍最常见的持续形态：<strong>旗形</strong>、<strong>三角形态</strong>、<strong>楔形</strong>、<strong>矩形/箱体</strong>、<strong>杯柄形态</strong>。</p>
+<p><img src="../assets/flag-triangle.svg" alt="旗形与三角形"/></p>
+<hr/>
+<h2 id="一旗形-flag">一、旗形 (Flag)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一旗形-flag" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>旗形是最可靠的持续形态之一，形态像一面飘扬的旗帜。旗形分为<strong>上升旗形</strong>和<strong>下降旗形</strong>。</p>
+<h3 id="上升旗形-bull-flag">上升旗形 (Bull Flag)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#上升旗形-bull-flag" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="形态特征">形态特征<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#形态特征" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>旗杆 (Flagpole)</strong>：价格以近乎垂直的角度快速上涨（直线拉升）</li>
+<li><strong>旗帜 (Flag)</strong>：价格进入回调整理期，在两条<strong>向下倾斜的平行线</strong>之间波动</li>
+<li>回调幅度通常不超过旗杆高度的 <strong>1/3</strong></li>
+<li>形态持续时间：1-4 周</li>
+</ul>
+<h4 id="成交量配合">成交量配合<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#成交量配合" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>旗杆阶段：成交量<strong>急剧放大</strong></li>
+<li>旗帜（整理）阶段：成交量<strong>逐步萎缩</strong>（缩量回调）</li>
+<li>突破阶段：成交量再次放大</li>
+</ul>
+<h4 id="如何交易">如何交易<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#如何交易" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>价格突破旗帜上轨（下降通道的上沿）时买入</li>
+<li>目标价 = 旗杆的长度 + 突破点价格</li>
+<li>止损设在旗帜下轨下方</li>
+</ul>
+<h4 id="两个不">两个”不”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#两个不" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ol>
+<li>旗帜<strong>不能太短</strong>（至少 3 根 K 线才构成整理形态）</li>
+<li>旗帜不能太规整——稍微有点毛刺的旗形更可靠，太完美的形态往往是陷阱</li>
+</ol>
+<hr/>
+<h3 id="下降旗形-bear-flag">下降旗形 (Bear Flag)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#下降旗形-bear-flag" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>下降旗形是上升旗形的镜像，出现在下跌趋势中。</p>
+<h4 id="形态特征-1">形态特征<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#形态特征-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>旗杆</strong>：价格快速下跌</li>
+<li><strong>旗帜</strong>：价格小幅反弹整理，在两条<strong>向上倾斜的平行线</strong>之间波动</li>
+<li>反弹幅度通常不超过旗杆高度的 1/3</li>
+</ul>
+<h4 id="交易方式">交易方式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#交易方式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>价格跌破旗帜下轨时做空</li>
+<li>目标价 = 旗杆的长度 + 突破点价格（向下计算）</li>
+<li>止损设在旗帜上轨上方</li>
+</ul>
+<hr/>
+<h2 id="二三角形态-triangle">二、三角形态 (Triangle)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二三角形态-triangle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>三角形态是最常见的整理形态之一，分为<strong>上升三角形</strong>、<strong>下降三角形</strong>和<strong>对称三角形</strong>。</p>
+<h3 id="上升三角形-ascending-triangle">上升三角形 (Ascending Triangle)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#上升三角形-ascending-triangle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="形态特征-2">形态特征<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#形态特征-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>上边：<strong>水平</strong>阻力线（价格多次在同一价位受阻）</li>
+<li>下边：<strong>向上倾斜</strong>的支撑线（每次回调的低点逐步抬高）</li>
+<li>形态由两条线收敛组成</li>
+</ul>
+<h4 id="含义">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>上升三角形是<strong>看涨</strong>信号。水平阻力线代表空头防线，而向上抬高的低点说明多头力量在逐步增强，最终将突破阻力。</p>
+<h4 id="成交量配合-1">成交量配合<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#成交量配合-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>形态形成过程中：成交量总体<strong>递减</strong></li>
+<li>突破方向：<strong>向上放量突破</strong>（如果缩量突破，可能是假突破）</li>
+</ul>
+<h4 id="目标价位计算">目标价位计算<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#目标价位计算" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>测量三角形最宽处的垂直距离（第一条边的高度），记作 H</li>
+<li>目标价 = 突破点 + H</li>
+</ul>
+<hr/>
+<h3 id="下降三角形-descending-triangle">下降三角形 (Descending Triangle)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#下降三角形-descending-triangle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="形态特征-3">形态特征<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#形态特征-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>下边：<strong>水平</strong>支撑线（价格多次在同一价位获得支撑）</li>
+<li>上边：<strong>向下倾斜</strong>的阻力线（每次反弹的高点越来越低）</li>
+<li>形态由两条线收敛组成</li>
+</ul>
+<h4 id="含义-1">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>下降三角形是<strong>看跌</strong>信号。水平支撑线虽然暂时守住，但多头反弹力量越来越弱（每次高点降低），最终将跌破支撑。</p>
+<h4 id="成交量配合-2">成交量配合<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#成交量配合-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>形态形成过程中：成交量递减</li>
+<li>向下破位：不需要放量也可以成立（下跌可以无量）</li>
+<li>但如果破位后放量下跌，可信度更高</li>
+</ul>
+<h4 id="目标价位计算-1">目标价位计算<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#目标价位计算-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>目标价 = 突破点 - H（最宽处的垂直距离）</p>
+<hr/>
+<h3 id="对称三角形-symmetrical-triangle">对称三角形 (Symmetrical Triangle)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#对称三角形-symmetrical-triangle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="形态特征-4">形态特征<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#形态特征-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>上边：<strong>向下倾斜</strong>的阻力线（高点越来越低）</li>
+<li>下边：<strong>向上倾斜</strong>的支撑线（低点越来越高）</li>
+<li>形态呈收敛状，两条线趋向于汇合</li>
+</ul>
+<h4 id="含义-2">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>对称三角形是<strong>中性</strong>形态，表示多空双方力量暂时均衡。突破方向决定后续走势：</p>
+<ul>
+<li>在上升趋势中，倾向于向上突破</li>
+<li>在下降趋势中，倾向于向下突破</li>
+</ul>
+<h4 id="成交量配合-3">成交量配合<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#成交量配合-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>形态形成过程中：成交量<strong>持续萎缩</strong>至最低水平</li>
+<li>突破时：<strong>成交量必须明显放大</strong></li>
+</ul>
+<h4 id="目标价位计算-2">目标价位计算<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#目标价位计算-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>与上升三角形相同：目标价 = 突破点 ± H</p>
+<h4 id="假突破识别">假突破识别<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#假突破识别" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>突破幅度小于 3% 且成交量不足 → 可能是假突破</li>
+<li>突破后立即回到三角区内 → 确认假突破</li>
+</ul>
+<hr/>
+<h2 id="三楔形-wedge">三、楔形 (Wedge)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三楔形-wedge" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>楔形与三角形态相似，区别在于<strong>楔形的两条边是同向倾斜</strong>的（都向上或都向下）。</p>
+<h3 id="上升楔形-rising-wedge">上升楔形 (Rising Wedge)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#上升楔形-rising-wedge" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>两条边都<strong>向上倾斜</strong>，但上边比下边更平缓</li>
+<li>在上升趋势末期出现时，往往是<strong>看跌信号</strong>（形态本身是看跌反转）</li>
+<li>在下降趋势中出现的上升楔形则是<strong>持续看跌</strong>（反弹无力）</li>
+</ul>
+<h3 id="下降楔形-falling-wedge">下降楔形 (Falling Wedge)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#下降楔形-falling-wedge" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>两条边都<strong>向下倾斜</strong>，但下边比上边更平缓</li>
+<li>在下降趋势末期出现时，是<strong>看涨信号</strong></li>
+<li>在上升趋势中出现的下降楔形则是<strong>持续看涨</strong>（回调整理）</li>
+</ul>
+<hr/>
+<h2 id="四矩形箱体-rectangle--box-range">四、矩形/箱体 (Rectangle / Box Range)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四矩形箱体-rectangle--box-range" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="形态特征-5">形态特征<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#形态特征-5" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>价格在两条<strong>平行水平线</strong>之间来回波动</li>
+<li>上轨是水平阻力，下轨是水平支撑</li>
+<li>形态像”箱体”或”跑道”</li>
+</ul>
+<h3 id="含义-3">含义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#含义-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>矩形代表多空双方僵持不下，既无法突破也无力跌破。最终必然会朝某个方向突破。</p>
+<ul>
+<li><strong>向上突破</strong> → 继续上涨（在上升趋势中）</li>
+<li><strong>向下破位</strong> → 继续下跌（在下降趋势中）</li>
+</ul>
+<h3 id="如何交易-1">如何交易<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#如何交易-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>箱体震荡期间</strong>：在箱体下轨买入、上轨卖出（高抛低吸）</li>
+<li><strong>突破瞬间</strong>：按突破方向顺势跟随</li>
+<li>箱体的宽度（持续时间）越长，突破后的目标空间越大</li>
+</ul>
+<h3 id="目标价位计算-3">目标价位计算<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#目标价位计算-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>目标价 = 箱体高度（上轨-下轨）的 1:1 测量</li>
+<li>例如箱体高度 5 元，向上突破后目标 = 上轨 + 5 元</li>
+</ul>
+<h3 id="成交量特征">成交量特征<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#成交量特征" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>箱体内部：成交量逐渐萎缩</li>
+<li>突破瞬间：成交量放大</li>
+<li>如果是假突破，成交量通常不足</li>
+</ul>
+<hr/>
+<h2 id="五杯柄形态-cup-and-handle">五、杯柄形态 (Cup and Handle)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五杯柄形态-cup-and-handle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>杯柄形态是一种<strong>中长期看涨持续形态</strong>，时间跨度常为 2-6 个月甚至更长。</p>
+<h3 id="形态特征-6">形态特征<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#形态特征-6" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>杯子 (Cup)</strong>：
+<ul>
+<li>形状像圆底——“U”形而非”V”形</li>
+<li>左边下跌，右边缓慢回升</li>
+<li>左右两边的价格高点大致在同一水平线</li>
+<li>深度不应超过前期涨幅的 1/3</li>
+</ul>
+</li>
+<li><strong>手柄 (Handle)</strong>：
+<ul>
+<li>杯子右侧形成后，价格小幅回调</li>
+<li>回调幅度通常是杯子涨幅的 <strong>10-15%</strong></li>
+<li>回调方向偏向<strong>向下倾斜</strong>的通道</li>
+<li>持续时间约 1-4 周</li>
+</ul>
+</li>
+</ul>
+<h3 id="成交量的关键特征">成交量的关键特征<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#成交量的关键特征" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>杯子左半部分（下跌段）：成交量较大</li>
+<li>杯子底部（圆弧底）：成交量极度萎缩</li>
+<li>杯子右半部分（上涨段）：成交量开始温和放大</li>
+<li>手柄部分（回调段）：成交量明显萎缩</li>
+<li><strong>突破杯柄右沿时</strong>：成交量必须强劲放大</li>
+</ul>
+<h3 id="目标价位计算-4">目标价位计算<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#目标价位计算-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>测量杯子深度（杯底到杯口的高度），记作 H</li>
+<li>目标价 = 杯柄突破点 + H</li>
+</ul>
+<h3 id="形态要点">形态要点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#形态要点" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>“U”形底比”V”形底更可靠</li>
+<li>杯底应窄小，不宜过宽</li>
+<li>手柄的下段应该是缩量回调</li>
+<li>如果手柄呈向上倾斜，形态较弱</li>
+<li>杯柄形态在周线图上更为可靠</li>
+</ul>
+<hr/>
+<h2 id="持续形态总结">持续形态总结<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#持续形态总结" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>形态</th><th>趋势前提</th><th>突破方向</th><th>关键成交量信号</th><th>时间跨度</th></tr></thead><tbody><tr><td>上升旗形</td><td>上涨趋势</td><td>向上</td><td>旗杆放量，旗帜缩量</td><td>1-4 周</td></tr><tr><td>下降旗形</td><td>下跌趋势</td><td>向下</td><td>旗杆放量，旗帜缩量</td><td>1-4 周</td></tr><tr><td>上升三角形</td><td>上涨趋势</td><td>向上</td><td>收敛期缩量，突破放量</td><td>数周-月</td></tr><tr><td>下降三角形</td><td>下跌趋势</td><td>向下</td><td>缩量收敛，破位确认</td><td>数周-月</td></tr><tr><td>对称三角形</td><td>中性</td><td>顺趋势</td><td>收敛期缩量至最低</td><td>数周-月</td></tr><tr><td>上升楔形</td><td>看跌</td><td>向下</td><td>缩量收敛</td><td>3-6 周</td></tr><tr><td>下降楔形</td><td>看涨</td><td>向上</td><td>缩量收敛</td><td>3-6 周</td></tr><tr><td>矩形/箱体</td><td>中性</td><td>顺趋势</td><td>缩量整理，放量突破</td><td>数周-数月</td></tr><tr><td>杯柄形态</td><td>上涨趋势</td><td>向上</td><td>杯底缩量，突破放量</td><td>2-6 个月</td></tr></tbody></table></div>
+<blockquote>
+<p>⚠️ <strong>重要提醒</strong>：持续形态的”持续”只是概率上的偏向。任何时候都有可能演变为反转形态。务必设好止损。</p>
+</blockquote></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-13" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#持续形态" data-for="持续形态">持续形态</a></li><li class="depth-1"><a href="#一旗形-flag" data-for="一旗形-flag">一、旗形 (Flag)</a></li><li class="depth-2"><a href="#上升旗形-bull-flag" data-for="上升旗形-bull-flag">上升旗形 (Bull Flag)</a></li><li class="depth-2"><a href="#下降旗形-bear-flag" data-for="下降旗形-bear-flag">下降旗形 (Bear Flag)</a></li><li class="depth-1"><a href="#二三角形态-triangle" data-for="二三角形态-triangle">二、三角形态 (Triangle)</a></li><li class="depth-2"><a href="#上升三角形-ascending-triangle" data-for="上升三角形-ascending-triangle">上升三角形 (Ascending Triangle)</a></li><li class="depth-2"><a href="#下降三角形-descending-triangle" data-for="下降三角形-descending-triangle">下降三角形 (Descending Triangle)</a></li><li class="depth-2"><a href="#对称三角形-symmetrical-triangle" data-for="对称三角形-symmetrical-triangle">对称三角形 (Symmetrical Triangle)</a></li><li class="depth-1"><a href="#三楔形-wedge" data-for="三楔形-wedge">三、楔形 (Wedge)</a></li><li class="depth-2"><a href="#上升楔形-rising-wedge" data-for="上升楔形-rising-wedge">上升楔形 (Rising Wedge)</a></li><li class="depth-2"><a href="#下降楔形-falling-wedge" data-for="下降楔形-falling-wedge">下降楔形 (Falling Wedge)</a></li><li class="depth-1"><a href="#四矩形箱体-rectangle--box-range" data-for="四矩形箱体-rectangle--box-range">四、矩形/箱体 (Rectangle / Box Range)</a></li><li class="depth-2"><a href="#形态特征" data-for="形态特征">形态特征</a></li><li class="depth-2"><a href="#含义" data-for="含义">含义</a></li><li class="depth-2"><a href="#如何交易" data-for="如何交易">如何交易</a></li><li class="depth-2"><a href="#目标价位计算" data-for="目标价位计算">目标价位计算</a></li><li class="depth-2"><a href="#成交量特征" data-for="成交量特征">成交量特征</a></li><li class="depth-1"><a href="#五杯柄形态-cup-and-handle" data-for="五杯柄形态-cup-and-handle">五、杯柄形态 (Cup and Handle)</a></li><li class="depth-2"><a href="#形态特征-1" data-for="形态特征-1">形态特征</a></li><li class="depth-2"><a href="#成交量的关键特征" data-for="成交量的关键特征">成交量的关键特征</a></li><li class="depth-2"><a href="#目标价位计算-1" data-for="目标价位计算-1">目标价位计算</a></li><li class="depth-2"><a href="#形态要点" data-for="形态要点">形态要点</a></li><li class="depth-1"><a href="#持续形态总结" data-for="持续形态总结">持续形态总结</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://garden.daniel-liu.top">🌱 秘密花园</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript.js" type="module" data-persist="true"></script></html>

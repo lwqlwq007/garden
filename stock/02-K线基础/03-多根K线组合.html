@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>03-多根K线组合 | Garden</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto Sans SC:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="🌱 Garden"/><meta property="og:title" content="03-多根K线组合 | Garden"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="03-多根K线组合 | Garden"/><meta name="twitter:description" content="多根 K 线组合 单根 K 线是”单词”，多根 K 线组合才是”句子”。组合形态比单根形态可靠性更高，是技术分析的核心工具之一。 1."/><meta property="og:description" content="多根 K 线组合 单根 K 线是”单词”，多根 K 线组合才是”句子”。组合形态比单根形态可靠性更高，是技术分析的核心工具之一。 1."/><meta property="og:image:alt" content="多根 K 线组合 单根 K 线是”单词”，多根 K 线组合才是”句子”。组合形态比单根形态可靠性更高，是技术分析的核心工具之一。 1."/><meta property="og:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:url" content="https://garden.daniel-liu.top/static/og-image.png"/><meta name="twitter:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="garden.daniel-liu.top"/><meta property="og:url" content="https://garden.daniel-liu.top/stock/02-K线基础/03-多根K线组合"/><meta property="twitter:url" content="https://garden.daniel-liu.top/stock/02-K线基础/03-多根K线组合"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="多根 K 线组合 单根 K 线是”单词”，多根 K 线组合才是”句子”。组合形态比单根形态可靠性更高，是技术分析的核心工具之一。 1."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2RhbmllbC9Eb2N1bWVudHMvZ2FyZGVuLXNpdGUvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://garden.daniel-liu.top/index.xml"/></head><body data-slug="stock/02-K线基础/03-多根K线组合"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">🌱 Garden</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;README\&quot;&amp;&amp;node.slugSegment!==\&quot;index\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-24"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-24" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/">stock</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/02-K线基础/">02 K线基础</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>03 多根K线组合</a></div></nav><h1 class="article-title">03-多根K线组合</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-18T16:00:00.000Z">2026年5月19日</time><span>10分钟阅读</span></p><ul class="tags"><li><a href="../../tags/stock" class="internal tag-link">stock</a></li><li><a href="../../tags/k-line" class="internal tag-link">k-line</a></li><li><a href="../../tags/candlestick-patterns" class="internal tag-link">candlestick-patterns</a></li><li><a href="../../tags/multi-candle" class="internal tag-link">multi-candle</a></li><li><a href="../../tags/" class="internal tag-link"></a></li></ul></div></div><article class="popover-hint"><h1 id="多根-k-线组合">多根 K 线组合<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#多根-k-线组合" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>单根 K 线是”单词”，多根 K 线组合才是”句子”。组合形态比单根形态可靠性更高，是技术分析的核心工具之一。</p>
+<hr/>
+<h2 id="1-吞没形态engulfing-pattern">1. 吞没形态（Engulfing Pattern）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-吞没形态engulfing-pattern" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>两根 K 线组成，第二根 K 线的实体完全”吞没”第一根 K 线的实体（影线不用管）。</p>
+<h3 id="看涨吞没bullish-engulfing">看涨吞没（Bullish Engulfing）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#看涨吞没bullish-engulfing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/engulfing-pattern.svg" alt="吞没形态"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>第一根是小阴线，第二根是大阳线，阳线实体完全覆盖阴线实体</td></tr><tr><td>出现位置</td><td><strong>下跌趋势末端</strong></td></tr><tr><td>代表意义</td><td>空头力量被多头彻底碾压，反转信号强烈</td></tr><tr><td>需确认</td><td>阳线<strong>成交量放大</strong>更可靠；下一根 K 线继续收阳则确认反转</td></tr></tbody></table></div>
+<h3 id="看跌吞没bearish-engulfing">看跌吞没（Bearish Engulfing）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#看跌吞没bearish-engulfing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/engulfing-pattern.svg" alt="吞没形态"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>第一根是小阳线，第二根是大阴线，阴线实体完全覆盖阳线实体</td></tr><tr><td>出现位置</td><td><strong>上涨趋势末端</strong></td></tr><tr><td>代表意义</td><td>多头被空头反扑吞没，顶部反转信号</td></tr><tr><td>需确认</td><td>阴线<strong>放量</strong>更可靠；下一根 K 线继续收阴确认下跌</td></tr></tbody></table></div>
+<blockquote>
+<p><strong>注意</strong>：两根 K 线影线可以忽略，只看实体是否完全覆盖。</p>
+</blockquote>
+<hr/>
+<h2 id="2-乌云盖顶--刺透形态">2. 乌云盖顶 &amp; 刺透形态<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-乌云盖顶--刺透形态" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="乌云盖顶dark-cloud-cover-顶部看跌">乌云盖顶（Dark Cloud Cover）— 顶部看跌<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#乌云盖顶dark-cloud-cover-顶部看跌" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/dark-cloud-piercing.svg" alt="乌云盖顶"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>一根大阳线后紧接一根大阴线，阴线开盘价高于阳线最高价，收盘价跌入阳线实体的 <strong>1/2 以下</strong></td></tr><tr><td>出现位置</td><td><strong>上涨趋势末端</strong></td></tr><tr><td>代表意义</td><td>乌云压顶，空头强势反扑，把多头成果吞噬了一大半</td></tr><tr><td>需确认</td><td>阴线实体越长、扎入越深（超过 1/2），看跌信号越强；下一根收阴确认</td></tr></tbody></table></div>
+<h3 id="刺透形态piercing-pattern-底部看涨">刺透形态（Piercing Pattern）— 底部看涨<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#刺透形态piercing-pattern-底部看涨" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/dark-cloud-piercing.svg" alt="刺透形态"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>一根大阴线后紧接一根大阳线，阳线开盘价低于阴线最低价，收盘价刺入阴线实体的 <strong>1/2 以上</strong></td></tr><tr><td>出现位置</td><td><strong>下跌趋势末端</strong></td></tr><tr><td>代表意义</td><td>多头绝地反击，“刺穿”了空头的防线</td></tr><tr><td>需确认</td><td>阳线实体越长、刺入越深，看涨信号越强；配合放量效果更好</td></tr></tbody></table></div>
+<blockquote>
+<p><strong>乌云盖顶 vs 看跌吞没</strong>：乌云盖顶要求阴线收盘跌入阳线实体内但未跌破开盘价；看跌吞没则是阴线完全覆盖了阳线，后者更强烈。</p>
+</blockquote>
+<hr/>
+<h2 id="3-晨星--黄昏星启明星--黄昏之星">3. 晨星 &amp; 黄昏星（启明星 &amp; 黄昏之星）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-晨星--黄昏星启明星--黄昏之星" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>三根 K 线组合，是最经典的反转形态之一。</p>
+<h3 id="晨星morning-star--启明星-底部看涨">晨星（Morning Star / 启明星）— 底部看涨<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#晨星morning-star--启明星-底部看涨" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/morning-evening-star.svg" alt="晨星与黄昏星"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>大阴线 → 小实体（跳空低开）→ 大阳线（跳空高开并收复失地）</td></tr><tr><td>出现位置</td><td><strong>下跌趋势末端</strong></td></tr><tr><td>代表意义</td><td>”黎明前的黑暗”：空头衰竭 → 犹豫 → 多头反攻，反转三部曲</td></tr><tr><td>需确认</td><td>中间的小实体若为 <strong>十字星</strong> 信号更强；第三根阳线<strong>放量</strong>确认</td></tr></tbody></table></div>
+<h3 id="黄昏星evening-star--黄昏之星-顶部看跌">黄昏星（Evening Star / 黄昏之星）— 顶部看跌<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#黄昏星evening-star--黄昏之星-顶部看跌" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/morning-evening-star.svg" alt="晨星与黄昏星"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>大阳线 → 小实体（跳空高开）→ 大阴线（跳空低开并跌破阳线实体）</td></tr><tr><td>出现位置</td><td><strong>上涨趋势末端</strong></td></tr><tr><td>代表意义</td><td>”日落西山”：多头疯狂 → 犹豫 → 空头反扑，顶部反转</td></tr><tr><td>需确认</td><td>第三根阴线<strong>放量</strong>确认；如果中间是十字星，称为”黄昏十字星”，信号更强烈</td></tr></tbody></table></div>
+<hr/>
+<h2 id="4-三只乌鸦--三白兵">4. 三只乌鸦 &amp; 三白兵<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-三只乌鸦--三白兵" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-三只乌鸦three-black-crows-顶部看跌"><a href="../../tags/" class="tag-link internal alias" data-slug="tags/index"></a> 三只乌鸦（Three Black Crows）— 顶部看跌<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-三只乌鸦three-black-crows-顶部看跌" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/three-black-crows.svg" alt="三只乌鸦"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>连续三根实体较长的阴线，每根收盘价都比前一根更低，且每根开盘价都在前一根实体中部附近</td></tr><tr><td>出现位置</td><td><strong>上涨趋势末端或高位</strong></td></tr><tr><td>代表意义</td><td>空头连续三天压制，多头毫无还手之力，顶部确认</td></tr><tr><td>需确认</td><td>成交量逐步放大 → 恐慌性出货；成交量逐步缩小 → 只是技术回调</td></tr></tbody></table></div>
+<h3 id="-三白兵three-white-soldiers-底部看涨"><a href="../../tags/" class="tag-link internal alias" data-slug="tags/index"></a> 三白兵（Three White Soldiers）— 底部看涨<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-三白兵three-white-soldiers-底部看涨" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/three-white-soldiers.svg" alt="三白兵"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>连续三根实体较长的阳线，每根收盘价都比前一根更高</td></tr><tr><td>出现位置</td><td><strong>下跌趋势末端或低位</strong></td></tr><tr><td>代表意义</td><td>多头连续发力，趋势反转确立，像三列士兵列队前进</td></tr><tr><td>需确认</td><td>成交量温和放大 → 健康上涨；若第三根出现<strong>巨量长阳</strong> → 可能短期高潮</td></tr></tbody></table></div>
+<hr/>
+<h2 id="5-红三兵three-advancing-white-soldiers">5. 红三兵（Three Advancing White Soldiers）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-红三兵three-advancing-white-soldiers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>红三兵是<strong>三白兵的细分变体</strong>，通常特指：三根阳线实体长度<strong>逐渐缩短</strong>或<strong>相近</strong>，且每根都有较短的上影线，走势稳健。</p>
+<p><img src="../assets/three-advancing.svg" alt="红三兵"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>三根阳线，实体可能逐渐缩短，上影线短，走势稳健扎实</td></tr><tr><td>出现位置</td><td>底部启动阶段或上涨中途</td></tr><tr><td>代表意义</td><td>稳步推升，控盘良好，不是急拉出货</td></tr><tr><td>与三白兵区别</td><td>红三兵更强调<strong>稳健</strong>；三白兵更强调<strong>强势</strong>（实体可以越来越大）</td></tr></tbody></table></div>
+<hr/>
+<h2 id="6-上升三法--下降三法risingfalling-three-methods">6. 上升三法 &amp; 下降三法（Rising/Falling Three Methods）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-上升三法--下降三法risingfalling-three-methods" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>这是一种 <strong>中途持续形态</strong>，而不是反转形态——告诉我们趋势还会继续。</p>
+<h3 id="上升三法rising-three-methods-上涨中继">上升三法（Rising Three Methods）— 上涨中继<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#上升三法rising-three-methods-上涨中继" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/rising-three-methods.svg" alt="上升三法"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>大阳线 → 三根（或更多）小阴线回调（不破阳线低点）→ 另一根大阳线创新高</td></tr><tr><td>出现位置</td><td><strong>上涨趋势中途</strong></td></tr><tr><td>代表意义</td><td>”洗盘再拉”：中间几根小阴线是主力在清洗浮筹，之后继续上攻</td></tr><tr><td>需确认</td><td>中间阴线<strong>缩量</strong>（洗盘特征），最后阳线<strong>放量</strong>（再次启动）</td></tr></tbody></table></div>
+<h3 id="下降三法falling-three-methods-下跌中继">下降三法（Falling Three Methods）— 下跌中继<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#下降三法falling-three-methods-下跌中继" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../assets/falling-three-methods.svg" alt="下降三法"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>形态特征</td><td>大阴线 → 三根（或更多）小阳线反弹（不破阴线高点）→ 另一根大阴线创新低</td></tr><tr><td>出现位置</td><td><strong>下跌趋势中途</strong></td></tr><tr><td>代表意义</td><td>”诱多再杀”：中间几根小阳线诱使散户抄底，然后继续下跌</td></tr><tr><td>需确认</td><td>中间阳线<strong>缩量</strong>，最后阴线<strong>放量</strong></td></tr></tbody></table></div>
+<blockquote>
+<p><strong>核心区别</strong>：上升/下降三法中间的 K 线虽然方向相反，但始终被第一根和最后一根 K 线的范围包裹，整体仍在原趋势方向上。</p>
+</blockquote>
+<hr/>
+<h2 id="组合形态速查表">组合形态速查表<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#组合形态速查表" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>形态</th><th>组成</th><th>趋势位置</th><th>信号方向</th><th>可靠性</th></tr></thead><tbody><tr><td>看涨吞没</td><td>2 根（小阴+大阳）</td><td>低位</td><td>✅ 看涨反转</td><td>★★★★</td></tr><tr><td>看跌吞没</td><td>2 根（小阳+大阴）</td><td>高位</td><td>❌ 看跌反转</td><td>★★★★</td></tr><tr><td>乌云盖顶</td><td>2 根（阳+阴）</td><td>高位</td><td>❌ 看跌反转</td><td>★★★</td></tr><tr><td>刺透形态</td><td>2 根（阴+阳）</td><td>低位</td><td>✅ 看涨反转</td><td>★★★</td></tr><tr><td>晨星（启明星）</td><td>3 根（阴+小+阳）</td><td>低位</td><td>✅ 看涨反转</td><td>★★★★★</td></tr><tr><td>黄昏星</td><td>3 根（阳+小+阴）</td><td>高位</td><td>❌ 看跌反转</td><td>★★★★★</td></tr><tr><td>三只乌鸦</td><td>3 根阴线</td><td>高位</td><td>❌ 看跌反转</td><td>★★★★</td></tr><tr><td>三白兵 / 红三兵</td><td>3 根阳线</td><td>低位</td><td>✅ 看涨反转</td><td>★★★★</td></tr><tr><td>上升三法</td><td>5 根（阳+阴+阳）</td><td>上涨中途</td><td>✅ 趋势持续</td><td>★★★★</td></tr><tr><td>下降三法</td><td>5 根（阴+阳+阴）</td><td>下跌中途</td><td>❌ 趋势持续</td><td>★★★★</td></tr></tbody></table></div>
+<hr/>
+<h2 id="-实战注意">📌 实战注意<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-实战注意" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>趋势是第一位的</strong>：在明显的下跌趋势中，即使出现看涨吞没也未必反转；在大牛市中，黄昏星可能只是短暂回调</li>
+<li><strong>位置决定价值</strong>：同样的形态在低位和高位意义完全不同</li>
+<li><strong>成交量是验证器</strong>：没有成交量配合的形态，可靠性打对折</li>
+<li><strong>多周期共振</strong>：如果日 K 出现晨星，同时周 K 也出现支撑位信号，可信度大大提升</li>
+<li><strong>等待确认</strong>：形态出现后，至少等下一根 K 线确认方向再行动</li>
+</ol>
+<blockquote>
+<p><strong>一句话总结</strong>：K 线组合不是水晶球，而是概率工具。理解每个形态背后的<strong>多空博弈逻辑</strong>，远比死记硬背图形更重要。</p>
+</blockquote></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-6" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#多根-k-线组合" data-for="多根-k-线组合">多根 K 线组合</a></li><li class="depth-1"><a href="#1-吞没形态engulfing-pattern" data-for="1-吞没形态engulfing-pattern">1. 吞没形态（Engulfing Pattern）</a></li><li class="depth-2"><a href="#看涨吞没bullish-engulfing" data-for="看涨吞没bullish-engulfing">看涨吞没（Bullish Engulfing）</a></li><li class="depth-2"><a href="#看跌吞没bearish-engulfing" data-for="看跌吞没bearish-engulfing">看跌吞没（Bearish Engulfing）</a></li><li class="depth-1"><a href="#2-乌云盖顶--刺透形态" data-for="2-乌云盖顶--刺透形态">2. 乌云盖顶 &amp; 刺透形态</a></li><li class="depth-2"><a href="#乌云盖顶dark-cloud-cover-顶部看跌" data-for="乌云盖顶dark-cloud-cover-顶部看跌">乌云盖顶（Dark Cloud Cover）— 顶部看跌</a></li><li class="depth-2"><a href="#刺透形态piercing-pattern-底部看涨" data-for="刺透形态piercing-pattern-底部看涨">刺透形态（Piercing Pattern）— 底部看涨</a></li><li class="depth-1"><a href="#3-晨星--黄昏星启明星--黄昏之星" data-for="3-晨星--黄昏星启明星--黄昏之星">3. 晨星 &amp; 黄昏星（启明星 &amp; 黄昏之星）</a></li><li class="depth-2"><a href="#晨星morning-star--启明星-底部看涨" data-for="晨星morning-star--启明星-底部看涨">晨星（Morning Star / 启明星）— 底部看涨</a></li><li class="depth-2"><a href="#黄昏星evening-star--黄昏之星-顶部看跌" data-for="黄昏星evening-star--黄昏之星-顶部看跌">黄昏星（Evening Star / 黄昏之星）— 顶部看跌</a></li><li class="depth-1"><a href="#4-三只乌鸦--三白兵" data-for="4-三只乌鸦--三白兵">4. 三只乌鸦 &amp; 三白兵</a></li><li class="depth-2"><a href="#-三只乌鸦three-black-crows-顶部看跌" data-for="-三只乌鸦three-black-crows-顶部看跌"> 三只乌鸦（Three Black Crows）— 顶部看跌</a></li><li class="depth-2"><a href="#-三白兵three-white-soldiers-底部看涨" data-for="-三白兵three-white-soldiers-底部看涨"> 三白兵（Three White Soldiers）— 底部看涨</a></li><li class="depth-1"><a href="#5-红三兵three-advancing-white-soldiers" data-for="5-红三兵three-advancing-white-soldiers">5. 红三兵（Three Advancing White Soldiers）</a></li><li class="depth-1"><a href="#6-上升三法--下降三法risingfalling-three-methods" data-for="6-上升三法--下降三法risingfalling-three-methods">6. 上升三法 &amp; 下降三法（Rising/Falling Three Methods）</a></li><li class="depth-2"><a href="#上升三法rising-three-methods-上涨中继" data-for="上升三法rising-three-methods-上涨中继">上升三法（Rising Three Methods）— 上涨中继</a></li><li class="depth-2"><a href="#下降三法falling-three-methods-下跌中继" data-for="下降三法falling-three-methods-下跌中继">下降三法（Falling Three Methods）— 下跌中继</a></li><li class="depth-1"><a href="#组合形态速查表" data-for="组合形态速查表">组合形态速查表</a></li><li class="depth-1"><a href="#-实战注意" data-for="-实战注意">📌 实战注意</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://garden.daniel-liu.top">🌱 秘密花园</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript.js" type="module" data-persist="true"></script></html>

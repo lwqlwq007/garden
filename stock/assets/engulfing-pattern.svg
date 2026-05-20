@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-size: 16px; text-anchor: middle; }
+    .label { font-size: 13px; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+    .dashed { stroke: #888; stroke-width: 1; stroke-dasharray: 4 3; fill: none; }
+  </style>
+
+  <text x="400" y="32" class="title">吞没形态</text>
+
+  <!-- ===== LEFT: Bullish Engulfing (看涨吞没) ===== -->
+  <text x="240" y="65" class="subtitle" fill="#22c55e">看涨吞没</text>
+
+  <!-- Day 1: Small red candle -->
+  <line x1="180" y1="285" x2="180" y2="300" class="line" stroke="#ef4444"/>
+  <rect x="165" y="300" width="30" height="28" fill="#ef4444"/>
+  <line x1="180" y1="328" x2="180" y2="355" class="line" stroke="#ef4444"/>
+  <text x="180" y="380" class="label" text-anchor="middle">1</text>
+
+  <!-- Day 2: Large green candle (engulfs day 1) -->
+  <line x1="240" y1="225" x2="240" y2="250" class="line" stroke="#22c55e"/>
+  <rect x="225" y="250" width="30" height="108" fill="#22c55e"/>
+  <line x1="240" y1="358" x2="240" y2="375" class="line" stroke="#22c55e"/>
+  <text x="240" y="380" class="label" text-anchor="middle">2</text>
+
+  <!-- Engulfing bracket -->
+  <line x1="210" y1="248" x2="215" y2="248" class="line"/>
+  <line x1="215" y1="248" x2="215" y2="360" class="line"/>
+  <line x1="215" y1="360" x2="210" y2="360" class="line"/>
+  <polygon points="215,260 205,265 215,270" fill="#888" opacity="0.5"/>
+
+  <!-- ===== RIGHT: Bearish Engulfing (看跌吞没) ===== -->
+  <text x="560" y="65" class="subtitle" fill="#ef4444">看跌吞没</text>
+
+  <!-- Day 1: Small green candle -->
+  <line x1="560" y1="255" x2="560" y2="275" class="line" stroke="#22c55e"/>
+  <rect x="545" y="275" width="30" height="25" fill="#22c55e"/>
+  <line x1="560" y1="300" x2="560" y2="320" class="line" stroke="#22c55e"/>
+  <text x="560" y="380" class="label" text-anchor="middle">1</text>
+
+  <!-- Day 2: Large red candle (engulfs day 1) -->
+  <line x1="620" y1="230" x2="620" y2="255" class="line" stroke="#ef4444"/>
+  <rect x="605" y="255" width="30" height="100" fill="#ef4444"/>
+  <line x1="620" y1="355" x2="620" y2="375" class="line" stroke="#ef4444"/>
+  <text x="620" y="380" class="label" text-anchor="middle">2</text>
+
+  <!-- Engulfing bracket -->
+  <line x1="590" y1="253" x2="585" y2="253" class="line"/>
+  <line x1="585" y1="253" x2="585" y2="357" class="line"/>
+  <line x1="585" y1="357" x2="590" y2="357" class="line"/>
+  <polygon points="585,260 595,265 585,270" fill="#888" opacity="0.5"/>
+
+  <!-- Notes -->
+  <text x="240" y="430" class="label" text-anchor="middle" fill="#aaa">小阴线被大阳线完全吞没</text>
+  <text x="560" y="430" class="label" text-anchor="middle" fill="#aaa">小阳线被大阴线完全吞没</text>
+</svg>

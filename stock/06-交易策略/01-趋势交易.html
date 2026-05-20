@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>01-趋势交易 | Garden</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto Sans SC:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="🌱 Garden"/><meta property="og:title" content="01-趋势交易 | Garden"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="01-趋势交易 | Garden"/><meta name="twitter:description" content="趋势交易 “趋势是你的朋友。” —— 华尔街格言 趋势交易是最经典的交易策略之一，核心理念是：顺着市场的主要方向交易，不抄底不摸顶，只做趋势的跟随者。 本章介绍趋势的定义、道氏理论、趋势线画法、以及支撑阻力的转化。 一、趋势的定义 趋势是价格运动的方向。根据价格的高点和低点的变化，趋势可以分为三种。 上升趋势 (Uptrend) 更高的高点 + 更高的低点（Higher Highs, Higher Lows） 每一个后续的高点（Peak）都高于前一个高点 每一个后续的低点（Trough）都高于前一个低点 表现形式：价格沿着一条向上倾斜的通道运动 下降趋势 (Downtrend) 更低的高点 +..."/><meta property="og:description" content="趋势交易 “趋势是你的朋友。” —— 华尔街格言 趋势交易是最经典的交易策略之一，核心理念是：顺着市场的主要方向交易，不抄底不摸顶，只做趋势的跟随者。 本章介绍趋势的定义、道氏理论、趋势线画法、以及支撑阻力的转化。 一、趋势的定义 趋势是价格运动的方向。根据价格的高点和低点的变化，趋势可以分为三种。 上升趋势 (Uptrend) 更高的高点 + 更高的低点（Higher Highs, Higher Lows） 每一个后续的高点（Peak）都高于前一个高点 每一个后续的低点（Trough）都高于前一个低点 表现形式：价格沿着一条向上倾斜的通道运动 下降趋势 (Downtrend) 更低的高点 +..."/><meta property="og:image:alt" content="趋势交易 “趋势是你的朋友。” —— 华尔街格言 趋势交易是最经典的交易策略之一，核心理念是：顺着市场的主要方向交易，不抄底不摸顶，只做趋势的跟随者。 本章介绍趋势的定义、道氏理论、趋势线画法、以及支撑阻力的转化。 一、趋势的定义 趋势是价格运动的方向。根据价格的高点和低点的变化，趋势可以分为三种。 上升趋势 (Uptrend) 更高的高点 + 更高的低点（Higher Highs, Higher Lows） 每一个后续的高点（Peak）都高于前一个高点 每一个后续的低点（Trough）都高于前一个低点 表现形式：价格沿着一条向上倾斜的通道运动 下降趋势 (Downtrend) 更低的高点 +..."/><meta property="og:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:url" content="https://garden.daniel-liu.top/static/og-image.png"/><meta name="twitter:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="garden.daniel-liu.top"/><meta property="og:url" content="https://garden.daniel-liu.top/stock/06-交易策略/01-趋势交易"/><meta property="twitter:url" content="https://garden.daniel-liu.top/stock/06-交易策略/01-趋势交易"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="趋势交易 “趋势是你的朋友。” —— 华尔街格言 趋势交易是最经典的交易策略之一，核心理念是：顺着市场的主要方向交易，不抄底不摸顶，只做趋势的跟随者。 本章介绍趋势的定义、道氏理论、趋势线画法、以及支撑阻力的转化。 一、趋势的定义 趋势是价格运动的方向。根据价格的高点和低点的变化，趋势可以分为三种。 上升趋势 (Uptrend) 更高的高点 + 更高的低点（Higher Highs, Higher Lows） 每一个后续的高点（Peak）都高于前一个高点 每一个后续的低点（Trough）都高于前一个低点 表现形式：价格沿着一条向上倾斜的通道运动 下降趋势 (Downtrend) 更低的高点 +..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2RhbmllbC9Eb2N1bWVudHMvZ2FyZGVuLXNpdGUvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://garden.daniel-liu.top/index.xml"/></head><body data-slug="stock/06-交易策略/01-趋势交易"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">🌱 Garden</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;README\&quot;&amp;&amp;node.slugSegment!==\&quot;index\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-45"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-45" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/">stock</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/06-交易策略/">06 交易策略</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>01 趋势交易</a></div></nav><h1 class="article-title">01-趋势交易</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-18T16:00:00.000Z">2026年5月19日</time><span>11分钟阅读</span></p><ul class="tags"><li><a href="../../tags/交易策略" class="internal tag-link">交易策略</a></li><li><a href="../../tags/趋势交易" class="internal tag-link">趋势交易</a></li><li><a href="../../tags/技术分析" class="internal tag-link">技术分析</a></li></ul></div></div><article class="popover-hint"><h1 id="趋势交易">趋势交易<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#趋势交易" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>“趋势是你的朋友。” —— 华尔街格言</p>
+</blockquote>
+<p>趋势交易是最经典的交易策略之一，核心理念是：<strong>顺着市场的主要方向交易</strong>，不抄底不摸顶，只做趋势的跟随者。</p>
+<p>本章介绍趋势的定义、道氏理论、趋势线画法、以及支撑阻力的转化。</p>
+<p><img src="../assets/support-resistance.svg" alt="支撑与阻力"/></p>
+<hr/>
+<h2 id="一趋势的定义">一、趋势的定义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一趋势的定义" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>趋势是价格运动的方向。根据价格的高点和低点的变化，趋势可以分为三种。</p>
+<h3 id="上升趋势-uptrend">上升趋势 (Uptrend)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#上升趋势-uptrend" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>更高的高点 + 更高的低点</strong>（Higher Highs, Higher Lows）</p>
+</blockquote>
+<ul>
+<li>每一个后续的高点（Peak）都高于前一个高点</li>
+<li>每一个后续的低点（Trough）都高于前一个低点</li>
+<li>表现形式：价格沿着一条向上倾斜的通道运动</li>
+</ul>
+<h3 id="下降趋势-downtrend">下降趋势 (Downtrend)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#下降趋势-downtrend" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>更低的高点 + 更低的低点</strong>（Lower Highs, Lower Lows）</p>
+</blockquote>
+<ul>
+<li>每一个后续的高点都低于前一个高点</li>
+<li>每一个后续的低点都低于前一个低点</li>
+<li>表现形式：价格沿着一条向下倾斜的通道运动</li>
+</ul>
+<h3 id="横盘趋势-sideways--range">横盘趋势 (Sideways / Range)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#横盘趋势-sideways--range" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>高点和低点基本持平，没有明显的方向</strong></p>
+</blockquote>
+<ul>
+<li>价格在一个水平区间内上下震荡</li>
+<li>多空双方力量均衡</li>
+<li>表现形式：箱体震荡</li>
+</ul>
+<h3 id="趋势的三个时间维度">趋势的三个时间维度<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#趋势的三个时间维度" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>级别</th><th>时间跨度</th><th>说明</th></tr></thead><tbody><tr><td><strong>主要趋势</strong></td><td>1年以上</td><td>牛市/熊市的大方向</td></tr><tr><td><strong>次级趋势</strong></td><td>3周-数月</td><td>主要趋势中的回调/反弹</td></tr><tr><td><strong>小趋势</strong></td><td>数天-数周</td><td>日常波动，噪音较多</td></tr></tbody></table></div>
+<blockquote>
+<p>交易时，<strong>大周期定方向，小周期找入场点</strong>。</p>
+</blockquote>
+<hr/>
+<h2 id="二道氏理论-dow-theory">二、道氏理论 (Dow Theory)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二道氏理论-dow-theory" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>道氏理论是现代技术分析的基石。它由 Charles Dow（道琼斯指数创始人）提出，核心原则至今有效。</p>
+<h3 id="六大基本原则">六大基本原则<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#六大基本原则" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="原则1价格反映一切">原则1：价格反映一切<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#原则1价格反映一切" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>所有已知信息（基本面、情绪、消息）都已反映在价格中。<strong>无需寻找价格以外的原因</strong>。</p>
+<h4 id="原则2市场有三种趋势">原则2：市场有三种趋势<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#原则2市场有三种趋势" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>主要趋势 (Primary Trend)</strong>：持续 1 年以上的大方向</li>
+<li><strong>次级趋势 (Secondary Trend)</strong>：主要趋势中的反向修正，持续 3 周-数月</li>
+<li><strong>小趋势 (Minor Trend)</strong>：日常波动，持续时间 &lt; 3 周</li>
+</ul>
+<h4 id="原则3主要趋势有三个阶段">原则3：主要趋势有三个阶段<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#原则3主要趋势有三个阶段" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>阶段</th><th>上升趋势</th><th>下降趋势</th></tr></thead><tbody><tr><td><strong>第1阶段（积累/派发）</strong></td><td>少数聪明资金买入</td><td>少数聪明资金卖出</td></tr><tr><td><strong>第2阶段（跟进）</strong></td><td>大众追涨入场</td><td>大众恐慌卖出</td></tr><tr><td><strong>第3阶段（高潮/恐慌）</strong></td><td>大众疯狂买入，聪明资金派发</td><td>最后的恐慌抛售，聪明资金买入</td></tr></tbody></table></div>
+<h4 id="原则4指数必须相互确认">原则4：指数必须相互确认<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#原则4指数必须相互确认" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>道指和标普 500 必须同时确认趋势方向。如果一个创新高，一个不创新高，趋势可能不可靠。</p>
+<h4 id="原则5成交量验证趋势">原则5：成交量验证趋势<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#原则5成交量验证趋势" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>上涨趋势中：<strong>价涨量增</strong>，价跌量缩（健康的上涨）</li>
+<li>如果价涨量缩：趋势可能接近尾声</li>
+</ul>
+<h4 id="原则6趋势一旦确立假设它持续直到反转信号出现">原则6：趋势一旦确立，假设它持续直到反转信号出现<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#原则6趋势一旦确立假设它持续直到反转信号出现" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>不要随意猜顶和抄底。<strong>趋势改变需要明确的信号</strong>。</p>
+<hr/>
+<h2 id="三趋势线画法">三、趋势线画法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三趋势线画法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>趋势线是最简单但最有效的技术分析工具之一。</p>
+<h3 id="上升趋势线">上升趋势线<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#上升趋势线" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>画法</strong>：连接上升趋势中的<strong>两个或更多有效低点</strong></li>
+<li>方向：从下向上倾斜</li>
+<li>作用：作为支撑线——价格回落到趋势线附近时可能反弹</li>
+</ul>
+<h3 id="下降趋势线">下降趋势线<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#下降趋势线" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>画法</strong>：连接下降趋势中的<strong>两个或更多有效高点</strong></li>
+<li>方向：从上向下倾斜</li>
+<li>作用：作为阻力线——价格反弹到趋势线附近时可能受阻</li>
+</ul>
+<h3 id="画趋势线的核心要点">画趋势线的核心要点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#画趋势线的核心要点" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>至少需要两个点</strong>才能连成一条线，<strong>第三个点确认</strong>这条线的有效性</li>
+<li><strong>连实体还是连影线？</strong>——一般连影线（影线代表价格触及的位置）</li>
+<li><strong>越陡峭的趋势线越脆弱</strong>：45 度左右的趋势线最为可靠，超过 60 度的趋势线很容易被跌破</li>
+<li><strong>接触次数越多越有效</strong>：被测试 3 次以上的趋势线比只测试 2 次的更可靠</li>
+<li><strong>趋势线需要调整</strong>：随着趋势发展，需要根据新的低点/高点不断调整</li>
+</ol>
+<h3 id="趋势线的作用">趋势线的作用<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#趋势线的作用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>在趋势中</strong>：作为支撑（上升趋势线）或阻力（下降趋势线）</li>
+<li><strong>被跌破</strong>：上升趋势线被跌破，可能是趋势反转或深度回调的信号</li>
+<li><strong>被突破</strong>：下降趋势线被向上突破，可能是趋势转强的信号</li>
+</ul>
+<h3 id="趋势通道">趋势通道<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#趋势通道" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>在趋势线的基础上，可以在另一侧画一条平行线，形成一个<strong>通道</strong>。</p>
+<ul>
+<li><strong>上升通道</strong>：连接低点（下轨）+ 平行线连接高点（上轨）</li>
+<li><strong>下降通道</strong>：连接高点（上轨）+ 平行线连接低点（下轨）</li>
+</ul>
+<p>通道交易：</p>
+<ul>
+<li>上升通道：下轨买入，上轨卖出</li>
+<li>下降通道：上轨做空，下轨止盈</li>
+</ul>
+<hr/>
+<h2 id="四支撑与阻力转化">四、支撑与阻力转化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四支撑与阻力转化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>支撑和阻力是技术分析中最核心的概念之一。<strong>一旦被有效突破，二者互换角色</strong>。</p>
+<p><img src="../assets/support-resistance.svg" alt="支撑与阻力"/></p>
+<h3 id="支撑-support">支撑 (Support)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#支撑-support" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>支撑是价格下跌到某个位置后停止下跌并反弹的水平。</p>
+<p><strong>支撑形成的原因</strong>：</p>
+<ul>
+<li>前期低点</li>
+<li>趋势线</li>
+<li>重要均线（如 50 日线、200 日线）</li>
+<li>整数关口（心理价位）</li>
+<li>前期密集成交区</li>
+</ul>
+<h3 id="阻力-resistance">阻力 (Resistance)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#阻力-resistance" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>阻力是价格上涨到某个位置后停止上涨并回调的水平。</p>
+<p><strong>阻力形成的原因</strong>：</p>
+<ul>
+<li>前期高点</li>
+<li>趋势线</li>
+<li>重要均线</li>
+<li>整数关口</li>
+<li>前期套牢盘密集区</li>
+</ul>
+<h3 id="支撑与阻力的转化">支撑与阻力的转化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#支撑与阻力的转化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>这是最重要的知识点：</p>
+<blockquote>
+<p><strong>被有效突破的阻力 → 变为未来的支撑</strong>
+<strong>被有效跌破的支撑 → 变为未来的阻力</strong></p>
+</blockquote>
+<p>举例：</p>
+<ul>
+<li>股价突破 100 元（前期阻力位）后回落到 100 元附近，100 元将从阻力变为支撑</li>
+<li>股价跌破 50 元（前期支撑位）后反弹到 50 元附近，50 元将从支撑变为阻力</li>
+</ul>
+<h3 id="如何判断突破有效">如何判断突破有效？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#如何判断突破有效" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>判断方法</th><th>说明</th></tr></thead><tbody><tr><td><strong>3% 原则</strong></td><td>收盘价超出阻力/支撑位 3% 以上</td></tr><tr><td><strong>2天原则</strong></td><td>连续 2 天收盘在阻力/支撑位之外</td></tr><tr><td><strong>成交量确认</strong></td><td>突破时放量</td></tr><tr><td><strong>回踩确认</strong></td><td>突破后价格回踩阻力/支撑位并确认反向</td></tr></tbody></table></div>
+<h3 id="如何画关键支撑和阻力">如何画关键支撑和阻力<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#如何画关键支撑和阻力" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>找明显的高低点</strong>：寻找图中明显的前期高点和前期低点</li>
+<li><strong>找密集成交区</strong>：价格反复触及的区域</li>
+<li><strong>画水平线</strong>：在这些位置画水平线</li>
+<li><strong>关注收盘价</strong>：收盘价是否突破比盘中突破更可靠</li>
+</ol>
+<h3 id="支撑阻力的层次">支撑阻力的层次<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#支撑阻力的层次" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>强支撑/阻力</strong>：多次测试未被突破的位置</li>
+<li><strong>弱支撑/阻力</strong>：只测试过一次的位置</li>
+<li><strong>越大的时间级别支撑阻力越强</strong>：周线级别的支撑比日线级别的支撑更可靠</li>
+</ul>
+<hr/>
+<h2 id="五趋势交易实战流程">五、趋势交易实战流程<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五趋势交易实战流程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="入场流程">入场流程<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#入场流程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>确定大趋势</strong>：查看周线或日线，确定当前主要趋势方向</li>
+<li><strong>等待回调</strong>：不追涨不杀跌，等待价格回调至支撑位</li>
+<li><strong>确认支撑有效</strong>：价格在支撑位附近出现止跌信号（锤子线、吞没形态等）</li>
+<li><strong>入场</strong>：在确认信号出现后入场</li>
+<li><strong>设置止损</strong>：止损设在支撑位下方（上升趋势中）</li>
+</ol>
+<h3 id="出场流程">出场流程<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#出场流程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>追踪止盈</strong>：随着趋势发展，不断提高止损位（叫”移动止损”或 Trailing Stop）</li>
+<li><strong>趋势线被跌破</strong>：如果价格跌破上升趋势线，考虑减仓或清仓</li>
+<li><strong>目标位到达</strong>：前期重要阻力位或通道上轨</li>
+</ol>
+<h3 id="不做趋势交易的情况">不做趋势交易的情况<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#不做趋势交易的情况" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>横盘整理期（没有趋势就不做趋势交易）</li>
+<li>极度震荡的市场（趋势不清晰）</li>
+<li>重大消息发布前（可能导致趋势突变）</li>
+</ul>
+<blockquote>
+<p>💡 <strong>核心心法</strong>：趋势交易不是精准抄底摸顶，而是<strong>捕捉中间最确定的波段</strong>。放弃鱼头和鱼尾，只吃鱼身。</p>
+</blockquote></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-16" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#趋势交易" data-for="趋势交易">趋势交易</a></li><li class="depth-1"><a href="#一趋势的定义" data-for="一趋势的定义">一、趋势的定义</a></li><li class="depth-2"><a href="#上升趋势-uptrend" data-for="上升趋势-uptrend">上升趋势 (Uptrend)</a></li><li class="depth-2"><a href="#下降趋势-downtrend" data-for="下降趋势-downtrend">下降趋势 (Downtrend)</a></li><li class="depth-2"><a href="#横盘趋势-sideways--range" data-for="横盘趋势-sideways--range">横盘趋势 (Sideways / Range)</a></li><li class="depth-2"><a href="#趋势的三个时间维度" data-for="趋势的三个时间维度">趋势的三个时间维度</a></li><li class="depth-1"><a href="#二道氏理论-dow-theory" data-for="二道氏理论-dow-theory">二、道氏理论 (Dow Theory)</a></li><li class="depth-2"><a href="#六大基本原则" data-for="六大基本原则">六大基本原则</a></li><li class="depth-1"><a href="#三趋势线画法" data-for="三趋势线画法">三、趋势线画法</a></li><li class="depth-2"><a href="#上升趋势线" data-for="上升趋势线">上升趋势线</a></li><li class="depth-2"><a href="#下降趋势线" data-for="下降趋势线">下降趋势线</a></li><li class="depth-2"><a href="#画趋势线的核心要点" data-for="画趋势线的核心要点">画趋势线的核心要点</a></li><li class="depth-2"><a href="#趋势线的作用" data-for="趋势线的作用">趋势线的作用</a></li><li class="depth-2"><a href="#趋势通道" data-for="趋势通道">趋势通道</a></li><li class="depth-1"><a href="#四支撑与阻力转化" data-for="四支撑与阻力转化">四、支撑与阻力转化</a></li><li class="depth-2"><a href="#支撑-support" data-for="支撑-support">支撑 (Support)</a></li><li class="depth-2"><a href="#阻力-resistance" data-for="阻力-resistance">阻力 (Resistance)</a></li><li class="depth-2"><a href="#支撑与阻力的转化" data-for="支撑与阻力的转化">支撑与阻力的转化</a></li><li class="depth-2"><a href="#如何判断突破有效" data-for="如何判断突破有效">如何判断突破有效？</a></li><li class="depth-2"><a href="#如何画关键支撑和阻力" data-for="如何画关键支撑和阻力">如何画关键支撑和阻力</a></li><li class="depth-2"><a href="#支撑阻力的层次" data-for="支撑阻力的层次">支撑阻力的层次</a></li><li class="depth-1"><a href="#五趋势交易实战流程" data-for="五趋势交易实战流程">五、趋势交易实战流程</a></li><li class="depth-2"><a href="#入场流程" data-for="入场流程">入场流程</a></li><li class="depth-2"><a href="#出场流程" data-for="出场流程">出场流程</a></li><li class="depth-2"><a href="#不做趋势交易的情况" data-for="不做趋势交易的情况">不做趋势交易的情况</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://garden.daniel-liu.top">🌱 秘密花园</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript.js" type="module" data-persist="true"></script></html>

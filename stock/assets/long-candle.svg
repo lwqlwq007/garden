@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .bull { fill: #22c55e; }
+      .bear { fill: #ef4444; }
+      .label { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 11px; }
+      .title { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #ffffff; font-size: 14px; font-weight: bold; }
+      .anno { stroke: #888888; stroke-width: 1; }
+      .ano { font-family: "PingFang SC","Microsoft YaHei",sans-serif; fill: #888888; font-size: 10px; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="400" height="300"/>
+
+  <text x="200" y="25" text-anchor="middle" class="title">大阳线 &amp; 大阴线</text>
+
+  <!-- ========== LEFT: Long Green Candle ========== -->
+  <!-- upper shadow (very short) -->
+  <rect x="85" y="68" width="8" height="12" class="bull"/>
+  <!-- body (very long) -->
+  <rect x="75" y="80" width="28" height="140" class="bull"/>
+  <!-- lower shadow (very short) -->
+  <rect x="85" y="220" width="8" height="12" class="bull"/>
+
+  <text x="89" y="275" text-anchor="middle" class="label">大阳线</text>
+  <text x="89" y="288" text-anchor="middle" class="ano" fill="#22c55e">买方主导 — 强势看涨</text>
+
+  <!-- ========== RIGHT: Long Red Candle ========== -->
+  <!-- upper shadow (very short) -->
+  <rect x="285" y="68" width="8" height="12" class="bear"/>
+  <!-- body (very long) -->
+  <rect x="275" y="80" width="28" height="140" class="bear"/>
+  <!-- lower shadow (very short) -->
+  <rect x="285" y="220" width="8" height="12" class="bear"/>
+
+  <text x="289" y="275" text-anchor="middle" class="label">大阴线</text>
+  <text x="289" y="288" text-anchor="middle" class="ano" fill="#ef4444">卖方主导 — 强势看跌</text>
+
+  <!-- annotation: short upper shadow (left) -->
+  <line x1="115" y1="68" x2="130" y2="68" class="anno"/>
+  <line x1="122" y1="68" x2="122" y2="80" class="anno" stroke-dasharray="2,2"/>
+  <line x1="115" y1="80" x2="130" y2="80" class="anno"/>
+  <text x="145" y="79" class="ano" text-anchor="start" font-size="8">影线短</text>
+
+  <!-- annotation: long body (left) -->
+  <line x1="115" y1="80" x2="135" y2="80" class="anno"/>
+  <line x1="125" y1="80" x2="125" y2="220" class="anno" stroke-dasharray="2,2"/>
+  <line x1="115" y1="220" x2="135" y2="220" class="anno"/>
+  <polygon points="125,76 121,85 129,85" class="ano"/>
+  <polygon points="125,224 121,215 129,215" class="ano"/>
+  <text x="145" y="155" class="ano" text-anchor="start">实体极长</text>
+
+  <!-- annotation: short upper shadow (right) -->
+  <line x1="315" y1="68" x2="330" y2="68" class="anno"/>
+  <line x1="322" y1="68" x2="322" y2="80" class="anno" stroke-dasharray="2,2"/>
+  <line x1="315" y1="80" x2="330" y2="80" class="anno"/>
+  <text x="335" y="79" class="ano" text-anchor="start" font-size="8">影线短</text>
+
+  <!-- annotation: long body (right) -->
+  <line x1="315" y1="80" x2="335" y2="80" class="anno"/>
+  <line x1="325" y1="80" x2="325" y2="220" class="anno" stroke-dasharray="2,2"/>
+  <line x1="315" y1="220" x2="335" y2="220" class="anno"/>
+  <polygon points="325,76 321,85 329,85" class="ano"/>
+  <polygon points="325,224 321,215 329,215" class="ano"/>
+</svg>

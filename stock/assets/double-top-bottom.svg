@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-size: 16px; text-anchor: middle; }
+    .label { font-size: 13px; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+    .dashed { stroke: #888; stroke-width: 1.5; stroke-dasharray: 5 3; fill: none; }
+  </style>
+
+  <text x="400" y="32" class="title">双顶与双底</text>
+
+  <!-- ===== TOP: M顶（双顶） ===== -->
+  <text x="400" y="65" class="subtitle" fill="#ef4444">M顶（双顶）</text>
+
+  <!-- Price curve -->
+  <path d="M 80,210 
+           C 130,210 150,100 200,100
+           C 260,100 300,225 400,225
+           C 500,225 540,100 600,100
+           C 650,100 670,210 720,210"
+        class="line" stroke="#fff" stroke-width="2.5"/>
+
+  <!-- Peak labels -->
+  <text x="200" y="90" class="subtitle" text-anchor="middle" fill="#fff">左顶</text>
+  <text x="600" y="90" class="subtitle" text-anchor="middle" fill="#fff">右顶</text>
+
+  <!-- Neckline -->
+  <line x1="80" y1="225" x2="720" y2="225" class="dashed" stroke="#ffaa00" stroke-width="2"/>
+  <text x="730" y="229" class="label" fill="#ffaa00">颈线</text>
+
+  <!-- Breakdown arrow -->
+  <line x1="400" y1="225" x2="400" y2="275" class="line" stroke="#ef4444"/>
+  <polygon points="400,268 394,258 406,258" fill="#ef4444"/>
+  <text x="400" y="290" class="label" text-anchor="middle" fill="#ef4444">跌破</text>
+
+  <!-- Separator -->
+  <line x1="80" y1="305" x2="720" y2="305" class="line" stroke="#444" stroke-width="2"/>
+
+  <!-- ===== BOTTOM: W底（双底） ===== -->
+  <text x="400" y="335" class="subtitle" fill="#22c55e">W底（双底）</text>
+
+  <!-- Price curve -->
+  <path d="M 80,380 
+           C 130,380 150,450 200,450
+           C 260,450 300,370 400,370
+           C 500,370 540,450 600,450
+           C 650,450 670,380 720,380"
+        class="line" stroke="#fff" stroke-width="2.5"/>
+
+  <!-- Valley labels -->
+  <text x="200" y="465" class="subtitle" text-anchor="middle" fill="#fff">左底</text>
+  <text x="600" y="465" class="subtitle" text-anchor="middle" fill="#fff">右底</text>
+
+  <!-- Neckline -->
+  <line x1="80" y1="370" x2="720" y2="370" class="dashed" stroke="#ffaa00" stroke-width="2"/>
+  <text x="730" y="374" class="label" fill="#ffaa00">颈线</text>
+
+  <!-- Breakout arrow -->
+  <line x1="400" y1="370" x2="400" y2="320" class="line" stroke="#22c55e"/>
+  <polygon points="400,328 394,338 406,338" fill="#22c55e"/>
+  <text x="400" y="315" class="label" text-anchor="middle" fill="#22c55e">突破</text>
+</svg>

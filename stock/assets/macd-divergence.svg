@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-size: 16px; text-anchor: middle; }
+    .label { font-size: 13px; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+    .dashed { stroke: #888; stroke-width: 1.5; stroke-dasharray: 5 3; fill: none; }
+  </style>
+
+  <text x="400" y="32" class="title">MACD 顶背离</text>
+
+  <!-- ===== TOP PANEL: Price ===== -->
+  <rect x="75" y="50" width="650" height="215" fill="none" stroke="#333" stroke-width="1" rx="4"/>
+  <text x="400" y="70" class="subtitle">价格走势</text>
+
+  <!-- Price curve (making higher highs) -->
+  <path d="M 100,240 
+           C 150,240 170,180 220,160
+           C 260,145 280,130 320,120
+           C 360,110 380,90 420,80
+           C 460,70 480,55 520,60
+           C 560,65 580,80 620,100
+           C 660,120 680,150 700,160"
+        class="line" stroke="#fff" stroke-width="2.5" fill="none"/>
+
+  <!-- Price peaks -->
+  <circle cx="220" cy="160" r="4" fill="#fff"/>
+  <text x="220" y="150" class="label" text-anchor="middle">P1</text>
+
+  <circle cx="420" cy="80" r="4" fill="#fff"/>
+  <text x="420" y="70" class="label" text-anchor="middle">P2</text>
+
+  <circle cx="620" cy="100" r="4" fill="#fff"/>
+  <text x="620" y="90" class="label" text-anchor="middle">P3</text>
+
+  <!-- Trend line connecting price peaks (upward) -->
+  <line x1="220" y1="160" x2="420" y2="80" class="dashed" stroke="#22c55e"/>
+  <line x1="420" y1="80" x2="620" y2="100" class="dashed" stroke="#22c55e"/>
+  <text x="420" y="115" class="label" text-anchor="middle" fill="#22c55e">价格创新高 ↑</text>
+
+  <!-- Vertical dashed lines from price peaks down -->
+  <line x1="220" y1="160" x2="220" y2="310" class="dashed" stroke="#444"/>
+  <line x1="420" y1="80" x2="420" y2="310" class="dashed" stroke="#444"/>
+  <line x1="620" y1="100" x2="620" y2="310" class="dashed" stroke="#444"/>
+
+  <!-- ===== BOTTOM PANEL: MACD ===== -->
+  <rect x="75" y="280" width="650" height="185" fill="none" stroke="#333" stroke-width="1" rx="4"/>
+  <text x="400" y="300" class="subtitle">MACD 指标</text>
+
+  <!-- Zero line -->
+  <line x1="100" y1="380" x2="700" y2="380" class="dashed" stroke="#555"/>
+  <text x="705" y="384" class="label" fill="#555">0</text>
+
+  <!-- MACD line (making lower highs - divergence!) -->
+  <path d="M 100,420 
+           C 150,420 170,380 220,360
+           C 260,345 280,340 320,370
+           C 360,390 380,395 420,385
+           C 460,375 480,370 520,400
+           C 560,420 580,420 620,410
+           C 660,400 680,410 700,420"
+        class="line" stroke="#ff9500" stroke-width="2.5" fill="none"/>
+
+  <!-- MACD peaks -->
+  <circle cx="220" cy="360" r="4" fill="#ff9500"/>
+  <text x="220" y="350" class="label" text-anchor="middle" fill="#ff9500">M1</text>
+
+  <circle cx="420" cy="385" r="4" fill="#ff9500"/>
+  <text x="420" y="398" class="label" text-anchor="middle" fill="#ff9500">M2</text>
+
+  <circle cx="620" cy="410" r="4" fill="#ff9500"/>
+  <text x="620" y="423" class="label" text-anchor="middle" fill="#ff9500">M3</text>
+
+  <!-- Trend line connecting MACD peaks (downward) -->
+  <line x1="220" y1="360" x2="420" y2="385" class="dashed" stroke="#ef4444"/>
+  <line x1="420" y1="385" x2="620" y2="410" class="dashed" stroke="#ef4444"/>
+  <text x="420" y="340" class="label" text-anchor="middle" fill="#ef4444">MACD未创新高 ↓</text>
+
+  <!-- ===== Divergence annotation ===== -->
+  <rect x="290" y="228" width="220" height="40" fill="#2a0000" rx="6" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="400" y="244" class="subtitle" text-anchor="middle" fill="#ef4444">⚠ 顶背离</text>
+  <text x="400" y="260" class="label" text-anchor="middle" fill="#ff8888">价格新高但 MACD 未新高，下跌信号</text>
+
+  <!-- Connector lines from annotation to both panels -->
+  <line x1="320" y1="228" x2="320" y2="200" class="dashed" stroke="#ef4444" stroke-width="1"/>
+  <line x1="320" y1="268" x2="320" y2="310" class="dashed" stroke="#ef4444" stroke-width="1"/>
+</svg>

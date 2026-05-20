@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-size: 14px; text-anchor: middle; }
+    .label { font-size: 13px; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+    .dashed { stroke: #888; stroke-width: 1; stroke-dasharray: 4 3; fill: none; }
+    .bracket { stroke: #888; stroke-width: 1.5; fill: none; }
+  </style>
+
+  <text x="400" y="32" class="title">单根K线解剖图</text>
+
+  <!-- ===== LEFT: Bullish Candle (Green) ===== -->
+  <!-- Upper wick -->
+  <line x1="240" y1="150" x2="240" y2="200" class="line" stroke="#22c55e"/>
+  <!-- Body (green: close=200 > open=350) -->
+  <rect x="218" y="200" width="44" height="150" fill="#22c55e"/>
+  <!-- Lower wick -->
+  <line x1="240" y1="350" x2="240" y2="420" class="line" stroke="#22c55e"/>
+
+  <!-- Left candle: 最高 label -->
+  <line x1="240" y1="150" x2="100" y2="150" class="dashed"/>
+  <circle cx="240" cy="150" r="3" fill="#888"/>
+  <text x="95" y="154" class="label" text-anchor="end">最高 (High)</text>
+
+  <!-- Left candle: 最低 label -->
+  <line x1="240" y1="420" x2="100" y2="420" class="dashed"/>
+  <circle cx="240" cy="420" r="3" fill="#888"/>
+  <text x="95" y="424" class="label" text-anchor="end">最低 (Low)</text>
+
+  <!-- Left candle: 开盘 label -->
+  <line x1="218" y1="350" x2="120" y2="350" class="line"/>
+  <circle cx="218" cy="350" r="3" fill="#888"/>
+  <text x="115" y="354" class="label" text-anchor="end">开盘 (Open)</text>
+
+  <!-- Left candle: 收盘 label -->
+  <line x1="218" y1="200" x2="120" y2="200" class="line"/>
+  <circle cx="218" cy="200" r="3" fill="#888"/>
+  <text x="115" y="204" class="label" text-anchor="end">收盘 (Close)</text>
+
+  <!-- Left: 上影线 bracket -->
+  <line x1="195" y1="150" x2="180" y2="150" class="bracket"/>
+  <line x1="180" y1="150" x2="180" y2="200" class="bracket"/>
+  <line x1="180" y1="200" x2="195" y2="200" class="bracket"/>
+  <text x="175" y="180" class="label" text-anchor="end">上影线</text>
+
+  <!-- Left: 下影线 bracket -->
+  <line x1="195" y1="350" x2="180" y2="350" class="bracket"/>
+  <line x1="180" y1="350" x2="180" y2="420" class="bracket"/>
+  <line x1="180" y1="420" x2="195" y2="420" class="bracket"/>
+  <text x="175" y="390" class="label" text-anchor="end">下影线</text>
+
+  <!-- Left: candle color label -->
+  <text x="240" y="460" class="subtitle" fill="#22c55e">阳线（上涨）</text>
+
+  <!-- ===== RIGHT: Bearish Candle (Red) ===== -->
+  <!-- Upper wick -->
+  <line x1="560" y1="120" x2="560" y2="200" class="line" stroke="#ef4444"/>
+  <!-- Body (red: open=200 > close=350) -->
+  <rect x="538" y="200" width="44" height="150" fill="#ef4444"/>
+  <!-- Lower wick -->
+  <line x1="560" y1="350" x2="560" y2="430" class="line" stroke="#ef4444"/>
+
+  <!-- Right candle: 最高 label -->
+  <line x1="560" y1="120" x2="700" y2="120" class="dashed"/>
+  <circle cx="560" cy="120" r="3" fill="#888"/>
+  <text x="705" y="124" class="label" text-anchor="start">最高 (High)</text>
+
+  <!-- Right candle: 最低 label -->
+  <line x1="560" y1="430" x2="700" y2="430" class="dashed"/>
+  <circle cx="560" cy="430" r="3" fill="#888"/>
+  <text x="705" y="434" class="label" text-anchor="start">最低 (Low)</text>
+
+  <!-- Right candle: 开盘 label -->
+  <line x1="538" y1="200" x2="680" y2="200" class="line"/>
+  <circle cx="538" cy="200" r="3" fill="#888"/>
+  <text x="685" y="204" class="label" text-anchor="start">开盘 (Open)</text>
+
+  <!-- Right candle: 收盘 label -->
+  <line x1="538" y1="350" x2="680" y2="350" class="line"/>
+  <circle cx="538" cy="350" r="3" fill="#888"/>
+  <text x="685" y="354" class="label" text-anchor="start">收盘 (Close)</text>
+
+  <!-- Right: 上影线 bracket -->
+  <line x1="605" y1="120" x2="620" y2="120" class="bracket"/>
+  <line x1="620" y1="120" x2="620" y2="200" class="bracket"/>
+  <line x1="620" y1="200" x2="605" y2="200" class="bracket"/>
+  <text x="625" y="165" class="label" text-anchor="start">上影线</text>
+
+  <!-- Right: 下影线 bracket -->
+  <line x1="605" y1="350" x2="620" y2="350" class="bracket"/>
+  <line x1="620" y1="350" x2="620" y2="430" class="bracket"/>
+  <line x1="620" y1="430" x2="605" y2="430" class="bracket"/>
+  <text x="625" y="395" class="label" text-anchor="start">下影线</text>
+
+  <!-- Right: candle color label -->
+  <text x="560" y="460" class="subtitle" fill="#ef4444">阴线（下跌）</text>
+</svg>

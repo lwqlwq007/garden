@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-size: 16px; text-anchor: middle; }
+    .label { font-size: 13px; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+    .dashed { stroke: #888; stroke-width: 1; stroke-dasharray: 4 3; fill: none; }
+  </style>
+
+  <text x="400" y="32" class="title">均线交叉：金叉与死叉</text>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="100" x2="720" y2="100" class="dashed" stroke="#333"/>
+  <line x1="80" y1="200" x2="720" y2="200" class="dashed" stroke="#333"/>
+  <line x1="80" y1="300" x2="720" y2="300" class="dashed" stroke="#333"/>
+  <line x1="80" y1="400" x2="720" y2="400" class="dashed" stroke="#333"/>
+
+  <!-- ===== Slow MA (橙线, 慢线, e.g. MA20) ===== -->
+  <polyline points="80,320
+                    140,290
+                    200,260
+                    260,240
+                    320,230
+                    380,230
+                    440,240
+                    500,260
+                    560,280
+                    620,290
+                    720,280"
+            fill="none" stroke="#ff9500" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- ===== Fast MA (蓝线, 快线, e.g. MA5) ===== -->
+  <polyline points="80,350
+                    140,300
+                    200,240
+                    260,190
+                    320,200
+                    380,220
+                    440,250
+                    500,290
+                    560,300
+                    620,280
+                    720,260"
+            fill="none" stroke="#2196f3" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- ===== Golden Cross (金叉) ===== -->
+  <!-- Find intersection: around x=220, y=250 -->
+  <circle cx="220" cy="250" r="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="220" cy="250" r="4" fill="#22c55e"/>
+
+  <!-- Green up arrow -->
+  <line x1="220" y1="250" x2="220" y2="170" class="line" stroke="#22c55e"/>
+  <polygon points="220,178 212,190 228,190" fill="#22c55e"/>
+  <text x="220" y="160" class="subtitle" text-anchor="middle" fill="#22c55e">金叉</text>
+  <text x="220" y="465" class="label" text-anchor="middle" fill="#22c55e">快线上穿慢线</text>
+
+  <!-- ===== Death Cross (死叉) ===== -->
+  <!-- Find intersection: around x=480, y=250 -->
+  <circle cx="480" cy="250" r="8" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <circle cx="480" cy="250" r="4" fill="#ef4444"/>
+
+  <!-- Red down arrow -->
+  <line x1="480" y1="250" x2="480" y2="330" class="line" stroke="#ef4444"/>
+  <polygon points="480,322 472,310 488,310" fill="#ef4444"/>
+  <text x="480" y="345" class="subtitle" text-anchor="middle" fill="#ef4444">死叉</text>
+  <text x="480" y="485" class="label" text-anchor="middle" fill="#ef4444">快线下穿慢线</text>
+
+  <!-- Legend -->
+  <rect x="580" y="68" width="130" height="50" fill="#2a2a2a" rx="4"/>
+  <line x1="590" y1="82" x2="620" y2="82" stroke="#2196f3" stroke-width="2"/>
+  <text x="625" y="86" class="label" fill="#2196f3">快线 (MA5)</text>
+  <line x1="590" y1="105" x2="620" y2="105" stroke="#ff9500" stroke-width="2"/>
+  <text x="625" y="109" class="label" fill="#ff9500">慢线 (MA20)</text>
+</svg>

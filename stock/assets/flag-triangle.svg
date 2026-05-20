@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-size: 16px; text-anchor: middle; }
+    .label { font-size: 13px; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+    .dashed { stroke: #888; stroke-width: 1.5; stroke-dasharray: 5 3; fill: none; }
+  </style>
+
+  <text x="400" y="32" class="title">旗形与三角形</text>
+
+  <!-- ===== TOP: 上升旗形 ===== -->
+  <text x="400" y="65" class="subtitle" fill="#22c55e">上升旗形</text>
+
+  <!-- Steep upward move -->
+  <line x1="100" y1="270" x2="220" y2="120" class="line" stroke="#fff" stroke-width="2.5"/>
+
+  <!-- Flag upper bound -->
+  <line x1="220" y1="120" x2="520" y2="155" class="line" stroke="#fff" stroke-width="2"/>
+
+  <!-- Flag lower bound -->
+  <line x1="260" y1="180" x2="560" y2="215" class="line" stroke="#fff" stroke-width="2"/>
+
+  <!-- Consolidation zigzag within flag -->
+  <polyline points="230,145 260,180 290,140 320,175 350,150 380,180 410,155 440,185 470,160 500,190 530,165 560,200"
+            class="line" stroke="#888" stroke-width="1.5" fill="none"/>
+
+  <!-- Breakout arrow -->
+  <line x1="540" y1="165" x2="580" y2="105" class="line" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="575,110 565,100 555,115" fill="#22c55e"/>
+  <text x="590" y="100" class="label" fill="#22c55e">突破</text>
+
+  <!-- Flag upper/lower labels -->
+  <text x="540" y="150" class="label" fill="#888" font-size="11">上轨</text>
+  <text x="580" y="220" class="label" fill="#888" font-size="11">下轨</text>
+
+  <!-- Separator -->
+  <line x1="80" y1="275" x2="720" y2="275" class="line" stroke="#444" stroke-width="2"/>
+
+  <!-- ===== BOTTOM: 对称三角形 ===== -->
+  <text x="400" y="305" class="subtitle">对称三角形</text>
+
+  <!-- Upper bound (sloping down) -->
+  <line x1="100" y1="310" x2="620" y2="380" class="line" stroke="#ef4444" stroke-width="2"/>
+  
+  <!-- Lower bound (sloping up) -->
+  <line x1="100" y1="430" x2="620" y2="380" class="line" stroke="#22c55e" stroke-width="2"/>
+
+  <!-- Price zigzag inside triangle -->
+  <polyline points="120,370
+                    160,340
+                    200,395
+                    260,360
+                    310,410
+                    370,370
+                    420,400
+                    480,375
+                    530,395
+                    580,385"
+            class="line" stroke="#fff" stroke-width="2" fill="none"/>
+
+  <!-- Apex -->
+  <circle cx="620" cy="380" r="4" fill="#888"/>
+
+  <!-- Breakout arrow upward -->
+  <line x1="620" y1="380" x2="660" y2="310" class="line" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="655,315 645,305 665,305" fill="#22c55e"/>
+  <text x="670" y="305" class="label" fill="#22c55e">突破向上</text>
+
+  <!-- Breakout arrow downward (dashed) -->
+  <line x1="620" y1="380" x2="660" y2="450" class="dashed" stroke="#ef4444" stroke-width="1.5"/>
+  <polygon points="655,445 665,455 645,455" fill="#ef4444" opacity="0.6"/>
+  <text x="670" y="460" class="label" fill="#ef4444" opacity="0.6">突破向下</text>
+
+  <!-- Labels -->
+  <text x="90" y="305" class="label" fill="#ef4444">上轨（阻力）</text>
+  <text x="90" y="440" class="label" fill="#22c55e">下轨（支撑）</text>
+</svg>

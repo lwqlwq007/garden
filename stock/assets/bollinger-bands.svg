@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-size: 16px; text-anchor: middle; }
+    .label { font-size: 13px; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+    .dashed { stroke: #888; stroke-width: 1.5; stroke-dasharray: 5 3; fill: none; }
+    .band { fill: rgba(136, 136, 136, 0.08); }
+  </style>
+
+  <text x="400" y="32" class="title">布林带 (Bollinger Bands)</text>
+
+  <!-- ===== Bollinger Bands ===== -->
+  <!-- Upper band -->
+  <path d="M 80,100 
+           C 200,100 300,140 400,160
+           C 500,180 550,150 600,140
+           C 650,130 700,120 720,120"
+        class="dashed" stroke="#888" stroke-width="1.5" fill="none"/>
+
+  <!-- Middle band (SMA) -->
+  <path d="M 80,230 
+           C 200,230 300,240 400,250
+           C 500,260 550,240 600,235
+           C 650,230 700,230 720,230"
+        class="line" stroke="#fff" stroke-width="2" fill="none"/>
+
+  <!-- Lower band -->
+  <path d="M 80,360 
+           C 200,360 300,340 400,340
+           C 500,340 550,330 600,330
+           C 650,330 700,340 720,360"
+        class="dashed" stroke="#888" stroke-width="1.5" fill="none"/>
+
+  <!-- Fill between upper and lower bands -->
+  <path d="M 80,100 C 200,100 300,140 400,160 C 500,180 550,150 600,140 C 650,130 700,120 720,120
+           L 720,360 C 700,340 650,330 600,330 C 550,330 500,340 400,340 C 300,340 200,360 80,360 Z"
+        class="band"/>
+
+  <!-- ===== Price curve oscillating within bands ===== -->
+  <path d="M 80,230 
+           C 120,170 150,280 200,250
+           C 240,220 270,310 320,290
+           C 360,270 380,200 420,240
+           C 460,270 500,300 540,250
+           C 570,210 600,180 640,210
+           C 670,240 700,280 720,260"
+        class="line" stroke="#2196f3" stroke-width="2.5" fill="none"/>
+
+  <!-- Band labels -->
+  <text x="730" y="118" class="label" fill="#888">上轨</text>
+  <text x="730" y="234" class="label" fill="#fff">中轨 (SMA)</text>
+  <text x="730" y="358" class="label" fill="#888">下轨</text>
+
+  <!-- ===== Squeeze Zone ===== -->
+  <!-- Highlight region where bands narrow -->
+  <rect x="350" y="95" width="100" height="370" fill="none" stroke="#ff9500" stroke-width="1.5" stroke-dasharray="6 3" rx="4"/>
+  
+  <!-- Squeeze brackets on bands -->
+  <line x1="350" y1="155" x2="370" y2="155" class="line" stroke="#ff9500"/>
+  <line x1="450" y1="161" x2="430" y2="161" class="line" stroke="#ff9500"/>
+  <line x1="350" y1="342" x2="370" y2="342" class="line" stroke="#ff9500"/>
+  <line x1="450" y1="340" x2="430" y2="340" class="line" stroke="#ff9500"/>
+
+  <text x="400" y="135" class="subtitle" text-anchor="middle" fill="#ff9500">挤压区</text>
+  <text x="400" y="158" class="label" text-anchor="middle" fill="#ff9500">(Squeeze)</text>
+
+  <!-- Narrow band arrows -->
+  <line x1="360" y1="155" x2="360" y2="342" class="line" stroke="#ff9500" stroke-width="1"/>
+  <polygon points="360,170 355,180 365,180" fill="#ff9500"/>
+  <polygon points="360,327 355,317 365,317" fill="#ff9500"/>
+
+  <line x1="440" y1="161" x2="440" y2="340" class="line" stroke="#ff9500" stroke-width="1"/>
+  <polygon points="440,176 435,186 445,186" fill="#ff9500"/>
+  <polygon points="440,325 435,315 445,315" fill="#ff9500"/>
+
+  <!-- Expansion arrows -->
+  <text x="250" y="175" class="label" fill="#888">宽幅</text>
+  <text x="550" y="175" class="label" fill="#888">宽幅</text>
+
+  <!-- Legend -->
+  <rect x="580" y="60" width="140" height="70" fill="#2a2a2a" rx="4"/>
+  <line x1="590" y1="77" x2="620" y2="77" stroke="#fff" stroke-width="2"/>
+  <text x="625" y="81" class="label">中轨 (SMA)</text>
+  <line x1="590" y1="97" x2="620" y2="97" stroke="#888" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="625" y="101" class="label">上/下轨</text>
+  <line x1="590" y1="117" x2="620" y2="117" stroke="#2196f3" stroke-width="2"/>
+  <text x="625" y="121" class="label">价格</text>
+</svg>

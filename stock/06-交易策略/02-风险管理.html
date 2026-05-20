@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>02-风险管理 | Garden</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto Sans SC:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="🌱 Garden"/><meta property="og:title" content="02-风险管理 | Garden"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="02-风险管理 | Garden"/><meta name="twitter:description" content="风险管理 “交易的第一条规则：不要亏钱。第二条规则：不要忘记第一条。” —— 沃伦·巴菲特 对于一个新手交易者来说，风险管理比盈利更重要。很多人在盈利之前就已经亏光了本金，原因不是判断错了方向，而是没有做好风险管理。 本章介绍：单笔风险控制、仓位计算方法、止损设置、止盈方法、以及最大回撤控制。 一、单笔风险 1-2% 原则 核心概念 每笔交易的风险不应超过总资金的 1-2%。 也就是说，如果总资金是 100,000 美元，任何一笔交易的最大亏损上限为： 1%（保守）：最多亏 1,000 美元 2%（激进）：最多亏 2,000 美元 为什么是 1-2%？ 这是经过大量交易实践验证的”生存法则”：..."/><meta property="og:description" content="风险管理 “交易的第一条规则：不要亏钱。第二条规则：不要忘记第一条。” —— 沃伦·巴菲特 对于一个新手交易者来说，风险管理比盈利更重要。很多人在盈利之前就已经亏光了本金，原因不是判断错了方向，而是没有做好风险管理。 本章介绍：单笔风险控制、仓位计算方法、止损设置、止盈方法、以及最大回撤控制。 一、单笔风险 1-2% 原则 核心概念 每笔交易的风险不应超过总资金的 1-2%。 也就是说，如果总资金是 100,000 美元，任何一笔交易的最大亏损上限为： 1%（保守）：最多亏 1,000 美元 2%（激进）：最多亏 2,000 美元 为什么是 1-2%？ 这是经过大量交易实践验证的”生存法则”：..."/><meta property="og:image:alt" content="风险管理 “交易的第一条规则：不要亏钱。第二条规则：不要忘记第一条。” —— 沃伦·巴菲特 对于一个新手交易者来说，风险管理比盈利更重要。很多人在盈利之前就已经亏光了本金，原因不是判断错了方向，而是没有做好风险管理。 本章介绍：单笔风险控制、仓位计算方法、止损设置、止盈方法、以及最大回撤控制。 一、单笔风险 1-2% 原则 核心概念 每笔交易的风险不应超过总资金的 1-2%。 也就是说，如果总资金是 100,000 美元，任何一笔交易的最大亏损上限为： 1%（保守）：最多亏 1,000 美元 2%（激进）：最多亏 2,000 美元 为什么是 1-2%？ 这是经过大量交易实践验证的”生存法则”：..."/><meta property="og:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:url" content="https://garden.daniel-liu.top/static/og-image.png"/><meta name="twitter:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="garden.daniel-liu.top"/><meta property="og:url" content="https://garden.daniel-liu.top/stock/06-交易策略/02-风险管理"/><meta property="twitter:url" content="https://garden.daniel-liu.top/stock/06-交易策略/02-风险管理"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="风险管理 “交易的第一条规则：不要亏钱。第二条规则：不要忘记第一条。” —— 沃伦·巴菲特 对于一个新手交易者来说，风险管理比盈利更重要。很多人在盈利之前就已经亏光了本金，原因不是判断错了方向，而是没有做好风险管理。 本章介绍：单笔风险控制、仓位计算方法、止损设置、止盈方法、以及最大回撤控制。 一、单笔风险 1-2% 原则 核心概念 每笔交易的风险不应超过总资金的 1-2%。 也就是说，如果总资金是 100,000 美元，任何一笔交易的最大亏损上限为： 1%（保守）：最多亏 1,000 美元 2%（激进）：最多亏 2,000 美元 为什么是 1-2%？ 这是经过大量交易实践验证的”生存法则”：..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2RhbmllbC9Eb2N1bWVudHMvZ2FyZGVuLXNpdGUvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://garden.daniel-liu.top/index.xml"/></head><body data-slug="stock/06-交易策略/02-风险管理"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">🌱 Garden</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;README\&quot;&amp;&amp;node.slugSegment!==\&quot;index\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-47"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-47" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/">stock</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/06-交易策略/">06 交易策略</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>02 风险管理</a></div></nav><h1 class="article-title">02-风险管理</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-18T16:00:00.000Z">2026年5月19日</time><span>10分钟阅读</span></p><ul class="tags"><li><a href="../../tags/交易策略" class="internal tag-link">交易策略</a></li><li><a href="../../tags/风险管理" class="internal tag-link">风险管理</a></li><li><a href="../../tags/仓位管理" class="internal tag-link">仓位管理</a></li><li><a href="../../tags/止损" class="internal tag-link">止损</a></li></ul></div></div><article class="popover-hint"><h1 id="风险管理">风险管理<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#风险管理" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>“交易的第一条规则：不要亏钱。第二条规则：不要忘记第一条。” —— 沃伦·巴菲特</p>
+</blockquote>
+<p>对于一个新手交易者来说，<strong>风险管理比盈利更重要</strong>。很多人在盈利之前就已经亏光了本金，原因不是判断错了方向，而是没有做好风险管理。</p>
+<p>本章介绍：单笔风险控制、仓位计算方法、止损设置、止盈方法、以及最大回撤控制。</p>
+<hr/>
+<h2 id="一单笔风险-1-2-原则">一、单笔风险 1-2% 原则<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一单笔风险-1-2-原则" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="核心概念">核心概念<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心概念" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>每笔交易的风险不应超过总资金的 1-2%。</strong></p>
+<p>也就是说，如果总资金是 100,000 美元，任何一笔交易的最大亏损上限为：</p>
+<ul>
+<li><strong>1%（保守）</strong>：最多亏 1,000 美元</li>
+<li><strong>2%（激进）</strong>：最多亏 2,000 美元</li>
+</ul>
+<h3 id="为什么是-1-2">为什么是 1-2%？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#为什么是-1-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>这是经过大量交易实践验证的”生存法则”：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>单笔风险</th><th>连续亏 10 次后的剩余资金</th><th>需要多少盈利才能回本</th></tr></thead><tbody><tr><td>5%</td><td>100% × (0.95^10) = <strong>59.9%</strong></td><td>67% 盈利才能回本</td></tr><tr><td>10%</td><td>100% × (0.90^10) = <strong>34.9%</strong></td><td>187% 盈利才能回本</td></tr><tr><td>20%</td><td>100% × (0.80^10) = <strong>10.7%</strong></td><td>831% 盈利才能回本</td></tr><tr><td><strong>2%</strong></td><td>100% × (0.98^10) = <strong>81.7%</strong></td><td><strong>22% 即可回本</strong></td></tr></tbody></table></div>
+<h3 id="1-2-不是策略是纪律">1-2% 不是策略，是纪律<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-2-不是策略是纪律" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>即使你的胜率只有 40%，只要盈亏比合适（如 1:2 或 1:3），1-2% 的风险控制也能让你长期盈利。但如果单笔风险超过 5%，一次意外就能让你出局。</p>
+<hr/>
+<h2 id="二仓位计算-position-sizing">二、仓位计算 (Position Sizing)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二仓位计算-position-sizing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>仓位计算的核心公式：</p>
+<blockquote>
+<p><strong>仓位大小 = 总资金 × 风险比例 ÷ 每股止损距离</strong></p>
+</blockquote>
+<h3 id="举例说明">举例说明<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#举例说明" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>情景设置</strong>：</p>
+<ul>
+<li>总资金：$100,000</li>
+<li>风险比例：1%（即最大亏损 $1,000）</li>
+<li>买入价：$50</li>
+<li>止损价：$47</li>
+<li>每股止损距离：<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">50</span><span class="mord">−</span></span></span></span>47 = $3</li>
+</ul>
+<p><strong>计算</strong>：</p>
+<ul>
+<li>可买入股数 = <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mord">÷</span></span></span></span>3 = <strong>333 股</strong></li>
+<li>买入金额 = 333 × <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">50</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4653em;"></span><span class="mord">∗</span><span class="mord">∗</span></span></span></span>16,650**</li>
+<li>建仓后，一旦跌到 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">47</span><span class="mord cjk_fallback">，亏损正好是</span></span></span></span>1,000（1%）</li>
+</ul>
+<h3 id="进阶分批建仓">进阶：分批建仓<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#进阶分批建仓" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>建仓阶段</th><th>比例</th><th>说明</th></tr></thead><tbody><tr><td>初始头寸</td><td>50%</td><td>第一次入场</td></tr><tr><td>加仓1</td><td>30%</td><td>价格朝有利方向运动后加仓</td></tr><tr><td>加仓2</td><td>20%</td><td>趋势确认后最后一次加仓</td></tr></tbody></table></div>
+<blockquote>
+<p>每次加仓也要<strong>重新计算总风险</strong>，确保最大亏损不超过 1-2%。</p>
+</blockquote>
+<hr/>
+<h2 id="三止损设置-stop-loss">三、止损设置 (Stop Loss)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三止损设置-stop-loss" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>止损是保护账户的”安全带”。以下是三种常见的止损方法。</p>
+<h3 id="方法一固定金额止损">方法一：固定金额止损<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#方法一固定金额止损" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>最简单的方法：固定每笔交易亏损金额，一旦亏到这个金额就离场。</p>
+<ul>
+<li><strong>优点</strong>：简单直接，容易执行</li>
+<li><strong>缺点</strong>：不考虑技术形态，可能被市场噪音”洗出来”</li>
+<li><strong>适用</strong>：短线交易、日内交易</li>
+</ul>
+<h3 id="方法二技术位止损">方法二：技术位止损<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#方法二技术位止损" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>根据技术分析的关键位置设置止损。</p>
+<p><strong>常见技术止损位</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>技术位</th><th>止损位置</th></tr></thead><tbody><tr><td><strong>前期低点</strong></td><td>在近期最低点下方 1-2%</td></tr><tr><td><strong>支撑位</strong></td><td>在关键支撑位下方 1-2%</td></tr><tr><td><strong>趋势线</strong></td><td>在趋势线下方（上升趋势）</td></tr><tr><td><strong>均线</strong></td><td>在 20日/50日/200日均线下方</td></tr><tr><td><strong>通道下轨</strong></td><td>在通道下轨下方</td></tr><tr><td><strong>形态止损</strong></td><td>在形态的”颈线”下方（如双底、头肩底等）</td></tr></tbody></table></div>
+<p><strong>优点</strong>：更合理，不容易被随机波动淘汰
+<strong>缺点</strong>：需要一定的技术分析能力</p>
+<h3 id="方法三atr-止损">方法三：ATR 止损<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#方法三atr-止损" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>ATR（Average True Range，平均真实波幅）衡量市场波动的平均范围。</p>
+<p><strong>如何计算 ATR 止损</strong>：</p>
+<ol>
+<li>查看股票的 ATR 值（TradingView / Thinkorswim 等平台自动显示）</li>
+<li>根据策略选择 ATR 倍数（通常 1.5-3 倍）</li>
+<li>止损价位 = 入场价 ± (ATR × 倍数)</li>
+</ol>
+<p><strong>举例</strong>：</p>
+<ul>
+<li>入场价：$100</li>
+<li>ATR(14)：$3</li>
+<li>使用 2 倍 ATR 止损</li>
+<li>止损位（做多）：<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span></span></span></span>3 × 2) = <strong>$94</strong></li>
+<li>止损距离：6%（正好约 2 倍 ATR）</li>
+</ul>
+<p><strong>ATR 止损的优点</strong>：</p>
+<ul>
+<li>根据市场波动动态调整——波动大的股票给更大空间，波动小的给更小空间</li>
+<li>不容易被市场噪音触发</li>
+</ul>
+<p><strong>注意事项</strong>：</p>
+<ul>
+<li>不同时间框架的 ATR 值不同（日线用日线 ATR，小时线用小时线 ATR）</li>
+<li>牛市时期 ATR 可能偏小，熊市时期 ATR 可能偏大</li>
+</ul>
+<h3 id="止损-vs-心理止损">止损 vs 心理止损<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#止损-vs-心理止损" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>类型</th><th>说明</th><th>建议</th></tr></thead><tbody><tr><td><strong>硬止损 (Hard Stop)</strong></td><td>在交易软件中提前设置止损单</td><td><strong>强烈建议</strong>——自动化执行</td></tr><tr><td><strong>心理止损 (Mental Stop)</strong></td><td>只在脑子里设止损，手动离场</td><td><strong>不推荐</strong>——人性会让你犹豫</td></tr></tbody></table></div>
+<blockquote>
+<p>永远使用<strong>硬止损单</strong>，不要相信自己的执行力。</p>
+</blockquote>
+<hr/>
+<h2 id="四止盈方法">四、止盈方法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四止盈方法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>止盈比止损更难——因为人性总是想”再多赚一点”。</p>
+<h3 id="方法一固定盈亏比止盈">方法一：固定盈亏比止盈<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#方法一固定盈亏比止盈" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>设置固定的盈亏比</strong>，如 1:2 或 1:3。</p>
+<p><strong>举例</strong>：</p>
+<ul>
+<li>入场价：$50</li>
+<li>止损价：<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">48</span><span class="mord cjk_fallback">（亏</span></span></span></span>2）</li>
+<li>目标盈亏比：1:2</li>
+<li>止盈价：<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">50</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span></span></span></span>2 × 2) = <strong>$54</strong></li>
+</ul>
+<p><strong>适用</strong>：波段交易、趋势交易
+<strong>优点</strong>：简单明确
+<strong>缺点</strong>：行情可能远超目标，过早离场</p>
+<h3 id="方法二技术位止盈">方法二：技术位止盈<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#方法二技术位止盈" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>根据重要的技术阻力位设置止盈。</p>
+<p><strong>常见技术止盈位</strong>：</p>
+<ul>
+<li>前期高点</li>
+<li>趋势线上轨</li>
+<li>通道上轨</li>
+<li>整数关口</li>
+<li>前期的密集成交区</li>
+</ul>
+<h3 id="方法三移动止盈-trailing-stop">方法三：移动止盈 (Trailing Stop)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#方法三移动止盈-trailing-stop" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>随着价格上涨，不断提高止损位，锁定利润。</p>
+<p><strong>固定距离移动止盈</strong>：</p>
+<ul>
+<li>初始止损 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">48</span><span class="mord cjk_fallback">（买入价</span></span></span></span>50）</li>
+<li>价格涨到 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">55</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">止损提高到</span></span></span></span>53</li>
+<li>价格涨到 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">60</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">止损提高到</span></span></span></span>58</li>
+<li>跌到 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">58</span><span class="mord cjk_fallback">时自动离场，锁定利润</span></span></span></span>8/股</li>
+</ul>
+<p><strong>分阶段移动止盈</strong>：</p>
+<ul>
+<li>盈利 5% → 止损提到盈亏平衡点</li>
+<li>盈利 10% → 止损提到盈利 5% 的位置</li>
+<li>盈利 20% → 止损提到盈利 10% 的位置</li>
+</ul>
+<h3 id="方法四分批止盈">方法四：分批止盈<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#方法四分批止盈" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>不一次性了结全部头寸，分批次在目标位止盈。</p>
+<p><strong>例：</strong> 买入 1,000 股，分三次止盈</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>批次</th><th>止盈点</th><th>卖出股数</th><th>利润</th></tr></thead><tbody><tr><td>第1批</td><td>第一个目标 (盈亏比 1:1)</td><td>500 股</td><td>收回大部分成本</td></tr><tr><td>第2批</td><td>第二个目标 (盈亏比 1:2)</td><td>300 股</td><td>锁定部分利润</td></tr><tr><td>第3批</td><td>移动止盈</td><td>200 股</td><td>追求最大利润</td></tr></tbody></table></div>
+<hr/>
+<h2 id="五最大回撤控制-maximum-drawdown">五、最大回撤控制 (Maximum Drawdown)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五最大回撤控制-maximum-drawdown" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="什么是最大回撤">什么是最大回撤？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#什么是最大回撤" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>最大回撤（Max Drawdown）是从账户最高点到最低点的最大亏损幅度。</p>
+<p><strong>举例</strong>：</p>
+<ul>
+<li>账户最高值：$120,000</li>
+<li>回撤到最低：$90,000</li>
+<li>最大回撤 = (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">120</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mord">−</span></span></span></span>90,000) ÷ $120,000 = <strong>25%</strong></li>
+</ul>
+<h3 id="回撤控制规则">回撤控制规则<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#回撤控制规则" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>回撤幅度</th><th>应采取的措施</th></tr></thead><tbody><tr><td><strong>5%</strong></td><td>检查交易策略，暂时休息</td></tr><tr><td><strong>10%</strong></td><td><strong>暂停交易</strong>，复盘所有亏损交易</td></tr><tr><td><strong>15%</strong></td><td>大幅缩减仓位，每天只做 1 笔或停止交易</td></tr><tr><td><strong>20%</strong></td><td><strong>绝对停止交易</strong>，降低至模拟资金或学习模式</td></tr></tbody></table></div>
+<h3 id="回本需要的盈利">回本需要的盈利<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#回本需要的盈利" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>回撤幅度</th><th>需要多少盈利回本</th></tr></thead><tbody><tr><td>10%</td><td>11.1%</td></tr><tr><td>20%</td><td>25.0%</td></tr><tr><td>30%</td><td>42.9%</td></tr><tr><td>40%</td><td>66.7%</td></tr><tr><td>50%</td><td><strong>100%</strong>（本金腰斩，需要翻倍才能回本）</td></tr></tbody></table></div>
+<blockquote>
+<p>所以，<strong>绝对不要超过 20% 的回撤</strong>。一旦回撤超过 20%，今年的交易任务就是回本，不是盈利。</p>
+</blockquote>
+<h3 id="平滑回撤的方法">平滑回撤的方法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#平滑回撤的方法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>分散交易</strong>：不把所有资金都押在一个股票上</li>
+<li><strong>降低仓位</strong>：连续亏损 3 次后降低仓位到原来的一半</li>
+<li><strong>休息</strong>：连续亏损时暂停交易，避免”报复性交易”</li>
+<li><strong>保护利润</strong>：盈利达到一定目标后，把盈利部分取出</li>
+</ol>
+<hr/>
+<h2 id="六风险管理的核心清单">六、风险管理的核心清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#六风险管理的核心清单" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>每次下单前，问自己以下问题：</p>
+<ol>
+<li>☐ <strong>总资金</strong>：目前总交易资金是多少？</li>
+<li>☐ <strong>单笔风险</strong>：这笔交易最多亏 1-2% 吗？</li>
+<li>☐ <strong>止损位置</strong>：止损设在什么位置？是否已下止损单？</li>
+<li>☐ <strong>仓位大小</strong>：通过公式计算正确的仓位大小了吗？</li>
+<li>☐ <strong>盈亏比</strong>：预期盈利 ≥ 止损距离 × 2 吗？</li>
+<li>☐ <strong>方向确认</strong>：当前趋势是否支持这笔交易的方向？</li>
+<li>☐ <strong>最大回撤</strong>：目前账户回撤到多少了？是否需要暂停？</li>
+<li>☐ <strong>心态检查</strong>：我现在情绪稳定吗？不是出于愤怒、报复或 FOMO？</li>
+</ol>
+<blockquote>
+<p>🔑 <strong>最终提醒</strong>：仓位管理 > 选股能力。一个仓位管理好的平庸交易者，长期表现胜过一个仓位管理差的优秀交易者。</p>
+</blockquote></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-17" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#风险管理" data-for="风险管理">风险管理</a></li><li class="depth-1"><a href="#一单笔风险-1-2-原则" data-for="一单笔风险-1-2-原则">一、单笔风险 1-2% 原则</a></li><li class="depth-2"><a href="#核心概念" data-for="核心概念">核心概念</a></li><li class="depth-2"><a href="#为什么是-1-2" data-for="为什么是-1-2">为什么是 1-2%？</a></li><li class="depth-2"><a href="#1-2-不是策略是纪律" data-for="1-2-不是策略是纪律">1-2% 不是策略，是纪律</a></li><li class="depth-1"><a href="#二仓位计算-position-sizing" data-for="二仓位计算-position-sizing">二、仓位计算 (Position Sizing)</a></li><li class="depth-2"><a href="#举例说明" data-for="举例说明">举例说明</a></li><li class="depth-2"><a href="#进阶分批建仓" data-for="进阶分批建仓">进阶：分批建仓</a></li><li class="depth-1"><a href="#三止损设置-stop-loss" data-for="三止损设置-stop-loss">三、止损设置 (Stop Loss)</a></li><li class="depth-2"><a href="#方法一固定金额止损" data-for="方法一固定金额止损">方法一：固定金额止损</a></li><li class="depth-2"><a href="#方法二技术位止损" data-for="方法二技术位止损">方法二：技术位止损</a></li><li class="depth-2"><a href="#方法三atr-止损" data-for="方法三atr-止损">方法三：ATR 止损</a></li><li class="depth-2"><a href="#止损-vs-心理止损" data-for="止损-vs-心理止损">止损 vs 心理止损</a></li><li class="depth-1"><a href="#四止盈方法" data-for="四止盈方法">四、止盈方法</a></li><li class="depth-2"><a href="#方法一固定盈亏比止盈" data-for="方法一固定盈亏比止盈">方法一：固定盈亏比止盈</a></li><li class="depth-2"><a href="#方法二技术位止盈" data-for="方法二技术位止盈">方法二：技术位止盈</a></li><li class="depth-2"><a href="#方法三移动止盈-trailing-stop" data-for="方法三移动止盈-trailing-stop">方法三：移动止盈 (Trailing Stop)</a></li><li class="depth-2"><a href="#方法四分批止盈" data-for="方法四分批止盈">方法四：分批止盈</a></li><li class="depth-1"><a href="#五最大回撤控制-maximum-drawdown" data-for="五最大回撤控制-maximum-drawdown">五、最大回撤控制 (Maximum Drawdown)</a></li><li class="depth-2"><a href="#什么是最大回撤" data-for="什么是最大回撤">什么是最大回撤？</a></li><li class="depth-2"><a href="#回撤控制规则" data-for="回撤控制规则">回撤控制规则</a></li><li class="depth-2"><a href="#回本需要的盈利" data-for="回本需要的盈利">回本需要的盈利</a></li><li class="depth-2"><a href="#平滑回撤的方法" data-for="平滑回撤的方法">平滑回撤的方法</a></li><li class="depth-1"><a href="#六风险管理的核心清单" data-for="六风险管理的核心清单">六、风险管理的核心清单</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://garden.daniel-liu.top">🌱 秘密花园</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript.js" type="module" data-persist="true"></script></html>

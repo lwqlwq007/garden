@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1e1e1e"/>
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+    .title { font-size: 20px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-size: 16px; text-anchor: middle; }
+    .label { font-size: 13px; }
+    .line { stroke: #888; stroke-width: 1.5; fill: none; }
+  </style>
+
+  <text x="400" y="32" class="title">阳线与阴线对比</text>
+
+  <!-- ===== LEFT: Bullish Candle (Green) ===== -->
+  <!-- Upper wick -->
+  <line x1="220" y1="80" x2="220" y2="120" class="line" stroke="#22c55e"/>
+  <!-- Body -->
+  <rect x="190" y="120" width="60" height="230" fill="#22c55e"/>
+  <!-- Lower wick -->
+  <line x1="220" y1="350" x2="220" y2="400" class="line" stroke="#22c55e"/>
+
+  <!-- Labels for left candle -->
+  <line x1="220" y1="80" x2="100" y2="80" class="line" stroke-dasharray="4 3" stroke="#888"/>
+  <text x="95" y="84" class="label" text-anchor="end">最高</text>
+
+  <line x1="190" y1="120" x2="120" y2="120" class="line"/>
+  <text x="115" y="124" class="label" text-anchor="end">收盘</text>
+
+  <line x1="190" y1="350" x2="120" y2="350" class="line"/>
+  <text x="115" y="354" class="label" text-anchor="end">开盘</text>
+
+  <line x1="220" y1="400" x2="100" y2="400" class="line" stroke-dasharray="4 3" stroke="#888"/>
+  <text x="95" y="404" class="label" text-anchor="end">最低</text>
+
+  <!-- Up arrow -->
+  <polygon points="220,102 210,118 230,118" fill="#22c55e"/>
+
+  <text x="220" y="445" class="subtitle" fill="#22c55e">阳线（看涨）</text>
+
+  <!-- ===== RIGHT: Bearish Candle (Red) ===== -->
+  <!-- Upper wick -->
+  <line x1="580" y1="80" x2="580" y2="120" class="line" stroke="#ef4444"/>
+  <!-- Body -->
+  <rect x="550" y="120" width="60" height="230" fill="#ef4444"/>
+  <!-- Lower wick -->
+  <line x1="580" y1="350" x2="580" y2="400" class="line" stroke="#ef4444"/>
+
+  <!-- Labels for right candle -->
+  <line x1="580" y1="80" x2="700" y2="80" class="line" stroke-dasharray="4 3" stroke="#888"/>
+  <text x="705" y="84" class="label" text-anchor="start">最高</text>
+
+  <line x1="610" y1="120" x2="680" y2="120" class="line"/>
+  <text x="685" y="124" class="label" text-anchor="start">开盘</text>
+
+  <line x1="610" y1="350" x2="680" y2="350" class="line"/>
+  <text x="685" y="354" class="label" text-anchor="start">收盘</text>
+
+  <line x1="580" y1="400" x2="700" y2="400" class="line" stroke-dasharray="4 3" stroke="#888"/>
+  <text x="705" y="404" class="label" text-anchor="start">最低</text>
+
+  <!-- Down arrow -->
+  <polygon points="580,102 570,118 590,118" fill="#ef4444"/>
+
+  <text x="580" y="445" class="subtitle" fill="#ef4444">阴线（看跌）</text>
+</svg>

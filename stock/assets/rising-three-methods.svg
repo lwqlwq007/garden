@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+  <defs>
+    <style>
+      text { font-family: "PingFang SC","Microsoft YaHei",sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="300" fill="#1e1e1e"/>
+
+  <!-- Title -->
+  <text x="250" y="28" text-anchor="middle" fill="#e0e0e0" font-size="18" font-weight="bold">上升三法</text>
+  <text x="250" y="46" text-anchor="middle" fill="#888" font-size="12">Rising Three Methods</text>
+
+  <!-- Range highlight: consolidation zone -->
+  <rect x="120" y="58" width="220" height="80" fill="#22c55e" opacity="0.04" rx="2"/>
+
+  <!-- C1: Big yang (first candle) -->
+  <g>
+    <line x1="70" y1="55" x2="70" y2="75" stroke="#22c55e" stroke-width="2"/>
+    <line x1="70" y1="145" x2="70" y2="158" stroke="#22c55e" stroke-width="2"/>
+    <rect x="62" y="75" width="16" height="70" fill="#22c55e" rx="1"/>
+  </g>
+
+  <!-- C2: Small yin 1 (within range) -->
+  <g>
+    <line x1="155" y1="82" x2="155" y2="92" stroke="#ef4444" stroke-width="2"/>
+    <line x1="155" y1="118" x2="155" y2="128" stroke="#ef4444" stroke-width="2"/>
+    <rect x="147" y="92" width="16" height="26" fill="#ef4444" rx="1"/>
+  </g>
+
+  <!-- C3: Small yin 2 (within range) -->
+  <g>
+    <line x1="220" y1="85" x2="220" y2="95" stroke="#ef4444" stroke-width="2"/>
+    <line x1="220" y1="115" x2="220" y2="125" stroke="#ef4444" stroke-width="2"/>
+    <rect x="212" y="95" width="16" height="20" fill="#ef4444" rx="1"/>
+  </g>
+
+  <!-- C4: Small yin 3 (within range) -->
+  <g>
+    <line x1="285" y1="80" x2="285" y2="90" stroke="#ef4444" stroke-width="2"/>
+    <line x1="285" y1="120" x2="285" y2="130" stroke="#ef4444" stroke-width="2"/>
+    <rect x="277" y="90" width="16" height="30" fill="#ef4444" rx="1"/>
+  </g>
+
+  <!-- C5: Big yang (breakout, new high) -->
+  <g>
+    <line x1="370" y1="30" x2="370" y2="48" stroke="#22c55e" stroke-width="2"/>
+    <line x1="370" y1="115" x2="370" y2="135" stroke="#22c55e" stroke-width="2"/>
+    <rect x="362" y="48" width="16" height="67" fill="#22c55e" rx="1"/>
+  </g>
+
+  <!-- C1 low reference line -->
+  <line x1="50" y1="145" x2="430" y2="145" stroke="#555" stroke-dasharray="3,3" stroke-width="1" opacity="0.5"/>
+  <text x="48" y="149" text-anchor="end" fill="#555" font-size="9" opacity="0.6">不破阳线低点</text>
+
+  <!-- Breakout annotation -->
+  <line x1="386" y1="30" x2="410" y2="18" stroke="#22c55e" stroke-width="1.5" opacity="0.7"/>
+  <text x="412" y="22" fill="#22c55e" font-size="10" opacity="0.8">创新高</text>
+
+  <!-- Step labels -->
+  <text x="70" y="275" text-anchor="middle" fill="#22c55e" font-size="11" opacity="0.8">① 大阳</text>
+  <text x="220" y="275" text-anchor="middle" fill="#ef4444" font-size="11" opacity="0.8">② 三小阴(洗盘)</text>
+  <text x="370" y="275" text-anchor="middle" fill="#22c55e" font-size="11" opacity="0.8">③ 大阳创新高</text>
+
+  <!-- Arrow sequence -->
+  <path d="M86,265 L140,265" stroke="#555" stroke-width="1.5" stroke-linecap="round" marker-end="url(#seq-arrow)"/>
+  <path d="M290,265 L350,265" stroke="#555" stroke-width="1.5" stroke-linecap="round" marker-end="url(#seq-arrow)"/>
+
+  <defs>
+    <marker id="seq-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Main label -->
+  <text x="250" y="248" text-anchor="middle" fill="#22c55e" font-size="15" font-weight="bold">上涨中继 · 洗盘再拉</text>
+</svg>

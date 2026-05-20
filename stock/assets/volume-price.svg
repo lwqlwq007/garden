@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350">
+  <rect width="600" height="350" fill="#1e1e1e"/>
+  
+  <text x="300" y="30" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">价格与成交量配合</text>
+  
+  <!-- 价格曲线 -->
+  <polyline points="40,250 80,230 120,240 160,180 200,150 240,120 280,130 320,90 360,100 400,140 440,170 480,200 520,220 560,250" fill="none" stroke="#22c55e" stroke-width="3" stroke-linejoin="round"/>
+  
+  <!-- 成交量柱 -->
+  <rect x="50" y="220" width="20" height="60" fill="#22c55e" rx="2" opacity="0.5"/>
+  <rect x="90" y="240" width="20" height="40" fill="#22c55e" rx="2" opacity="0.3"/>
+  <rect x="130" y="250" width="20" height="30" fill="#22c55e" rx="2" opacity="0.3"/>
+  <rect x="170" y="190" width="20" height="90" fill="#22c55e" rx="2" opacity="0.7"/>
+  <rect x="210" y="160" width="20" height="120" fill="#22c55e" rx="2" opacity="0.8"/>
+  <rect x="250" y="130" width="20" height="150" fill="#22c55e" rx="2" opacity="0.9"/>
+  <rect x="290" y="260" width="20" height="20" fill="#ef4444" rx="2" opacity="0.3"/>
+  <rect x="330" y="100" width="20" height="180" fill="#22c55e" rx="2" opacity="0.9"/>
+  <rect x="370" y="200" width="20" height="80" fill="#ef4444" rx="2" opacity="0.5"/>
+  <rect x="410" y="200" width="20" height="80" fill="#ef4444" rx="2" opacity="0.4"/>
+  <rect x="450" y="220" width="20" height="60" fill="#ef4444" rx="2" opacity="0.3"/>
+  <rect x="490" y="230" width="20" height="50" fill="#ef4444" rx="2" opacity="0.3"/>
+  <rect x="530" y="250" width="20" height="30" fill="#ef4444" rx="2" opacity="0.3"/>
+  
+  <!-- 标注 -->
+  <text x="230" y="115" fill="#22c55e" font-size="12" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">放量上涨</text>
+  <text x="280" y="295" fill="#666" font-size="11" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">缩量回调</text>
+  <text x="330" y="85" fill="#22c55e" font-size="12" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">放量突破</text>
+  <text x="430" y="185" fill="#ef4444" font-size="12" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif">高位放量</text>
+  
+  <!-- 图例 -->
+  <rect x="40" y="310" width="12" height="12" fill="#22c55e" rx="1" opacity="0.7"/>
+  <text x="58" y="321" fill="#aaa" font-size="11" font-family="'PingFang SC','Microsoft YaHei',sans-serif">成交量柱（绿色=上涨）</text>
+  <rect x="210" y="310" width="12" height="12" fill="#ef4444" rx="1" opacity="0.7"/>
+  <text x="228" y="321" fill="#aaa" font-size="11" font-family="'PingFang SC','Microsoft YaHei',sans-serif">成交量柱（红色=下跌）</text>
+  <line x1="400" y1="316" x2="440" y2="316" stroke="#22c55e" stroke-width="3"/>
+  <text x="448" y="321" fill="#aaa" font-size="11" font-family="'PingFang SC','Microsoft YaHei',sans-serif">价格走势</text>
+</svg>

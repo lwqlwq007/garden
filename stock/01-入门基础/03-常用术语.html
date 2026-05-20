@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>03-常用术语 | Garden</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto Sans SC:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="🌱 Garden"/><meta property="og:title" content="03-常用术语 | Garden"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="03-常用术语 | Garden"/><meta name="twitter:description" content="常用术语 本文按首字母拼音排序，随查随用。新手不用一次背完，遇到了回来查就行。 A Alpha（α，阿尔法） 衡量一只股票超没超过大盘的表现。 Alpha > 0：比大盘涨得多/跌得少 Alpha = 0：和大盘一样 Alpha &lt; 0：比大盘差 例子：大盘涨 10%，你的股票涨 15%，那 Alpha 就是 +5%。 B Beta（β，贝塔） 衡量一只股票比大盘”爱动”多少倍。 Beta > 1：比大盘波动大（涨跌更猛） Beta = 1：和大盘一样波动 Beta &lt; 1：比大盘波动小（更稳） 例子： 科技股 Beta ~1.5 → 大盘涨 10%，它可能涨 15% ..."/><meta property="og:description" content="常用术语 本文按首字母拼音排序，随查随用。新手不用一次背完，遇到了回来查就行。 A Alpha（α，阿尔法） 衡量一只股票超没超过大盘的表现。 Alpha > 0：比大盘涨得多/跌得少 Alpha = 0：和大盘一样 Alpha &lt; 0：比大盘差 例子：大盘涨 10%，你的股票涨 15%，那 Alpha 就是 +5%。 B Beta（β，贝塔） 衡量一只股票比大盘”爱动”多少倍。 Beta > 1：比大盘波动大（涨跌更猛） Beta = 1：和大盘一样波动 Beta &lt; 1：比大盘波动小（更稳） 例子： 科技股 Beta ~1.5 → 大盘涨 10%，它可能涨 15% ..."/><meta property="og:image:alt" content="常用术语 本文按首字母拼音排序，随查随用。新手不用一次背完，遇到了回来查就行。 A Alpha（α，阿尔法） 衡量一只股票超没超过大盘的表现。 Alpha > 0：比大盘涨得多/跌得少 Alpha = 0：和大盘一样 Alpha &lt; 0：比大盘差 例子：大盘涨 10%，你的股票涨 15%，那 Alpha 就是 +5%。 B Beta（β，贝塔） 衡量一只股票比大盘”爱动”多少倍。 Beta > 1：比大盘波动大（涨跌更猛） Beta = 1：和大盘一样波动 Beta &lt; 1：比大盘波动小（更稳） 例子： 科技股 Beta ~1.5 → 大盘涨 10%，它可能涨 15% ..."/><meta property="og:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:url" content="https://garden.daniel-liu.top/static/og-image.png"/><meta name="twitter:image" content="https://garden.daniel-liu.top/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="garden.daniel-liu.top"/><meta property="og:url" content="https://garden.daniel-liu.top/stock/01-入门基础/03-常用术语"/><meta property="twitter:url" content="https://garden.daniel-liu.top/stock/01-入门基础/03-常用术语"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="常用术语 本文按首字母拼音排序，随查随用。新手不用一次背完，遇到了回来查就行。 A Alpha（α，阿尔法） 衡量一只股票超没超过大盘的表现。 Alpha > 0：比大盘涨得多/跌得少 Alpha = 0：和大盘一样 Alpha &lt; 0：比大盘差 例子：大盘涨 10%，你的股票涨 15%，那 Alpha 就是 +5%。 B Beta（β，贝塔） 衡量一只股票比大盘”爱动”多少倍。 Beta > 1：比大盘波动大（涨跌更猛） Beta = 1：和大盘一样波动 Beta &lt; 1：比大盘波动小（更稳） 例子： 科技股 Beta ~1.5 → 大盘涨 10%，它可能涨 15% ..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2RhbmllbC9Eb2N1bWVudHMvZ2FyZGVuLXNpdGUvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://garden.daniel-liu.top/index.xml"/></head><body data-slug="stock/01-入门基础/03-常用术语"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">🌱 Garden</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;README\&quot;&amp;&amp;node.slugSegment!==\&quot;index\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-14"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-14" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/">stock</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../stock/01-入门基础/">01 入门基础</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>03 常用术语</a></div></nav><h1 class="article-title">03-常用术语</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-18T16:00:00.000Z">2026年5月19日</time><span>9分钟阅读</span></p><ul class="tags"><li><a href="../../tags/stock" class="internal tag-link">stock</a></li><li><a href="../../tags/beginner" class="internal tag-link">beginner</a></li><li><a href="../../tags/glossary" class="internal tag-link">glossary</a></li><li><a href="../../tags/reference" class="internal tag-link">reference</a></li></ul></div></div><article class="popover-hint"><h1 id="常用术语">常用术语<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#常用术语" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>本文按首字母拼音排序，随查随用。新手不用一次背完，遇到了回来查就行。</p>
+</blockquote>
+<hr/>
+<h2 id="a">A<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="alphaα阿尔法">Alpha（α，阿尔法）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#alphaα阿尔法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>衡量一只股票<strong>超没超过大盘的表现</strong>。</p>
+<ul>
+<li>Alpha > 0：比大盘涨得多/跌得少</li>
+<li>Alpha = 0：和大盘一样</li>
+<li>Alpha &lt; 0：比大盘差</li>
+</ul>
+<p><strong>例子</strong>：大盘涨 10%，你的股票涨 15%，那 Alpha 就是 +5%。</p>
+<hr/>
+<h2 id="b">B<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="betaβ贝塔">Beta（β，贝塔）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#betaβ贝塔" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>衡量一只股票<strong>比大盘”爱动”多少倍</strong>。</p>
+<ul>
+<li>Beta > 1：比大盘波动大（涨跌更猛）</li>
+<li>Beta = 1：和大盘一样波动</li>
+<li>Beta &lt; 1：比大盘波动小（更稳）</li>
+</ul>
+<p><strong>例子</strong>：</p>
+<ul>
+<li>科技股 Beta ~1.5 → 大盘涨 10%，它可能涨 15%</li>
+<li>公用事业股 Beta ~0.5 → 大盘跌 10%，它可能只跌 5%</li>
+</ul>
+<hr/>
+<h2 id="c">C<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="仓位position">仓位（Position）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#仓位position" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>你总共投了多少钱在股市里。</p>
+<ul>
+<li><strong>满仓</strong>：所有钱都买了股票</li>
+<li><strong>半仓</strong>：一半股票一半现金</li>
+<li><strong>空仓</strong>：一股没买，全是现金</li>
+</ul>
+<p><strong>例子</strong>：你有 10 万，买了 6 万股票，就是 6 成仓。</p>
+<h3 id="持仓量open-interest--holdings">持仓量（Open Interest / Holdings）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#持仓量open-interest--holdings" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>不算严格的术语，散户口中的”持仓量”通常指<strong>你手里持有多少股</strong>。</p>
+<blockquote>
+<p>🔗 正式术语中”持仓量”通常指期权市场，股票的看”成交量”和”流通股”就够了。</p>
+</blockquote>
+<h3 id="拆股stock-split">拆股（Stock Split）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#拆股stock-split" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>公司把一股拆成多股，股价同比例降低，<strong>你的总资产不变</strong>。</p>
+<p><strong>例子</strong>：苹果 1 股 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">200</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">4</span><span class="mord cjk_fallback">拆股</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">变成</span><span class="mord">4</span><span class="mord cjk_fallback">股，每股</span></span></span></span>50。你原来 1 股变成 4 股，总价值还是 $200。</p>
+<blockquote>
+<p>📌 拆股后股价变低，更容易买入，公司想吸引更多散户。</p>
+</blockquote>
+<h3 id="除息日--02-美股交易规则股息派发流程">除息日 → <a href="./02-美股交易规则" class="internal alias" data-slug="stock/01-入门基础/02-美股交易规则">02-美股交易规则#股息派发流程</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#除息日--02-美股交易规则股息派发流程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<hr/>
+<h2 id="d">D<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="做多long--going-long">做多（Long / Going Long）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#做多long--going-long" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>看涨</strong>，买入股票等它涨了再卖。大部分人的操作方式。</p>
+<h3 id="做空short--short-selling">做空（Short / Short Selling）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#做空short--short-selling" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>看跌</strong>，先借股票卖掉，等跌了再买回来还掉。详见 <a href="./02-美股交易规则#卖空机制做空" class="internal alias" data-slug="stock/01-入门基础/02-美股交易规则">卖空机制（做空）</a>。</p>
+<h3 id="股息率dividend-yield">股息率（Dividend Yield）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#股息率dividend-yield" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>公司每年派发的股息 ÷ 当前股价 × 100%。</p>
+<p><strong>例子</strong>：股价 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">100</span><span class="mord cjk_fallback">，每股年派息</span></span></span></span>4 → 股息率 = 4%</p>
+<blockquote>
+<p>💡 并不是股息率越高越好。高股息率有时是因为股价暴跌导致的，可能是个坑。</p>
+</blockquote>
+<hr/>
+<h2 id="g">G<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#g" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="杠杆leverage">杠杆（Leverage）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#杠杆leverage" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>借钱投资，放大收益也放大亏损。</p>
+<ul>
+<li><strong>2 倍杠杆</strong>：你有 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord cjk_fallback">万，券商借你</span></span></span></span>1 万，你总共有 $2 万可以投</li>
+<li>股票涨 10% → 你的本金赚 20%</li>
+<li>股票跌 10% → 你的本金亏 20%</li>
+<li>股票跌 50% → 你的本金亏 100%（爆仓）</li>
+</ul>
+<blockquote>
+<p>⚠️ 杠杆是把双刃剑。新手建议<strong>不要用杠杆</strong>。</p>
+</blockquote>
+<hr/>
+<h2 id="h">H<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#h" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="回撤drawdown">回撤（Drawdown）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#回撤drawdown" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>从最高点跌下来的幅度。</p>
+<p><strong>例子</strong>：你的账户最高 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mord cjk_fallback">，现在跌到</span></span></span></span>8,000 → 回撤 = 20%</p>
+<blockquote>
+<p>📌 <strong>最大回撤</strong>是衡量风险的重要指标。比如一只股票历史最大回撤 50%，意味着你这时候入场最惨可能腰斩。</p>
+</blockquote>
+<hr/>
+<h2 id="i">I<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#i" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="ipoinitial-public-offering首次公开募股">IPO（Initial Public Offering，首次公开募股）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ipoinitial-public-offering首次公开募股" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>公司第一次把股票卖给公众。你可以理解成公司”上市”。</p>
+<p><strong>例子</strong>：某公司 IPO 价 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">20</span><span class="mord cjk_fallback">，开盘第一天涨到</span></span></span></span>40 → 也叫”打新”赚钱了。</p>
+<h3 id="ipo-vs-spac">IPO vs SPAC<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ipo-vs-spac" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>方式</th><th>说明</th></tr></thead><tbody><tr><td><strong>IPO</strong></td><td>传统方式：公司找投行、路演、定价、上市</td></tr><tr><td><strong>SPAC</strong></td><td>特殊目的收购公司：先有个壳公司上市，再去找目标公司合并上市。速度更快，但质量参差不齐</td></tr></tbody></table></div>
+<hr/>
+<h2 id="k">K<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#k" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="合股reverse-stock-split">合股（Reverse Stock Split）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#合股reverse-stock-split" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>拆股的反面：多股合成一股，股价上涨，<strong>总资产不变</strong>。</p>
+<p><strong>例子</strong>：你持有 10 股 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord cjk_fallback">的股票</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">10</span><span class="mord cjk_fallback">合股</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">变成</span><span class="mord">1</span><span class="mord cjk_fallback">股</span></span></span></span>10。总价值还是 $10。</p>
+<blockquote>
+<p>⚠️ 合股通常是公司为了避免退市（交易所要求股价不能低于 $1），不一定是好事。</p>
+</blockquote>
+<hr/>
+<h2 id="l">L<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#l" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="流通股shares-outstanding--float">流通股（Shares Outstanding / Float）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#流通股shares-outstanding--float" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>总共有多少股可以在市场上买卖</strong>。</p>
+<ul>
+<li><strong>流通股少</strong>（小盘股）→ 容易被炒起来，波动大</li>
+<li><strong>流通股多</strong>（大盘股，如苹果 ~150 亿股）→ 相对稳定</li>
+</ul>
+<h3 id="止损stop-loss--止蚀">止损（Stop-Loss / 止蚀）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#止损stop-loss--止蚀" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>预设一个价格，跌到这个价格<strong>自动卖出</strong>，防止亏更多。</p>
+<p><strong>例子</strong>：<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">100</span><span class="mord cjk_fallback">买的股票，设止损</span></span></span></span>90 → 跌到 $90 自动卖掉，最多亏 10%。</p>
+<h3 id="止盈take-profit">止盈（Take-Profit）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#止盈take-profit" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>预设一个价格，涨到这个价格<strong>自动卖出</strong>，锁定利润。</p>
+<p><strong>例子</strong>：<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">100</span><span class="mord cjk_fallback">买的股票，设止盈</span></span></span></span>120 → 涨到 $120 自动卖掉，锁定 20% 利润。</p>
+<blockquote>
+<p>💡 止损止盈是新手保护自己的最重要工具，一定要学会用。</p>
+</blockquote>
+<hr/>
+<h2 id="p">P<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#p" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="pe市盈率price-to-earnings-ratio">PE（市盈率，Price-to-Earnings Ratio）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pe市盈率price-to-earnings-ratio" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>股价 ÷ 每股盈利。用来判断股票<strong>贵不贵</strong>。</p>
+<p><strong>例子</strong>：股价 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">100</span><span class="mord cjk_fallback">，每股年盈利</span></span></span></span>5 → PE = 20 倍</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>PE 高低</th><th>含义</th></tr></thead><tbody><tr><td>PE 高（>30）</td><td>市场认为它未来会高速增长，或可能被高估</td></tr><tr><td>PE 低（&lt;15）</td><td>可能被低估，也可能公司不赚钱</td></tr></tbody></table></div>
+<h3 id="pb市净率price-to-book-ratio">PB（市净率，Price-to-Book Ratio）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pb市净率price-to-book-ratio" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>股价 ÷ 每股净资产。适用于金融、地产等重资产行业。</p>
+<p><strong>例子</strong>：PB &lt; 1 说明股价低于公司净资产，可能是便宜货（也可能市场不看好它）。</p>
+<h3 id="仓位--c">仓位 → <a href="#c" class="internal alias">C</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#仓位--c" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="持仓量--c">持仓量 → <a href="#c" class="internal alias">C</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#持仓量--c" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<hr/>
+<h2 id="r">R<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#r" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="roe净资产收益率return-on-equity">ROE（净资产收益率，Return on Equity）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#roe净资产收益率return-on-equity" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>净利润 ÷ 股东权益。衡量公司<strong>用股东的钱赚了多少钱</strong>。</p>
+<ul>
+<li>ROE > 15%：优秀</li>
+<li>ROE > 20%：非常优秀</li>
+<li>ROE 长期 &lt; 10%：可能不太行</li>
+</ul>
+<p><strong>例子</strong>：公司股东出了 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord cjk_fallback">亿，一年赚了</span></span></span></span>2,000 万 → ROE = 20%</p>
+<h3 id="回撤--h">回撤 → <a href="#h" class="internal alias">H</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#回撤--h" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<hr/>
+<h2 id="s">S<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#s" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="spac--i">SPAC → <a href="#i" class="internal alias">I</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spac--i" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="市价单market-order">市价单（Market Order）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#市价单market-order" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>按当前市场价立刻买入/卖出</strong>，不指定价格。</p>
+<ul>
+<li>✅ 优点：立刻成交，不用等</li>
+<li>⚠️ 缺点：价格不确定，尤其在行情剧烈时可能买到意料之外的价格</li>
+</ul>
+<blockquote>
+<p><strong>别在盘前/盘后和财报时用市价单！</strong> 滑点能吃掉你好几个点的利润。</p>
+</blockquote>
+<h3 id="限价单limit-order">限价单（Limit Order）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#限价单limit-order" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>指定一个价格</strong>，只有达到或更好时才成交。</p>
+<ul>
+<li>✅ 优点：价格可控</li>
+<li>⚠️ 缺点：可能买不到（股价一直没到你的价格）</li>
+</ul>
+<p><strong>例子</strong>：当前 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">100</span><span class="mord cjk_fallback">，你想</span></span></span></span>98 买 → 下限价单 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">98</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">等跌到</span></span></span></span>98 自动买入</p>
+<h3 id="市值market-capmarket-capitalization">市值（Market Cap，Market Capitalization）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#市值market-capmarket-capitalization" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>股价 × 总股本。公司值多少钱。</p>
+<p><strong>分类</strong>：</p>
+<ul>
+<li><strong>大盘股</strong>：市值 > $100 亿（苹果、微软）</li>
+<li><strong>中盘股</strong>：市值 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">20</span><span class="mord cjk_fallback">亿</span><span class="mord">–</span></span></span></span>100 亿</li>
+<li><strong>小盘股</strong>：市值 &lt; $20 亿</li>
+<li><strong>微盘股</strong>：市值 &lt; $3 亿（风险极高）</li>
+</ul>
+<h3 id="成交量volume--trading-volume">成交量（Volume / Trading Volume）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#成交量volume--trading-volume" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>一段时间内成交了多少股。</p>
+<ul>
+<li><strong>量大</strong>：市场关注度高，买卖容易</li>
+<li><strong>量小</strong>：想卖可能得等，或者要多让几毛钱</li>
+</ul>
+<blockquote>
+<p>💡 股价上涨时配合放量是健康的信号；无量上涨可能只是昙花一现。</p>
+</blockquote>
+<hr/>
+<h2 id="t">T<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#t" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="头寸position">头寸（Position）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#头寸position" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“仓位”的正式叫法。<strong>你在某只股票上的投资额</strong>。</p>
+<p><strong>例子</strong>：“我在苹果上有 5 万美元的头寸” = 买了约 $50,000 的苹果股票。</p>
+<hr/>
+<h2 id="z">Z<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#z" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="做多--做空--d">做多 / 做空 → <a href="#d" class="internal alias">D</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#做多--做空--d" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="止损--止盈--l">止损 / 止盈 → <a href="#l" class="internal alias">L</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#止损--止盈--l" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<hr/>
+<p><em>上一篇 ← <a href="./02-美股交易规则" class="internal alias" data-slug="stock/01-入门基础/02-美股交易规则">02-美股交易规则</a></em></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-3" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#常用术语" data-for="常用术语">常用术语</a></li><li class="depth-1"><a href="#a" data-for="a">A</a></li><li class="depth-2"><a href="#alphaα阿尔法" data-for="alphaα阿尔法">Alpha（α，阿尔法）</a></li><li class="depth-1"><a href="#b" data-for="b">B</a></li><li class="depth-2"><a href="#betaβ贝塔" data-for="betaβ贝塔">Beta（β，贝塔）</a></li><li class="depth-1"><a href="#c" data-for="c">C</a></li><li class="depth-2"><a href="#仓位position" data-for="仓位position">仓位（Position）</a></li><li class="depth-2"><a href="#持仓量open-interest--holdings" data-for="持仓量open-interest--holdings">持仓量（Open Interest / Holdings）</a></li><li class="depth-2"><a href="#拆股stock-split" data-for="拆股stock-split">拆股（Stock Split）</a></li><li class="depth-2"><a href="#除息日--02-美股交易规则股息派发流程" data-for="除息日--02-美股交易规则股息派发流程">除息日 → 02-美股交易规则#股息派发流程</a></li><li class="depth-1"><a href="#d" data-for="d">D</a></li><li class="depth-2"><a href="#做多long--going-long" data-for="做多long--going-long">做多（Long / Going Long）</a></li><li class="depth-2"><a href="#做空short--short-selling" data-for="做空short--short-selling">做空（Short / Short Selling）</a></li><li class="depth-2"><a href="#股息率dividend-yield" data-for="股息率dividend-yield">股息率（Dividend Yield）</a></li><li class="depth-1"><a href="#g" data-for="g">G</a></li><li class="depth-2"><a href="#杠杆leverage" data-for="杠杆leverage">杠杆（Leverage）</a></li><li class="depth-1"><a href="#h" data-for="h">H</a></li><li class="depth-2"><a href="#回撤drawdown" data-for="回撤drawdown">回撤（Drawdown）</a></li><li class="depth-1"><a href="#i" data-for="i">I</a></li><li class="depth-2"><a href="#ipoinitial-public-offering首次公开募股" data-for="ipoinitial-public-offering首次公开募股">IPO（Initial Public Offering，首次公开募股）</a></li><li class="depth-2"><a href="#ipo-vs-spac" data-for="ipo-vs-spac">IPO vs SPAC</a></li><li class="depth-1"><a href="#k" data-for="k">K</a></li><li class="depth-2"><a href="#合股reverse-stock-split" data-for="合股reverse-stock-split">合股（Reverse Stock Split）</a></li><li class="depth-1"><a href="#l" data-for="l">L</a></li><li class="depth-2"><a href="#流通股shares-outstanding--float" data-for="流通股shares-outstanding--float">流通股（Shares Outstanding / Float）</a></li><li class="depth-2"><a href="#止损stop-loss--止蚀" data-for="止损stop-loss--止蚀">止损（Stop-Loss / 止蚀）</a></li><li class="depth-2"><a href="#止盈take-profit" data-for="止盈take-profit">止盈（Take-Profit）</a></li><li class="depth-1"><a href="#p" data-for="p">P</a></li><li class="depth-2"><a href="#pe市盈率price-to-earnings-ratio" data-for="pe市盈率price-to-earnings-ratio">PE（市盈率，Price-to-Earnings Ratio）</a></li><li class="depth-2"><a href="#pb市净率price-to-book-ratio" data-for="pb市净率price-to-book-ratio">PB（市净率，Price-to-Book Ratio）</a></li><li class="depth-2"><a href="#仓位--c" data-for="仓位--c">仓位 → C</a></li><li class="depth-2"><a href="#持仓量--c" data-for="持仓量--c">持仓量 → C</a></li><li class="depth-1"><a href="#r" data-for="r">R</a></li><li class="depth-2"><a href="#roe净资产收益率return-on-equity" data-for="roe净资产收益率return-on-equity">ROE（净资产收益率，Return on Equity）</a></li><li class="depth-2"><a href="#回撤--h" data-for="回撤--h">回撤 → H</a></li><li class="depth-1"><a href="#s" data-for="s">S</a></li><li class="depth-2"><a href="#spac--i" data-for="spac--i">SPAC → I</a></li><li class="depth-2"><a href="#市价单market-order" data-for="市价单market-order">市价单（Market Order）</a></li><li class="depth-2"><a href="#限价单limit-order" data-for="限价单limit-order">限价单（Limit Order）</a></li><li class="depth-2"><a href="#市值market-capmarket-capitalization" data-for="市值market-capmarket-capitalization">市值（Market Cap，Market Capitalization）</a></li><li class="depth-2"><a href="#成交量volume--trading-volume" data-for="成交量volume--trading-volume">成交量（Volume / Trading Volume）</a></li><li class="depth-1"><a href="#t" data-for="t">T</a></li><li class="depth-2"><a href="#头寸position" data-for="头寸position">头寸（Position）</a></li><li class="depth-1"><a href="#z" data-for="z">Z</a></li><li class="depth-2"><a href="#做多--做空--d" data-for="做多--做空--d">做多 / 做空 → D</a></li><li class="depth-2"><a href="#止损--止盈--l" data-for="止损--止盈--l">止损 / 止盈 → L</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-2" class="overflow"><li><a href="../../stock/01-入门基础/02-美股交易规则" class="internal">02-美股交易规则</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://garden.daniel-liu.top">🌱 秘密花园</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript.js" type="module" data-persist="true"></script></html>
